@@ -4,7 +4,7 @@ using System.Collections;
 public class TongueSwing : MonoBehaviour {
 
 	Vector3 anchor_position;
-	DistanceJoint2D joint;
+	SpringJoint2D joint;
 	RaycastHit2D raycast_hit;
 	public LayerMask layer_mask;
 	public float distance = 3f;
@@ -12,7 +12,7 @@ public class TongueSwing : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		joint = GetComponent<DistanceJoint2D>();
+		joint = GetComponent<SpringJoint2D>();
 		joint.enabled = false;
 		anchor_position = anchor.position;
 
