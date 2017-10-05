@@ -46,6 +46,8 @@ GameObject:
   - 114: {fileID: 11443526}
   - 61: {fileID: 6127656}
   - 231: {fileID: 23168468}
+  - 114: {fileID: 11493130}
+  - 120: {fileID: 12004542}
   m_Layer: 9
   m_Name: Player
   m_TagString: Player
@@ -181,10 +183,65 @@ MonoBehaviour:
   m_MaxSpeed: 10
   m_JumpForce: 800
   m_CrouchSpeed: 0.36
-  m_AirControl: 0
+  m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294965759
+--- !u!114 &11493130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 809e9d9fbcfc34f5dbe631caaeb8ae53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  swingable_layer:
+    serializedVersion: 2
+    m_Bits: 2048
+  distance: 3
+  rope: {fileID: 12004542}
+--- !u!120 &12004542
+LineRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 180612}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_Materials:
+  - {fileID: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Positions:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 1}
+  m_Parameters:
+    startWidth: 0.1
+    endWidth: 0.1
+    m_StartColor:
+      serializedVersion: 2
+      rgba: 4294967295
+    m_EndColor:
+      serializedVersion: 2
+      rgba: 4294967295
+  m_UseWorldSpace: 1
 --- !u!212 &21251946
 SpriteRenderer:
   m_ObjectHideFlags: 1
