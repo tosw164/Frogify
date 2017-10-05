@@ -392,7 +392,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 117712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c4782cf42f2644447b9631f6e522160b, type: 3}
   m_Name: 
@@ -438,8 +438,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTextObject: {fileID: 117012}
   punchObject: {fileID: 118758}
-  writingSpeed: 60
-  punctuationPause: 0.25
+  writingSpeed: 79.9
+  punctuationPause: 0.15
   hiddenTextColor: {r: 1, g: 1, b: 1, a: 0}
   writeWholeWords: 0
   forceRichText: 1
