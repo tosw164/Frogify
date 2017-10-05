@@ -1,0 +1,221 @@
+fileFormatVersion: 2
+guid: b45df4729fd1b4123a9af700fb295f92
+timeCreated: 1507089649
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tile_jungle_bottom_brown_0
+    21300002: tile_jungle_bottom_brown_1
+    21300004: tile_jungle_bottom_brown_2
+    21300006: tile_jungle_bottom_brown_3
+    21300008: tile_jungle_bottom_brown_4
+    21300010: tile_jungle_bottom_brown_5
+    21300012: tile_jungle_bottom_brown_6
+    21300014: tile_jungle_bottom_brown_7
+    21300016: tile_jungle_bottom_brown_8
+    21300018: tile_jungle_bottom_brown_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tile_jungle_bottom_brown_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 16}
+        - {x: -16.5, y: -16}
+        - {x: 16.5, y: -16}
+        - {x: 16.5, y: 16}
+    - name: tile_jungle_bottom_brown_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 96
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_bottom_brown_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 16}
+        - {x: -32, y: 9}
+        - {x: 17, y: -16}
+        - {x: 32, y: -16}
+        - {x: 32, y: 16}
+    - name: tile_jungle_bottom_brown_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: 22}
+        - {x: 4, y: -24}
+        - {x: 11, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: 32}
+    - name: tile_jungle_bottom_brown_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: -32}
+        - {x: -11, y: -32}
+        - {x: -4, y: -24}
+        - {x: 16, y: 21}
+        - {x: 16, y: 32}
+    - name: tile_jungle_bottom_brown_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: -6}
+        - {x: 2, y: -25}
+        - {x: 10, y: -32}
+        - {x: 16, y: -32}
+        - {x: 16, y: 32}
+    - name: tile_jungle_bottom_brown_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 32}
+        - {x: -16, y: -32}
+        - {x: -10, y: -32}
+        - {x: -6, y: -28}
+        - {x: 16, y: -4}
+        - {x: 16, y: 32}
+    - name: tile_jungle_bottom_brown_7
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 32, y: 16}
+        - {x: -32, y: 16}
+        - {x: -32, y: -16}
+        - {x: -22, y: -16}
+        - {x: 20, y: 4}
+        - {x: 31, y: 10}
+        - {x: 32, y: 12}
+    - name: tile_jungle_bottom_brown_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: tile_jungle_bottom_brown_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 96
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,550 @@
+fileFormatVersion: 2
+guid: e7a1cd1c36ad749acb537a5ca48ffb56
+timeCreated: 1507090216
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tile_jungle_tree_dark_0
+    21300002: tile_jungle_tree_dark_1
+    21300004: tile_jungle_tree_dark_2
+    21300006: tile_jungle_tree_dark_3
+    21300008: tile_jungle_tree_dark_4
+    21300010: tile_jungle_tree_dark_5
+    21300012: tile_jungle_tree_dark_6
+    21300014: tile_jungle_tree_dark_7
+    21300016: tile_jungle_tree_dark_8
+    21300018: tile_jungle_tree_dark_9
+    21300020: tile_jungle_tree_dark_10
+    21300022: tile_jungle_tree_dark_11
+    21300024: tile_jungle_tree_dark_12
+    21300026: tile_jungle_tree_dark_13
+    21300028: tile_jungle_tree_dark_14
+    21300030: tile_jungle_tree_dark_15
+    21300032: tile_jungle_tree_dark_16
+    21300034: tile_jungle_tree_dark_17
+    21300036: tile_jungle_tree_dark_18
+    21300038: tile_jungle_tree_dark_19
+    21300040: tile_jungle_tree_dark_20
+    21300042: tile_jungle_tree_dark_21
+    21300044: tile_jungle_tree_dark_22
+    21300046: tile_jungle_tree_dark_23
+    21300048: tile_jungle_tree_dark_24
+    21300050: tile_jungle_tree_dark_25
+    21300052: tile_jungle_tree_dark_26
+    21300054: tile_jungle_tree_dark_27
+    21300056: tile_jungle_tree_dark_28
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tile_jungle_tree_dark_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 16, y: -16}
+        - {x: 16, y: 16}
+    - name: tile_jungle_tree_dark_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 305
+        width: 38
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -4, y: 19}
+        - {x: -18, y: 13}
+        - {x: -18, y: -19}
+        - {x: 19, y: -19}
+        - {x: 19, y: 19}
+    - name: tile_jungle_tree_dark_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 321
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 303
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 20}
+        - {x: -19, y: -20}
+        - {x: 19, y: -20}
+        - {x: 19, y: 15}
+        - {x: 11, y: 20}
+    - name: tile_jungle_tree_dark_4
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 0
+        width: 128
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 24.5}
+        - {x: -38, y: 21.5}
+        - {x: -58, y: -17.5}
+        - {x: -58, y: -24.5}
+        - {x: 61, y: -24.5}
+        - {x: 61, y: -16.5}
+        - {x: 36, y: 24.5}
+    - name: tile_jungle_tree_dark_5
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 50
+        width: 126
+        height: 44
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -32, y: 22}
+        - {x: -32, y: -22}
+        - {x: 36, y: -22}
+        - {x: 36, y: 22}
+    - name: tile_jungle_tree_dark_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 94
+        width: 94
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -47, y: 36}
+        - {x: -47, y: -36}
+        - {x: 20, y: -36}
+        - {x: 23, y: 27}
+        - {x: 23, y: 36}
+    - name: tile_jungle_tree_dark_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 167
+        width: 257
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -88.5, y: 22.5}
+        - {x: -128.5, y: 17.5}
+        - {x: -128.5, y: -20.5}
+        - {x: -113.5, y: -22.5}
+        - {x: 83.5, y: -22.5}
+        - {x: 128.5, y: -1.5}
+        - {x: 128.5, y: 7.5}
+        - {x: 83.5, y: 22.5}
+    - name: tile_jungle_tree_dark_8
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 212
+        width: 75
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -27.5, y: -20.5}
+        - {x: 36.5, y: -20.5}
+        - {x: 36.5, y: -12.5}
+        - {x: 35.5, y: 20.5}
+        - {x: -29.5, y: 20.5}
+        - {x: -29.5, y: -9.5}
+    - name: tile_jungle_tree_dark_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 219
+        width: 47
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 0.5, y: 17}
+        - {x: -14.5, y: 11}
+        - {x: -23.5, y: -8}
+        - {x: -23.5, y: -13}
+        - {x: -22.5, y: -14}
+        - {x: 16.5, y: -14}
+        - {x: 23.5, y: 2}
+        - {x: 23.5, y: 17}
+    - name: tile_jungle_tree_dark_10
+      rect:
+        serializedVersion: 2
+        x: 258
+        y: 186
+        width: 48
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_11
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 149
+        width: 43
+        height: 36
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -10.5, y: 18}
+        - {x: -18.5, y: 12}
+        - {x: -18.5, y: -10}
+        - {x: -3.5, y: -17}
+        - {x: 19.5, y: -17}
+        - {x: 19.5, y: 14}
+        - {x: 7.5, y: 18}
+    - name: tile_jungle_tree_dark_12
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 95
+        width: 69
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 3.5, y: 33}
+        - {x: -19.5, y: 33}
+        - {x: -24.5, y: 32}
+        - {x: -34.5, y: 6}
+        - {x: -34.5, y: -26}
+        - {x: -20.5, y: -34}
+        - {x: 13.5, y: -34}
+        - {x: 33.5, y: -13}
+        - {x: 33.5, y: 15}
+    - name: tile_jungle_tree_dark_13
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 18
+        width: 77
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -31.5, y: -15}
+        - {x: -16.5, y: -30}
+        - {x: 9.5, y: -30}
+        - {x: 33.5, y: -19}
+        - {x: 33.5, y: 15}
+        - {x: 28.5, y: 31}
+        - {x: -17.5, y: 31}
+        - {x: -31.5, y: 11}
+    - name: tile_jungle_tree_dark_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 321
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 288
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 16, y: -10}
+        - {x: 16, y: 16}
+        - {x: -16, y: 16}
+        - {x: -16, y: -16}
+        - {x: 6, y: -16}
+        - {x: 7, y: -14}
+        - {x: 7, y: -11}
+        - {x: 15, y: -11}
+    - name: tile_jungle_tree_dark_16
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 289
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 16}
+        - {x: -16.5, y: -12}
+        - {x: -6.5, y: -11}
+        - {x: -7.5, y: -12}
+        - {x: -6.5, y: -16}
+        - {x: 16.5, y: -16}
+        - {x: 16.5, y: 16}
+    - name: tile_jungle_tree_dark_17
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 257
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_18
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 303
+        width: 37
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -5.5, y: 20}
+        - {x: -18.5, y: 14}
+        - {x: -18.5, y: -20}
+        - {x: 18.5, y: -20}
+        - {x: 18.5, y: 20}
+    - name: tile_jungle_tree_dark_19
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 262
+        width: 38
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 20.5}
+        - {x: -19, y: -15.5}
+        - {x: -9, y: -20.5}
+        - {x: 19, y: -20.5}
+        - {x: 19, y: 20.5}
+    - name: tile_jungle_tree_dark_20
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 263
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -19, y: 20}
+        - {x: -19, y: -20}
+        - {x: 8, y: -20}
+        - {x: 19, y: -11}
+        - {x: 19, y: 20}
+    - name: tile_jungle_tree_dark_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 321
+        width: 33
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_22
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 321
+        width: 31
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_23
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 288
+        width: 31
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_tree_dark_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 288
+        width: 33
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -16.5, y: 16}
+        - {x: -16.5, y: -12}
+        - {x: -9.5, y: -16}
+        - {x: 16.5, y: -16}
+        - {x: 16.5, y: 16}
+    - name: tile_jungle_tree_dark_25
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 304
+        width: 38
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 6, y: 20}
+        - {x: -19, y: 20}
+        - {x: -19, y: -20}
+        - {x: 19, y: -20}
+        - {x: 19, y: 9}
+        - {x: 10, y: 19}
+    - name: tile_jungle_tree_dark_26
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 261
+        width: 40
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 19, y: 13.5}
+        - {x: 17, y: 21.5}
+        - {x: -20, y: 21.5}
+        - {x: -20, y: -19.5}
+        - {x: -18, y: -20.5}
+        - {x: -1, y: -20.5}
+        - {x: 5, y: -19.5}
+        - {x: 18, y: -5.5}
+        - {x: 19, y: 3.5}
+    - name: tile_jungle_tree_dark_27
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 261
+        width: 38
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -18, y: 21.5}
+        - {x: -19, y: 20.5}
+        - {x: -19, y: 5.5}
+        - {x: -18, y: -6.5}
+        - {x: 0, y: -21.5}
+        - {x: 13, y: -21.5}
+        - {x: 19, y: -19.5}
+        - {x: 19, y: 21.5}
+    - name: tile_jungle_tree_dark_28
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 115
+        width: 66
+        height: 51
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 27, y: 19.5}
+        - {x: 15, y: 8.5}
+        - {x: -24, y: 21.5}
+        - {x: -32, y: 21.5}
+        - {x: -32, y: 2.5}
+        - {x: -20, y: -15.5}
+        - {x: -4, y: -25.5}
+        - {x: 10, y: -25.5}
+        - {x: 30, y: -6.5}
+        - {x: 33, y: -0.5}
+        - {x: 33, y: 21.5}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
