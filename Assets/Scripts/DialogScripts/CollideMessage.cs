@@ -43,7 +43,7 @@ public class CollideMessage : MonoBehaviour {
 		if (needededItems != null) {
 			foreach(string item in needededItems){
 				//if item is in the game manager's player inventory, add it to the message
-				if (GameManager.gameManager.itemList.Contains(item)){
+				if (ItemManager.itemManager.itemList.Contains(item)){
 					finalMessageIndex+=1;
 				}
 			}

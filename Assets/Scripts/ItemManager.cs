@@ -9,10 +9,10 @@ using System.Collections.Generic;       //Allows us to use Lists.
  * 
  * 
 **/
-public class GameManager : MonoBehaviour
+public class ItemManager : MonoBehaviour
 {
 
-	public static GameManager gameManager = null;              //Static instance of GameManager which allows it to be accessed by any other script.
+	public static ItemManager itemManager = null;              //Static instance of GameManager which allows it to be accessed by any other script.
 	private int level = 3;                                  //Current level number, expressed in game as "Day 1".
 
 	public List<string> itemList;
@@ -21,13 +21,13 @@ public class GameManager : MonoBehaviour
 	void Awake()
 	{
 		//Check if instance already exists
-		if (gameManager == null)
+		if (itemManager == null)
 
 			//if not, set instance to this
-			gameManager = this;
+			itemManager = this;
 
 		//If instance already exists and it's not this:
-		else if (gameManager != this)
+		else if (itemManager != this)
 
 			//Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
 			Destroy(gameObject);    
