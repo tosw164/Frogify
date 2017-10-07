@@ -9,7 +9,6 @@ GameObject:
   m_Component:
   - 4: {fileID: 455560}
   - 33: {fileID: 3378928}
-  - 65: {fileID: 6553476}
   - 23: {fileID: 2301148}
   - 114: {fileID: 11412886}
   m_Layer: 0
@@ -65,31 +64,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136976}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &6553476
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 136976}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &11412886
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136976}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f05280f23212466a8c248a88c41db25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 175400, guid: 8f8286fed50254cb09de3456d87e6c89, type: 2}
-  shootingRate: 0
+  shootingRate: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
