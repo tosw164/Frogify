@@ -11,19 +11,33 @@ public class Spider : MonoBehaviour {
 
 	private float movement_speed = 2f;
 	private bool move_down;
+
+	//Tracks the shaking left and right
 	private bool shake;
 	private bool prevShake;
-	private float shakeCounterRate = 5;
+
+	//The pausing counter between shakes
+	private float shakeCounterPause = 5;
 	private float shakeCounter;
+
+	//The timer for how long the spider shakes
+	private float shakeTimer;
+	private float shakeTimerLimit;
 
 	//Counter for speed of spider dropping down, increments as it goes
 	float counter;
 
 	// Use this for initialization
 	void Start () {
+		
 		shake = true;
 		prevShake = true;
+
+		shakeTimer = 0f;
+		shakeTimerLimit = 30f;
+
 		move_down = true;
+
 		counter = 0;
 		shakeCounter = 0;
 	}
@@ -34,11 +48,12 @@ public class Spider : MonoBehaviour {
 		if (shake == true) {
 			shakeSpider ();
 		} else {
+			Debug.Log ("DROP");
 			if (transform.position.y < bottom_y) {
 				move_down = false;
 			} else if (transform.position.y > top_y) {
 				shake = true;
-				shakeSpider ();
+				move_down = true;
 				counter = 0.0f;
 
 			}
@@ -58,8 +73,19 @@ public class Spider : MonoBehaviour {
 	void shakeSpider(){
 		float speed = 1.0f; //how fast it shakes
 		float amount = 10.0f; //how much it shakes
+
+
+		shakeTimer++;
 		shakeCounter++;
-		if (shakeCounter == shakeCounterRate) {
+//		Debug.Log (shakeTimer);
+
+		if (shakeTimer > shakeTimerLimit) {
+			shake = false;
+			//Sets the timer for the amount shake to 0 again
+			shakeTimer = 0f;
+		}
+			
+		if (shakeCounter == shakeCounterPause) {
 			if (prevShake) {
 				transform.Translate (Vector2.left * (amount * (Time.deltaTime * speed)));
 				prevShake = false;
@@ -69,5 +95,6 @@ public class Spider : MonoBehaviour {
 			}
 			shakeCounter = 0f;
 		}
+
 	}
 }
