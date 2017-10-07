@@ -15,6 +15,7 @@ GameObject:
   - 61: {fileID: 6143790}
   - 114: {fileID: 11426654}
   - 114: {fileID: 11455670}
+  - 61: {fileID: 6115518}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -54,10 +55,25 @@ GameObject:
   - 114: {fileID: 11466818}
   - 114: {fileID: 11474402}
   - 114: {fileID: 11482876}
-  - 114: {fileID: 11470418}
   - 114: {fileID: 11472590}
-  - 114: {fileID: 11423454}
   - 114: {fileID: 11468356}
+  - 114: {fileID: 11495052}
+  - 114: {fileID: 11410604}
+  - 114: {fileID: 11439934}
+  - 114: {fileID: 11404590}
+  - 114: {fileID: 11422976}
+  - 114: {fileID: 11453332}
+  - 114: {fileID: 11488266}
+  - 114: {fileID: 11410382}
+  - 114: {fileID: 11464880}
+  - 114: {fileID: 11400164}
+  - 114: {fileID: 11454928}
+  - 114: {fileID: 11415704}
+  - 114: {fileID: 11434456}
+  - 114: {fileID: 11421686}
+  - 114: {fileID: 11442110}
+  - 114: {fileID: 11469266}
+  - 114: {fileID: 11445886}
   m_Layer: 0
   m_Name: urlanaFlowchart
   m_TagString: Untagged
@@ -106,6 +122,20 @@ BoxCollider2D:
   m_Offset: {x: 0.014722342, y: 0.071913846}
   serializedVersion: 2
   m_Size: {x: 2.7438939, y: 2.7260232}
+--- !u!61 &6115518
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0.8137168, y: 1.2034401}
+  serializedVersion: 2
+  m_Size: {x: 9.800376, y: 4.9642406}
 --- !u!61 &6143790
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -120,6 +150,28 @@ BoxCollider2D:
   m_Offset: {x: 0.8137168, y: 1.2034401}
   serializedVersion: 2
   m_Size: {x: 9.800376, y: 4.9642406}
+--- !u!114 &11400164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  text: The humans have great big beasts that can bring down your home, as easily
+    as you swatting down a beehve. I'm telling you, your home will be flattened!
+  description: Pathos chosen
+  targetBlock: {fileID: 11464880}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
 --- !u!114 &11400384
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,7 +189,7 @@ MonoBehaviour:
     leave the forest?
   description: 
   character: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: daddd40e074fc43adacd0481cce27e18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -177,6 +229,30 @@ MonoBehaviour:
   - {fileID: 11410456}
   - {fileID: 11443284}
   - {fileID: 11444564}
+--- !u!114 &11404590
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 458
+    y: 135.16687
+    width: 120
+    height: 40
+  itemId: 26
+  blockName: Logos
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 11439934}
+  - {fileID: 11445886}
 --- !u!114 &11406424
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -191,6 +267,28 @@ MonoBehaviour:
   itemId: 5
   indentLevel: 0
   sayDialog: {fileID: 0}
+--- !u!114 &11410382
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  text: I've seen the humans, Bearlana. I've seen what they can do! You can trust
+    me, Bearlana, you've known me since I was a tadpole...
+  description: Ethos chosen
+  targetBlock: {fileID: 11488266}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
 --- !u!114 &11410456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -217,6 +315,46 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &11410604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  storyText: Pawpaws, for me? Good lad! Is that honey too? And yet... It's so black.
+    And it smells horrible!
+  description: 
+  character: {fileID: 11455670}
+  portrait: {fileID: 21300000, guid: ea8f56c43254d41728f5ac4e8299b6c9, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &11415704
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b097b9790a8a1456a86bc4d322b487db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  menuDialog: {fileID: 0}
 --- !u!114 &11420580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -257,7 +395,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 209
-    y: 201
+    y: 203
     width: 131
     height: 40
   itemId: 18
@@ -268,10 +406,16 @@ MonoBehaviour:
   - {fileID: 11466818}
   - {fileID: 11474402}
   - {fileID: 11482876}
-  - {fileID: 11470418}
+  - {fileID: 11410604}
+  - {fileID: 11421686}
+  - {fileID: 11434456}
+  - {fileID: 11415704}
+  - {fileID: 11442110}
+  - {fileID: 11454928}
+  - {fileID: 11400164}
+  - {fileID: 11410382}
   - {fileID: 11472590}
-  - {fileID: 11423454}
---- !u!114 &11423454
+--- !u!114 &11421686
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -279,24 +423,50 @@ MonoBehaviour:
   m_GameObject: {fileID: 138834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 24
+  itemId: 35
   indentLevel: 0
-  targetObject: {fileID: 0}
-  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
-    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: Platformer2DUserControl
-  targetMethod: enableMovement
-  targetMethodText: 'enableMovement (): Void'
-  methodParameters: []
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
+  storyText: I've been trying to tell you, Bearlana. The humans have done this! You
+    have to leave!
+  description: 
+  character: {fileID: 0}
+  portrait: {fileID: 21300000, guid: daddd40e074fc43adacd0481cce27e18, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &11422976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  storyText: My home, destroyed by giant beasts like a beehive swatted to the ground?
+    Oh no! We must leave at once, Pep!
+  description: 
+  character: {fileID: 11455670}
+  portrait: {fileID: 21300000, guid: ea8f56c43254d41728f5ac4e8299b6c9, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!114 &11425510
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,6 +512,31 @@ MonoBehaviour:
   needededItems:
   - pawpaw
   - oilyHoney
+--- !u!114 &11434456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  storyText: I love this home, Pep. I can't just leave.
+  description: 
+  character: {fileID: 11455670}
+  portrait: {fileID: 21300000, guid: ea8f56c43254d41728f5ac4e8299b6c9, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!114 &11437666
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,6 +563,52 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &11439934
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 31
+  indentLevel: 0
+  storyText: 'While you make sense, Pep, I am attached to this little cave. '
+  description: 
+  character: {fileID: 11455670}
+  portrait: {fileID: 21300000, guid: ea8f56c43254d41728f5ac4e8299b6c9, type: 3}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
+--- !u!114 &11442110
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 37
+  indentLevel: 0
+  text: Bearlana seems quite emotional, particularly to his home...
+  description: Description
+  targetBlock: {fileID: 11404590}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 0
+  setMenuDialog: {fileID: 0}
 --- !u!114 &11443284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -436,6 +677,32 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &11445886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 38
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: enableMovement
+  targetMethodText: 'enableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &11447316
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -452,7 +719,7 @@ MonoBehaviour:
   storyText: It's me, Pep!
   description: 
   character: {fileID: 0}
-  portrait: {fileID: 0}
+  portrait: {fileID: 21300000, guid: daddd40e074fc43adacd0481cce27e18, type: 3}
   voiceOverClip: {fileID: 0}
   showAlways: 1
   showCount: 1
@@ -530,6 +797,33 @@ MonoBehaviour:
   move: 1
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &11453332
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 32
+  indentLevel: 0
+  storyText: I'm sorry, Pep, but this is my home. I grew up with the bees and the
+    pawpaws. I can't leave them now on a rumour spread by a small little critter like
+    you.
+  description: 
+  character: {fileID: 11494076}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!114 &11453340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -549,10 +843,10 @@ MonoBehaviour:
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
-    x: -350
+    x: -351.16687
     y: -361
-    width: 1311
-    height: 1003
+    width: 1331.1669
+    height: 1050.5336
   selectedBlock: {fileID: 11401276}
   selectedCommands: []
   variables: []
@@ -566,6 +860,28 @@ MonoBehaviour:
   hideCommands: []
   luaEnvironment: {fileID: 0}
   luaBindingName: flowchart
+--- !u!114 &11454928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  text: It's only a matter of time before all the honey becomes oily. Eventually,
+    you will starve!
+  description: logos chosen
+  targetBlock: {fileID: 11404590}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
 --- !u!114 &11455670
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -610,6 +926,30 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 0}
+--- !u!114 &11464880
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 457.23517
+    y: 249.5336
+    width: 120
+    height: 40
+  itemId: 28
+  blockName: Pathos
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 11422976}
+  - {fileID: 11495052}
 --- !u!114 &11465200
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -665,7 +1005,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   parentBlock: {fileID: 11421198}
   message: 2
---- !u!114 &11470418
+--- !u!114 &11469266
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -673,23 +1013,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 138834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 22
+  itemId: 39
   indentLevel: 0
-  storyText: I will leave the forest
-  description: 
-  character: {fileID: 11494076}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  targetObject: {fileID: 0}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: enableMovement
+  targetMethodText: 'enableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &11470610
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -826,6 +1167,30 @@ MonoBehaviour:
   move: 1
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &11488266
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 457.23523
+    y: 187.68988
+    width: 120
+    height: 40
+  itemId: 30
+  blockName: Ethos
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 11453332}
+  - {fileID: 11469266}
 --- !u!114 &11492964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -873,6 +1238,32 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
+--- !u!114 &11495052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 138834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  targetObject: {fileID: 0}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: enableMovement
+  targetMethodText: 'enableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!212 &21200000
 SpriteRenderer:
   m_ObjectHideFlags: 1
