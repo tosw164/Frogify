@@ -4,27 +4,11 @@ using UnityEngine.UI;
 
 public class PlayerCollectable : MonoBehaviour {
 
-
-//	private int score = 0;
-	public Text scoreText;
-
-	void Start() {
-		UpdateScore ();
-	}
-
-	void Update() {
-	}
-
+	// Update the singleton ScoreManager's score when the player picks up a coin.
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Collectable")) {
 			other.gameObject.SetActive (false);
 			ScoreManager.manager.score++;
-			UpdateScore ();
 		}
-	}
-
-	void UpdateScore()
-	{
-		scoreText.text = "Score: " + ScoreManager.manager.score;
 	}
 }
