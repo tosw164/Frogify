@@ -8,7 +8,7 @@ public class PlayerCollectable : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Collectable")) {
 			other.gameObject.SetActive (false);
-			ScoreManager.manager.score++;
+			ScoreManager.manager.collectableScore++;
 		}
 	}
 }

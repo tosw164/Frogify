@@ -4,7 +4,7 @@ using System.Collections;
 public class ScoreManager : MonoBehaviour {
 	
 	public static ScoreManager manager;
-	public int score;
+	public int collectableScore;
 
 	void Awake () {
 
