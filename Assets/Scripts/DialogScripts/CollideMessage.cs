@@ -54,7 +54,7 @@ public class CollideMessage : MonoBehaviour {
 			_firstTimeList.Add (true);
 		}
 
-		if (targetFlowchart != null && other.name == "Player" && _firstTimeList[finalMessageIndex]) {
+		if (targetFlowchart != null && other.tag == "Player" && _firstTimeList[finalMessageIndex]) {
 
 			targetFlowchart.SendFungusMessage (""+finalMessageIndex);
 			_firstTimeList [finalMessageIndex] = false;//set the first time to false after first time interacted
