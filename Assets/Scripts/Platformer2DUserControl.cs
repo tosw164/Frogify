@@ -58,6 +58,7 @@ namespace UnityStandardAssets._2D
 
 		public void enableMovement(){
 			isMovable = true;
+
 		}
 	}
 }
