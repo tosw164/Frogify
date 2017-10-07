@@ -9,11 +9,11 @@ using System.Collections;
  * This class follows the singleton pattern, and is insipred from the
  * Unity tutorial - Data Persistence.
  */
-public class ScoreManager : MonoBehaviour {
+public class OverallScoreManager : MonoBehaviour {
 
 	//Follwoing the singeltong pattern - static variable allows the instance
 	//to be obtained and then increment/decrement/get health.
-	public static ScoreManager scoreManager;
+	public static OverallScoreManager scoreManager;
 
 	//Values for each respective score.
 	private long argumentationScore;
