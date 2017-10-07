@@ -11,11 +11,14 @@ public class CollisionFlag : MonoBehaviour {
 	public float distance = 3f;
 	public LineRenderer rope;
 
+	public static bool isAttached;
+
 	void Start(){
 		//Disable rope and joint, instantiate joint
 		joint = GetComponent<SpringJoint2D> ();
 		joint.enabled = false;
 		rope.enabled = false;
+		isAttached = false;
 	}
 
 	void OnTriggerStay2D(Collider2D other)
@@ -31,7 +34,7 @@ public class CollisionFlag : MonoBehaviour {
 				rope.enabled = true;
 				rope.SetPosition (0, transform.position);
 				rope.SetPosition (1, other.transform.position);
-				
+				isAttached = true;
 			}
 		}
 	}
@@ -41,6 +44,7 @@ public class CollisionFlag : MonoBehaviour {
 		if (Input.GetKeyUp(KeyCode.Space) && rope.enabled == true){
 			joint.enabled = false;
 			rope.enabled = false;
+			isAttached = false;
 		}
 
 		if (Input.GetKey(KeyCode.Space) && rope.enabled == true){
