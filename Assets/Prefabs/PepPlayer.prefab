@@ -49,6 +49,7 @@ GameObject:
   - 114: {fileID: 11421484}
   - 120: {fileID: 12042038}
   - 114: {fileID: 11471036}
+  - 114: {fileID: 11432712}
   m_Layer: 9
   m_Name: PepPlayer
   m_TagString: Player
@@ -276,6 +277,17 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294963711
   run_multiplier: 2.5
+--- !u!114 &11432712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c197f448e20f246349309c690c9a5aa1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11433600
 MonoBehaviour:
   m_ObjectHideFlags: 1

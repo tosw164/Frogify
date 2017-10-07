@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 467896}
   - 114: {fileID: 11470444}
   m_Layer: 0
-  m_Name: ScoreManagerPrefab
+  m_Name: ScoreManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a15789d0233488cbba7cf862c8cb62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  score: 0
+  collectableScore: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
