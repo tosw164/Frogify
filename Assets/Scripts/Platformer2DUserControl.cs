@@ -33,6 +33,7 @@ namespace UnityStandardAssets._2D
 
 		private void FixedUpdate()
 		{
+
 			//check if movable
 			if (isMovable) {
 				// Read the inputs.
