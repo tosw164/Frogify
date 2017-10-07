@@ -1,19 +1,19 @@
 ﻿using System;
 using UnityEngine;
-using UnityStandardAssets.CrossPlatformInput;
+//using UnityStandardAssets.CrossPlatformInput;
 
 namespace UnityStandardAssets._2D
 {
-	[RequireComponent(typeof (CustomCharacter))]
+//	[RequireComponent(typeof (CustomCharacter))]
 	public class CustomControl: MonoBehaviour
 	{
-		private CustomCharacter m_Character;
+//		private CustomCharacter m_Character;
 		private bool m_Jump;
 
 
 		private void Awake()
 		{
-			m_Character = GetComponent<CustomCharacter>();
+//			m_Character = GetComponent<CustomCharacter>();
 		}
 
 
@@ -22,7 +22,7 @@ namespace UnityStandardAssets._2D
 			if (!m_Jump)
 			{
 				// Read the jump input in Update so button presses aren't missed.
-				m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+//				m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
 			}
 		}
 
@@ -31,9 +31,9 @@ namespace UnityStandardAssets._2D
 		{
 			// Read the inputs.
 			bool crouch = Input.GetKey(KeyCode.LeftControl);
-			float h = CrossPlatformInputManager.GetAxis("Horizontal");
+//			float h = CrossPlatformInputManager.GetAxis("Horizontal");
 			// Pass all parameters to the character control script.
-			m_Character.Move(h, crouch, m_Jump);
+//			m_Character.Move(h, crouch, m_Jump);
 			m_Jump = false;
 		}
 	}
