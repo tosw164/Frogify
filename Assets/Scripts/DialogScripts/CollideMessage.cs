@@ -1,39 +1,65 @@
 ﻿using UnityEngine;
 using System.Collections;
 using Fungus;
+using System.Collections.Generic;
 
 /**
- * This script should be used for all assets that have a dialogue-on-interact component.
+ * This script should be used for all assets that have a dialogue-on-trigger component.
  * Set the repeatable to true if you want the trigger to repeat.
- * Set the broadcast message to the name of the dialogue fungus box.
+ * 
+ * THe script incorporates conditional messages
+ * Currently, the different dialogue options are based on the inventory that Pep has.
+ * If Pep has no required items, it sends message 0.
+ * THe message index is used to call the particular flowchart block required.
+ * 
+ * You have to populate the required items yourself. 
+ * The required items convention is to have a camelCase and is stored in the 
+ * singleton GameManager.
  * 
 **/
 public class CollideMessage : MonoBehaviour {
 
 	public bool isRepeatable = false;
-	public string broadcastMessage;
+	public Flowchart targetFlowchart;
+	//list of things that are needed
+	public List<string> needededItems;
 
-	private bool firstTime=true;
+	private bool _firstTime=true;
+	private List<bool> _firstTimeList = new List<bool>();
 
-	void OnCollisionEnter(Collision collision){
-		print ("collided");
-	
-	}
+//for collision enter actions. COuld be useful in future.
+//	void OnCollisionEnter(Collision collision){
+//		print ("collided");
+//	
+//	}
 
+	//When player enters the trigger box, send the flowchartMessage to the target flowchart.
 	void OnTriggerEnter2D(Collider2D other){
-		print ("collided");
+		_firstTimeList.Add (true);
 
-		if (other.name == "Player" && firstTime) {
-			print ("triggered");
-			Flowchart.BroadcastFungusMessage(broadcastMessage);
-			if (!isRepeatable) {
-				firstTime = false;//disable from repeating
+		int finalMessageIndex=0;//message to send based on the items
+		//if the NPC has multiple dialogue scenes, the dialogue scenes are based on what the 
+		//character is carrying.
+		if (needededItems != null) {
+			foreach(string item in needededItems){
+				//if item is in the game manager's player inventory, add it to the message
+				if (ItemManager.itemManager.itemList.Contains(item)){
+					finalMessageIndex+=1;
+				}
 			}
-			//disable player movement during the timeframe 
-
-		
 		}
 
+		//intialize the first-time flag list
+		for (int i = 0; i < needededItems.Count; i++){
+			_firstTimeList.Add (true);
+		}
+
+		if (targetFlowchart != null && other.tag == "Player" && _firstTimeList[finalMessageIndex]) {
+
+			targetFlowchart.SendFungusMessage (""+finalMessageIndex);
+			_firstTimeList [finalMessageIndex] = false;//set the first time to false after first time interacted
+		
+		}
 
 
 	}
