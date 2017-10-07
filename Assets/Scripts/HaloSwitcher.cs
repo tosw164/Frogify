@@ -4,24 +4,35 @@ using System.Collections;
 public class HaloSwitcher : MonoBehaviour {
 
 	private Behaviour componentHalo;
-	private int i;
+	private bool outsideRegion;
 	// Use this for initialization
 	void Start () {
-		i = 0;
-		Debug.Log("made i: "+i);
+		outsideRegion = true;
 		componentHalo = (Behaviour)GetComponent("Halo");
+
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) 
 	{
-		i++;
-		Debug.Log("ouch"+i);
 		componentHalo.enabled = true;
+		outsideRegion = false;
 	}
 
 	void OnTriggerExit2D (Collider2D col) 
 	{
+		outsideRegion = true;
 		componentHalo.enabled = false;
+	}
+
+	void Update (){
+		if (outsideRegion) {
+			if (CollisionFlag.isAttached) {
+				componentHalo.enabled = true;
+			} else {
+				outsideRegion = false;
+				componentHalo.enabled = false;
+			}
+		}
 	}
 
 }
