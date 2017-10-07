@@ -32,7 +32,7 @@ namespace UnityStandardAssets._2D
 			bool crouch = Input.GetKey(KeyCode.LeftControl) | Input.GetKey(KeyCode.S);
 			bool run = Input.GetKey (KeyCode.LeftShift);
 			float h = Input.GetAxis("Horizontal");
-			Debug.Log (crouch + " " + run + " " + h);
+//			Debug.Log (crouch + " " + run + " " + h);
 			// Pass all parameters to the character control script.
 			m_Character.Move(h, crouch, m_Jump, run);
 			m_Jump = false;

@@ -20,6 +20,8 @@ namespace UnityStandardAssets._2D
 		private Rigidbody2D m_Rigidbody2D;
 		private bool m_FacingRight = true;  // For determining which way the player is currently 
 
+		public float run_multiplier = 2.5f;
+
 		private void Awake()
 		{
 			// Setting up references.
@@ -74,13 +76,13 @@ namespace UnityStandardAssets._2D
 				m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
-				float run_multiplier = 1.0f;
-				if (run == true){
-					run_multiplier = 2.5f;
+				float x_velocity = 1.0f;
+				if (run == true && m_Grounded == true){
+					x_velocity = run_multiplier;
 				}
 
 				// Move the character
-				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed*run_multiplier, m_Rigidbody2D.velocity.y);
+				m_Rigidbody2D.velocity = new Vector2(move*m_MaxSpeed*x_velocity, m_Rigidbody2D.velocity.y);
 
 				// If the input is moving the player right and the player is facing left...
 				if (move > 0 && !m_FacingRight)
