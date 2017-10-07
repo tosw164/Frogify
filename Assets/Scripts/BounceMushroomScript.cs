@@ -25,7 +25,7 @@ public class BounceMushroomScript : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.name == "Player" ) {
+		if (other.gameObject.name == "Pep" ) {
 			anim.SetBool ("IsReleased",false);
 			anim.SetBool ("IsOnTop",true);
 			collided = true;
