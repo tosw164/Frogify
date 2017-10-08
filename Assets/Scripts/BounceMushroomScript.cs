@@ -7,27 +7,28 @@ public class BounceMushroomScript : MonoBehaviour {
 	GameObject Player;
 	Rigidbody2D rigi2d;
 	public Vector2 velocity;
-	public Animator anim;
+	//public Animator anim;
 	public bool collided;
 
 
 	// Use this for initialization
 	void Start () {
-		anim = GetComponent<Animator> ();
+		//anim = GetComponent<Animator> ();
 	}
 
 	void Update () {
-		if (collided && Input.GetKeyDown ("space")) {
-			anim.SetBool ("IsReleased",true);
+		if (collided) {
+			//anim.SetBool ("IsReleased",true);
 			Player.GetComponent<Rigidbody2D>().velocity = velocity;
-			anim.SetBool ("IsOnTop",false);
+			//anim.SetBool ("IsOnTop",false);
+			collided = false;
 		}
 	}
 
 	void OnCollisionEnter2D(Collision2D other) {
-		if (other.gameObject.name == "Pep" ) {
-			anim.SetBool ("IsReleased",false);
-			anim.SetBool ("IsOnTop",true);
+		if (other.gameObject.CompareTag("Player")) {
+			//anim.SetBool ("IsReleased",false);
+			//anim.SetBool ("IsOnTop",true);
 			collided = true;
 			Player = other.gameObject;
 		}
