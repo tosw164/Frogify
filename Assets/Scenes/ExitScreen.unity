@@ -13179,16 +13179,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 77
   indentLevel: 0
-  targetObject: {fileID: 0}
-  targetComponentAssemblyName: 
-  targetComponentFullname: 
-  targetComponentText: 
-  targetMethod: 
-  targetMethodText: 
-  methodParameters: []
+  targetObject: {fileID: 1103076337}
+  targetComponentAssemblyName: LevelCompleteMenu, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: LevelCompleteMenu
+  targetMethod: setActive
+  targetMethodText: 'setActive (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: pathos
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
-  returnValueType: 
+  returnValueType: System.Void
   showInherited: 0
   callMode: 0
 --- !u!114 &837364422
@@ -16496,7 +16514,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 175934, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
@@ -17831,6 +17849,21 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1103076337 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 141128, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
+  m_PrefabInternal: {fileID: 1193491738}
+--- !u!114 &1103076338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103076337}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3207915cc3a3e400ea05b33e9f08ea87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1123092446
 GameObject:
   m_ObjectHideFlags: 0
@@ -18927,6 +18960,14 @@ Prefab:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 141128, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 132572, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 175936, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
