@@ -17665,7 +17665,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitsToMove: 25
-  EnemySpeed: 15
+  EnemySpeed: 10
   _isFacingUp: 0
   _startPos: 0
   _endPos: 0
@@ -24020,7 +24020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   UnitsToMove: 25
-  EnemySpeed: 15
+  EnemySpeed: 25
   _isFacingUp: 0
   _startPos: 0
   _endPos: 0
@@ -25848,6 +25848,11 @@ Prefab:
     - target: {fileID: 4497400648710374, guid: 60b9fb8f580d3944fbfd4d8aedab86ff, type: 2}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114100151431405452, guid: 60b9fb8f580d3944fbfd4d8aedab86ff,
+        type: 2}
+      propertyPath: EnemySpeed
+      value: 18
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 60b9fb8f580d3944fbfd4d8aedab86ff, type: 2}
