@@ -23,6 +23,9 @@ public class ScoreManager : MonoBehaviour {
 
 	//called by the dialogue to load exit scenes
 	public void saveChoice(string playerChoice){
-		choice = playerChoice;
+		Debug.Log (playerChoice);
+		ScoreManager.manager.choice = playerChoice;
+		Debug.Log ("choiceAssigned");
+
 	}
 }
