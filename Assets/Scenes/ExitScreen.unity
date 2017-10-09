@@ -269,6 +269,14 @@ Prefab:
       propertyPath: m_AnchoredPosition.y
       value: 0.000010013999
       objectReference: {fileID: 0}
+    - target: {fileID: 11473704, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462732, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3ad0ca64958fc4edcb2c9b3801d708ed, type: 2}
   m_IsPrefabParent: 0
