@@ -28,4 +28,10 @@ public class ScoreManager : MonoBehaviour {
 		Debug.Log ("choiceAssigned");
 
 	}
+
+	public void setZero(){
+		Debug.Log ("SCORE");
+		ScoreManager.manager.collectableScore = 0;
+	}
+
 }
