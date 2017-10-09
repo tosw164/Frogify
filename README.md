@@ -10,10 +10,15 @@ Our protagonist is Pep, a naive young frog that must persuade his tribe to leave
 
 ## Running the Game
 
-This Unity game was developed using Unity version 5.3.5f1. The game project should be openable after cloning the
-repository and importing the root directory as a project into Unity. Running the MainMenu scene (under Assets/Scenes)
+This Unity game was developed using Unity version 5.3.5f1. The game project should be importable after cloning the
+repository and import the root directory as a project into Unity. Running the MainMenu scene (under Assets/Scenes)
 will start the game. Alternatively, you can download the executable for the prototype under the
-[releases](https://github.com/tosw164/Frogify/releases) section of the repository.
+[releases](https://github.com/tosw164/Frogify/releases) section of the repository (you'll need to extract the zip
+archive).
+
+Please run the game/unity project from a local drive on the lab computers, as the network drives in UG4 gives file name
+errors (when trying to import), and also because the game is being run over the network, there will be performance
+issues (especially with frame rate).
 
 ## Group Members
 | Name  | Github Username | UPI | ID |
