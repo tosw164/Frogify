@@ -1,0 +1,116 @@
+fileFormatVersion: 2
+guid: c3a5eb1b911cd4a5e99730bda8e55ec2
+timeCreated: 1508193950
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: tile_jungle_treelimb_0
+    21300002: tile_jungle_treelimb_1
+    21300004: tile_jungle_treelimb_2
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: tile_jungle_treelimb_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3
+        width: 158
+        height: 161
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: 45, y: 80.5}
+        - {x: -79, y: -11.5}
+        - {x: -79, y: -80.5}
+        - {x: -78, y: -80.5}
+        - {x: 60, y: -12.5}
+        - {x: 79, y: 37.5}
+        - {x: 79, y: 80.5}
+    - name: tile_jungle_treelimb_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 95
+        width: 132
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -66, y: 34.5}
+        - {x: -66, y: -34.5}
+        - {x: 12, y: -34.5}
+        - {x: 15, y: -33.5}
+        - {x: 17, y: -29.5}
+        - {x: 35, y: -34.5}
+        - {x: 63, y: -34.5}
+        - {x: 66, y: -11.5}
+        - {x: 66, y: 34.5}
+    - name: tile_jungle_treelimb_2
+      rect:
+        serializedVersion: 2
+        x: 290
+        y: 0
+        width: 158
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline:
+      - - {x: -42, y: 82}
+        - {x: -79, y: 82}
+        - {x: -79, y: 25}
+        - {x: 52, y: -82}
+        - {x: 79, y: -82}
+        - {x: 79, y: -37}
+        - {x: 16, y: 31}
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
