@@ -15,24 +15,19 @@ public class MovingPlatform : MonoBehaviour {
 
 	private float origPosition;
 	private bool move_left;
-	private bool firstTime;
 
 	// Use this for initialization
 	void Start () {
-		//Initially moves left
+		// Save the initial position of the platform
+		origPosition = transform.position.x;
 
+		//Initially moves left
 		move_left = true;
-		firstTime = true;
 	}
 		
 	
 	// Update is called once per frame
 	void Update () {
-		if (firstTime) {
-			origPosition = transform.position.x;
-			firstTime = false;
-		}
-
 		//If the asset moves far enough left, turns right.
 		//Vice versa, once it passes the right limit, turns left
 		if (transform.position.x < (origPosition - dLeft_x)){
