@@ -8,27 +8,36 @@ using System.Collections;
  */
 public class MovingPlatform : MonoBehaviour {
 
-	//Public fields, assigned
-	public int left_x;
-	public int right_x;
+	//Public fields, assigned, relative to current position
+	public int dLeft_x;
+	public int dRight_x;
 	public int movement_speed;
 
+	private float origPosition;
 	private bool move_left;
+	private bool firstTime;
 
 	// Use this for initialization
 	void Start () {
 		//Initially moves left
+
 		move_left = true;
+		firstTime = true;
 	}
+		
 	
 	// Update is called once per frame
 	void Update () {
+		if (firstTime) {
+			origPosition = transform.position.x;
+			firstTime = false;
+		}
 
 		//If the asset moves far enough left, turns right.
 		//Vice versa, once it passes the right limit, turns left
-		if (transform.position.x < left_x){
+		if (transform.position.x < (origPosition - dLeft_x)){
 			move_left = false;
-		} else if (transform.position.x > right_x) {
+		} else if (transform.position.x > (origPosition + dRight_x)) {
 			move_left = true;
 		}
 
