@@ -7,7 +7,7 @@ using System.Collections;
  * script the enemy MUST have a trigger associated with it.
  * Pep must also have a rigidbody
  */
-public class EnemyDamangeOnContact : MonoBehaviour {
+public class EnemyDamageOnContact : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
@@ -17,8 +17,15 @@ public class EnemyDamangeOnContact : MonoBehaviour {
 	/**
 	 * This will trigger when Pep come within the range of the enemy,
 	 * it will decrement the health as it is a discrete value on Pep.
+	 * DOUBLE CHECK THAT COLLISION2D IS OK.
+	 * 
+	 * Also should probably have some kind of invulnerability period.
+	 * And should make him bounce somewehere.
 	 */ 
-	void OnTriggerEnter(Collider pep){
-		pep.gameObject.GetComponent<HealthManager> ().decrementHealth();
+	void OnCollisionEnter2D(Collision2D pep) {
+		if (pep.gameObject.tag == "Player") {
+			pep.gameObject.GetComponent<HealthManager> ().decrementHealth();
+			Debug.Log("Took damage");
+		}
 	}
 }

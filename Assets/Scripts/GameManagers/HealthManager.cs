@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 /*
  * This is a simple Health Manager class that will be used to store
@@ -38,6 +39,9 @@ public class HealthManager : MonoBehaviour {
 
 	public void decrementHealth(){
 		health--;
+		if (health == 0) {
+			SceneManager.LoadScene(3);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+		}
 	}
 
 	//Getter method

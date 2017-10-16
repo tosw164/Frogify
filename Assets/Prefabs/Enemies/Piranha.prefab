@@ -11,9 +11,9 @@ GameObject:
   - 212: {fileID: 21286388}
   - 95: {fileID: 9529002}
   - 114: {fileID: 11481898}
-  - 114: {fileID: 11469576}
   - 50: {fileID: 5018388}
   - 61: {fileID: 6182142}
+  - 114: {fileID: 11430546}
   m_Layer: 0
   m_Name: Piranha
   m_TagString: Untagged
@@ -82,7 +82,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11469576
+--- !u!114 &11430546
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -90,7 +90,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 163766}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e053b0a94752146e79954ce4df1b5565, type: 3}
+  m_Script: {fileID: 11500000, guid: 56c774ca5ee3d48b1affbc6821fefc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11481898
