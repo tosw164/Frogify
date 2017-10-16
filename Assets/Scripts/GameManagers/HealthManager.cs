@@ -18,11 +18,12 @@ public class HealthManager : MonoBehaviour {
 
 	//private just to enforce that health should only be incremented
 	//via use of methods - just to help debugging/controlling the value.
-	private float health;
+	private int health = 3;
 
 	//Method called to either instantiate or destroy the object to ensure
 	//singleton nature.
 	void Awake () {
+		Debug.Log ("Im alive xdd");
 		if (healthManager == null) {
 			DontDestroyOnLoad (gameObject);
 			healthManager = this;
@@ -39,6 +40,7 @@ public class HealthManager : MonoBehaviour {
 
 	public void decrementHealth(){
 		health--;
+		Debug.Log ("Took damage, current health is: " + health);
 		if (health == 0) {
 			SceneManager.LoadScene(3);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 		}

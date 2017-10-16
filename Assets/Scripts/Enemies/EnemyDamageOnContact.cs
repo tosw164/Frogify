@@ -22,9 +22,10 @@ public class EnemyDamageOnContact : MonoBehaviour {
 	 * Also should probably have some kind of invulnerability period.
 	 * And should make him bounce somewehere.
 	 */ 
-	void OnCollisionEnter2D(Collision2D pep) {
+	void OnTriggerEnter2D(Collider2D pep){ 
+		Debug.Log ("Trigger hit");
 		if (pep.gameObject.tag == "Player") {
-			pep.gameObject.GetComponent<HealthManager> ().decrementHealth();
+			HealthManager.healthManager.decrementHealth();
 			Debug.Log("Took damage");
 		}
 	}
