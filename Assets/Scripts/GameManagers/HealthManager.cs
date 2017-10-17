@@ -16,9 +16,11 @@ public class HealthManager : MonoBehaviour {
 	//to be obtained and then increment/decrement/get health.
 	public static HealthManager healthManager;
 
+	private static int DEFAULT_HEALTH = 3;
+
 	//private just to enforce that health should only be incremented
 	//via use of methods - just to help debugging/controlling the value.
-	private int health = 3;
+	private int health = DEFAULT_HEALTH;
 
 	//Method called to either instantiate or destroy the object to ensure
 	//singleton nature.
@@ -42,6 +44,7 @@ public class HealthManager : MonoBehaviour {
 		health--;
 		Debug.Log ("Took damage, current health is: " + health);
 		if (health == 0) {
+			health = DEFAULT_HEALTH;//set health BACK to default value
 			SceneManager.LoadScene(3);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 		}
 	}
