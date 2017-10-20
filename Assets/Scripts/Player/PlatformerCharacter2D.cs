@@ -20,7 +20,9 @@ namespace UnityStandardAssets._2D
 		private Rigidbody2D m_Rigidbody2D;
 		private bool m_FacingRight = true;  // For determining which way the player is currently 
 
-		public float run_multiplier = 2.5f;
+		private bool jump_speedup; //Represents user already sprinting when jumping. Jump movement will be sped up until key up.
+
+		public float movement_multiplier = 2.5f; //Represent speedup when LEFTSHIFT is pressed
 
 		private void Awake()
 		{
@@ -29,6 +31,8 @@ namespace UnityStandardAssets._2D
 			m_CeilingCheck = transform.Find("CeilingCheck");
 			m_Anim = GetComponent<Animator>();
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
+			jump_speedup = false;
 		}
 
 
@@ -64,7 +68,7 @@ namespace UnityStandardAssets._2D
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
 				float x_velocity = 1.0f;
 				if (run == true && m_Grounded == true){
-					x_velocity = run_multiplier;
+					x_velocity = movement_multiplier;
 				}
 
 				// Move the character
