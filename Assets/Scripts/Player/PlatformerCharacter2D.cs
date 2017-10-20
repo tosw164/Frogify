@@ -46,25 +46,11 @@ namespace UnityStandardAssets._2D
 			m_Anim.SetBool("Ground", m_Grounded);
 			m_Anim.SetBool ("isJump", !m_Grounded);
 
-			// Set the vertical animation
-//			m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
 		}
 
 
 		public void Move(float move, bool crouch, bool jump, bool run)
 		{
-			// If crouching, check to see if the character can stand up
-//			if (!crouch && m_Anim.GetBool("Crouch"))
-//			{
-//				// If the character has a ceiling preventing them from standing up, keep them crouching
-//				if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-//				{
-//					crouch = true;
-//				}
-//			}
-
-			// Set whether or not the character is crouching in the animator
-//			m_Anim.SetBool("Crouch", crouch);
 
 			//only control the player if grounded or airControl is turned on
 			if (m_Grounded || m_AirControl)
@@ -74,8 +60,6 @@ namespace UnityStandardAssets._2D
 				move = (crouch ? move*m_CrouchSpeed : move);
 
 				m_Anim.SetBool ("isWalking", true);
-				// The Speed animator parameter is set to the absolute value of the horizontal input.
-//				m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
 				float x_velocity = 1.0f;
