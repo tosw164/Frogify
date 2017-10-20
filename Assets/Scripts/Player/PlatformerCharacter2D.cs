@@ -55,6 +55,17 @@ namespace UnityStandardAssets._2D
 
 		public void Move(float move, bool crouch, bool jump, bool run)
 		{
+			//If shift was held when jump pressed, should keep momentum
+			if (m_Grounded && jump && run){
+				jump_speedup = true;
+			} else if (m_Grounded && jump_speedup){
+				jump_speedup = false;
+			}
+
+			//TODO REMOVE BECAUSE DEBUGGING
+			if (!m_Grounded && !jump_speedup){
+				Debug.Log("jump: " + jump + " run: " + run);
+			}
 
 			//only control the player if grounded or airControl is turned on
 			if (m_Grounded || m_AirControl)
@@ -67,7 +78,7 @@ namespace UnityStandardAssets._2D
 
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
 				float x_velocity = 1.0f;
-				if (run == true && m_Grounded == true){
+				if (run == true && m_Grounded == true || jump_speedup){
 					x_velocity = movement_multiplier;
 				}
 
