@@ -6,40 +6,51 @@ public class Spider : MonoBehaviour {
 	public Transform transform;
 	public float top_y;
 	public float bottom_y;
-	public float shakingLength;
 
+	//The timer for how long the spider shakes
+	public float shakeTimerLimit;
+	private float shakeTimer;
 
-	private float movement_speed = 2f;
+	public float movement_speed;
+
+	//The pausing counter between shakes - how vigourously the spider shakes
+	private float shakeCounterPause = 0.05f;
+
 	private bool move_down;
 
 	//Tracks the shaking left and right
 	private bool shake;
 	private bool prevShake;
 
-	//The pausing counter between shakes
-	private float shakeCounterPause = 5;
+
+	//The amount of shaking
+	private float amount = 0.1f;
 	private float shakeCounter;
 
-	//The timer for how long the spider shakes
-	private float shakeTimer;
-	private float shakeTimerLimit;
+
 
 	//Counter for speed of spider dropping down, increments as it goes
 	float counter;
 
+	private float origPositionX;
+
 	// Use this for initialization
 	void Start () {
-		
 		shake = true;
 		prevShake = true;
-
-		shakeTimer = 0f;
-		shakeTimerLimit = 30f;
-
 		move_down = true;
 
+
+		//Iniital values to 0
+		shakeTimer = 0f;
+		//For accleration of the drop
 		counter = 0;
 		shakeCounter = 0;
+
+		//Saves original position
+		origPositionX = transform.position.x;
+
+
 	}
 
 	// Update is called once per frame
@@ -71,26 +82,26 @@ public class Spider : MonoBehaviour {
 
 
 	void shakeSpider(){
-		float speed = 1.0f; //how fast it shakes
-		float amount = 10.0f; //how much it shakes
-
-
-		shakeTimer++;
-		shakeCounter++;
+		shakeTimer += Time.deltaTime;
 //		Debug.Log (shakeTimer);
 
 		if (shakeTimer > shakeTimerLimit) {
 			shake = false;
 			//Sets the timer for the amount shake to 0 again
 			shakeTimer = 0f;
+			//Also set the counter (for the time between shakes, to 0)
+			shakeCounter = 0f;
+			//Resets the spider's position to it's original position
+			transform.position = new Vector2(origPositionX, transform.position.y);
+
 		}
-			
-		if (shakeCounter == shakeCounterPause) {
+		shakeCounter += Time.deltaTime;	
+		if (shakeCounter > shakeCounterPause) {
 			if (prevShake) {
-				transform.Translate (Vector2.left * (amount * (Time.deltaTime * speed)));
+				transform.position = new Vector2(origPositionX - amount, transform.position.y);
 				prevShake = false;
 			} else {
-				transform.Translate (Vector2.right * (amount * (Time.deltaTime * speed)));
+				transform.position = new Vector2(origPositionX + amount, transform.position.y);
 				prevShake = true;
 			}
 			shakeCounter = 0f;

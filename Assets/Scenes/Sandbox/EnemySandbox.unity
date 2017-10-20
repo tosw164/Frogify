@@ -124,6 +124,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 11456446, guid: 690ac6d094f2242cca6dd02337ad7f18, type: 2}
+      propertyPath: shakeTimerLimit
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11456446, guid: 690ac6d094f2242cca6dd02337ad7f18, type: 2}
+      propertyPath: movement_speed
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 690ac6d094f2242cca6dd02337ad7f18, type: 2}
   m_IsPrefabParent: 0
