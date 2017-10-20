@@ -81,7 +81,7 @@ namespace UnityStandardAssets._2D
 
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
 				float x_velocity = 1.0f;
-				if (run == true && m_Grounded == true || jump_speedup){
+				if (run == true && m_Grounded == true || jump_speedup && run){
 					x_velocity = movement_multiplier;
 				}
 
