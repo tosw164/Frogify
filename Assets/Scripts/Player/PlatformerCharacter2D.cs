@@ -38,6 +38,7 @@ namespace UnityStandardAssets._2D
 			// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 			// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+
 			for (int i = 0; i < colliders.Length; i++)
 			{
 				if (colliders[i].gameObject != gameObject)
@@ -53,19 +54,6 @@ namespace UnityStandardAssets._2D
 
 		public void Move(float move, bool crouch, bool jump, bool run)
 		{
-			// If crouching, check to see if the character can stand up
-//			if (!crouch && m_Anim.GetBool("Crouch"))
-//			{
-//				// If the character has a ceiling preventing them from standing up, keep them crouching
-//				if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-//				{
-//					crouch = true;
-//				}
-//			}
-
-			// Set whether or not the character is crouching in the animator
-//			m_Anim.SetBool("Crouch", crouch);
-
 			//only control the player if grounded or airControl is turned on
 			if (m_Grounded || m_AirControl)
 			{
