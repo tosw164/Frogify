@@ -19,9 +19,9 @@ TagManager:
   - Player
   - Wall
   - SwingRange
-  - 
-  - 
-  - 
+  - GroundLayerFront
+  - GroundLayerMiddle
+  - Background
   - 
   - 
   - 
@@ -40,6 +40,21 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BackgroundLayer
+    uniqueID: 2497412503
+    locked: 0
+  - name: DetailLayer
+    uniqueID: 2600404171
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: GroundLayerFront
+    uniqueID: 1676628673
+    locked: 0
+  - name: GroundLayerMiddle
+    uniqueID: 1872579029
+    locked: 0
+  - name: GroundLayerBack
+    uniqueID: 1364540405
     locked: 0
