@@ -8,6 +8,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 426546}
+  - 61: {fileID: 6137446}
   m_Layer: 9
   m_Name: GroundCheck
   m_TagString: Untagged
@@ -197,6 +198,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -1.36}
   serializedVersion: 2
   m_Radius: 2.0052962
+--- !u!61 &6137446
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 124394}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 5, y: 0.2}
 --- !u!61 &6159648
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -210,7 +225,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0.24, y: 1.43}
   serializedVersion: 2
-  m_Size: {x: 5.51, y: 3.4}
+  m_Size: {x: 3.5, y: 3.4}
 --- !u!81 &8112122
 AudioListener:
   m_ObjectHideFlags: 1
