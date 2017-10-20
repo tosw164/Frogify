@@ -65,6 +65,11 @@ namespace UnityStandardAssets._2D
 				jump_speedup = false;
 			}
 
+			//When letting go of LEFTSHIFT when speed jumping, make LEFTSHIFT no longer make you go faster
+			if (jump_speedup && !run){
+				jump_speedup = false;
+			}
+
 			//TODO REMOVE BECAUSE DEBUGGING
 			if (!m_Grounded && !jump_speedup){
 				Debug.Log("jump: " + jump + " run: " + run);
