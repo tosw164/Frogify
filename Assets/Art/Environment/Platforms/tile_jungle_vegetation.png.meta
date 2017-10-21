@@ -1,13 +1,11 @@
 fileFormatVersion: 2
-guid: a5bfb64d1cabe4fb88c1997180bde6a3
-timeCreated: 1507525078
+guid: 643964bb69a6246e9aac02328ec5f96d
+timeCreated: 1508193988
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: tile_jungle_water_0
-    21300002: tile_jungle_water_1
-    21300004: tile_jungle_water_2
-    21300006: tile_jungle_water_3
+    21300000: tile_jungle_vegetation_0
+    21300002: tile_jungle_vegetation_1
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -54,58 +52,28 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: tile_jungle_water_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 63
-        height: 128
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -31.5, y: 64}
-        - {x: -31.5, y: -64}
-        - {x: 31.5, y: -64}
-        - {x: 31.5, y: 64}
-    - name: tile_jungle_water_1
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 32
-        width: 31
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-    - name: tile_jungle_water_2
+    - name: tile_jungle_vegetation_0
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 31
-        height: 32
+        width: 192
+        height: 20
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: tile_jungle_water_3
+    - name: tile_jungle_vegetation_1
       rect:
         serializedVersion: 2
-        x: 96
-        y: 64
-        width: 32
-        height: 31
+        x: 21
+        y: 0
+        width: 22
+        height: 15
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      outline: []
     outline: []
   spritePackingTag: 
   userData: 
