@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour {
 	//Stored here to potentially facilitaed consolidation of scoring.
 	private long collectableScore = 0;
 
+	//On startup the string is just main menu, as Pep progresses, shoudl
+	//modify this string to know where to place him again.
+	private string levelString = "MAIN_MENU";
 
 	//======================================================
 
@@ -69,7 +72,7 @@ public class GameManager : MonoBehaviour {
 		if (health == 0) {
 			health = DEFAULT_HEALTH;//set health BACK to default value
 			//TODO: SHould this be reset by the gameover screen?
-			switchScene(POCC.SceneLookup.GAME_OVER_INDEX);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+			switchScene(POCC.SceneLookup.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 		}
 	}
 
@@ -143,20 +146,53 @@ public class GameManager : MonoBehaviour {
 	//Helper Methods
 
 	//Helper method to switch scene when required.
-	public void switchScene(int sceneNum){
-		SceneManager.LoadScene (sceneNum);
+	public void switchScene(string sceneName){
+		SceneManager.LoadScene (sceneName);
 	}
 
-	//Skeleton of a method used for serialization.
+	/*
+	 * Method of actually saving data - it instantiates another container class
+	 * that will then hold the data and be serialized to disk.
+	 * Will be called whenever theres a change in level to persist whats needed.
+	 */
 	public void Save(){
 		BinaryFormatter bf = new BinaryFormatter();
 
 		//Using unity built in persistentDataPath in order to be more professional
 		FileStream file = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
 
-		//Now need to say WHAT data you want to save. You need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
+		//Now need to say WHAT data you want to save. YDou need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
+		POCC.PlayerData gameData = new POCC.PlayerData(health,argumentationScore,collectableScore, levelString);
+
+		bf.Serialize (file, gameData);
+		file.Close ();
 
 	}
+
+	/**
+	 * Method for actually loading in data and setting up the 
+	 */ 
+	public void Load(){
+		if (File.Exists (Application.persistentDataPath + "/pepInfo.dat")) {
+			BinaryFormatter bf = new BinaryFormatter();
+
+			//Doesn't need file mode because just opening it and KNOW it arledy exists
+			FileStream saveFile = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
+
+			//Reading in FROM the save file - need cast to be able to get it.
+			POCC.PlayerData gameData = (POCC.PlayerData) bf.Deserialize(saveFile);
+			saveFile.Close ();
+
+			this.health = gameData.getHealth ();
+			this.argumentationScore = gameData.getArgueScore ();
+			this.collectableScore = gameData.getCollectScore ();
+			this.levelString = gameData.getLevelString ();
+		}
+		//IF HERE, THEN MAYBE SAY THERES NO SAVED DATA.
+		//maybe when loading sceen.
+	}
+
+
 	//======================================================
 
 }
