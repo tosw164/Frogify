@@ -21,6 +21,11 @@ namespace UnityStandardAssets._2D
 		private bool m_FacingRight = true;  // For determining which way the player is currently 
 
 		private bool jump_speedup; //Represents user already sprinting when jumping. Jump movement will be sped up until key up.
+		
+		//Values used to fix issue where on next frame after sprintjump, player still grounded so doesn't sprintjump
+		private float jump_cooldown; 				//Float of when allow_ground_slowdown is allowed to be flipped
+		private float JUMP_COOLDOWN_VALUE = 1.0f;	//Value of "cooldown" representing time boolean can't be flipped after sprintjump
+		private bool allow_ground_slowdown; 		//boolean representing if groundcheck can disable sprintjump.
 
 		public float movement_multiplier = 2.5f; //Represent speedup when LEFTSHIFT is pressed
 
@@ -53,6 +58,10 @@ namespace UnityStandardAssets._2D
 			m_Anim.SetBool("Ground", m_Grounded);
 			m_Anim.SetBool ("isJump", !m_Grounded);
 
+			//Allow boolean to be flipped after cooldown depleted after sprintjumping
+			if (jump_speedup && Time.time > jump_cooldown && !allow_ground_slowdown){
+				allow_ground_slowdown = true;
+			}
 		}
 
 
@@ -61,7 +70,12 @@ namespace UnityStandardAssets._2D
 			//If shift was held when jump pressed, should keep momentum
 			if (m_Grounded && jump && run){
 				jump_speedup = true;
-			} else if (m_Grounded && jump_speedup){
+
+				//Add cooldown and make else if below not triggerable until cooldown depleted
+				jump_cooldown = Time.time + JUMP_COOLDOWN_VALUE;
+				allow_ground_slowdown = false;
+			} else if (m_Grounded && jump_speedup && allow_ground_slowdown){
+				//Only set it to false after cooldown after sprintjump if grounded
 				jump_speedup = false;
 			}
 
