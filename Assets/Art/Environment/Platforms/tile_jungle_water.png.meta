@@ -1,10 +1,6 @@
 fileFormatVersion: 2
 guid: a5bfb64d1cabe4fb88c1997180bde6a3
-<<<<<<< HEAD:Assets/Art/Environment/Platforms/tile_jungle_water.png.meta
-timeCreated: 1508487978
-=======
-timeCreated: 1508194414
->>>>>>> master:Assets/Art/Environment/Platforms/tile_jungle_water.png.meta
+timeCreated: 1508543248
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -64,36 +60,36 @@ TextureImporter:
     - name: tile_jungle_water_0
       rect:
         serializedVersion: 2
+        x: 33
+        y: 0
+        width: 31
+        height: 128
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+    - name: tile_jungle_water_1
+      rect:
+        serializedVersion: 2
         x: 0
         y: 0
-        width: 29
+        width: 33
         height: 128
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -31.5, y: 64}
-        - {x: -31.5, y: -64}
-        - {x: 31.5, y: -64}
-        - {x: 31.5, y: 64}
-    - name: tile_jungle_water_1
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 32
-        width: 29
-        height: 36
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
+      - - {x: -16.5, y: 64}
+        - {x: -16.5, y: -64}
+        - {x: 16.5, y: -64}
+        - {x: 16.5, y: 64}
     - name: tile_jungle_water_2
       rect:
         serializedVersion: 2
-        x: 66
-        y: 0
-        width: 29
-        height: 32
+        x: 65
+        y: 97
+        width: 63
+        height: 31
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -101,48 +97,40 @@ TextureImporter:
     - name: tile_jungle_water_3
       rect:
         serializedVersion: 2
-        x: 96
-        y: 65
-        width: 32
-        height: 30
+        x: 97
+        y: 68
+        width: 30
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -16, y: 16}
-        - {x: -16, y: -16}
-        - {x: 16, y: -16}
-        - {x: 16, y: 16}
+      outline: []
     - name: tile_jungle_water_4
       rect:
         serializedVersion: 2
-        x: 29
-        y: 0
-        width: 35
-        height: 128
+        x: 65
+        y: 33
+        width: 31
+        height: 35
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline:
-      - - {x: -17.5, y: 64}
-        - {x: -17.5, y: -64}
-        - {x: 17.5, y: -64}
-        - {x: 17.5, y: 64}
+      - - {x: -16, y: 17.5}
+        - {x: -16, y: -17.5}
+        - {x: 16, y: -17.5}
+        - {x: 16, y: 17.5}
     - name: tile_jungle_water_5
       rect:
         serializedVersion: 2
-        x: 64
-        y: 96
-        width: 64
+        x: 65
+        y: 0
+        width: 31
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
-      outline:
-      - - {x: -32, y: 16}
-        - {x: -32, y: -16}
-        - {x: 32, y: -16}
-        - {x: 32, y: 16}
+      outline: []
     - name: tile_jungle_water_6
       rect:
         serializedVersion: 2
