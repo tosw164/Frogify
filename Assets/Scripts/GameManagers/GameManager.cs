@@ -100,17 +100,11 @@ namespace POCC {
 		}
 
 		public void incrementCollectableScore(Collectable collectable){
-			//If it is a normal gold fly, just increment by 1
-			if (collectable.Equals(Collectable.GOLDFLY)) {
-				collectableScore++;
-			}
+			collectableScore += Lookup.collectableScoreLookup(collectable);
 		}
 
 		public void incrementArgumentationScore(ArgumentationValue argueVal){
-			//If it is their first attempt, and got it right, increment by 10
-			if (argueVal.Equals(ArgumentationValue.FIRST_ATTEMPT)) {
-				argumentationScore += 10;
-			}
+			argumentationScore += Lookup.argumentationScoreLookup(argueVal);
 		}
 
 		//TODO: Need to refactor this

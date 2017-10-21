@@ -4,7 +4,7 @@ namespace POCC
 {
 	/**
 	 * This class will simply provide a means of looking
-	 * up scenes in the game.
+	 * up values in the game.
 	 */
 	public class Lookup
 	{
@@ -39,5 +39,22 @@ namespace POCC
 			}
 		}
 
+		public static long collectableScoreLookup(Collectable collectable) {
+			switch(collectable) {
+				default:
+					// Unmapped enum value
+				case Collectable.GOLDFLY:
+					return 1;
+			}
+		}
+
+		public static long argumentationScoreLookup(ArgumentationValue argueValue) {
+			switch(argueValue) {
+				default:
+					// Unmapped enum value
+				case ArgumentationValue.FIRST_ATTEMPT:
+					return 10;
+			}
+		}
 	}
 }
