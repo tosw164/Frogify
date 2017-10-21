@@ -20,7 +20,14 @@ namespace UnityStandardAssets._2D
 		private Rigidbody2D m_Rigidbody2D;
 		private bool m_FacingRight = true;  // For determining which way the player is currently 
 
-		public float run_multiplier = 2.5f;
+		private bool jump_speedup; //Represents user already sprinting when jumping. Jump movement will be sped up until key up.
+		
+		//Values used to fix issue where on next frame after sprintjump, player still grounded so doesn't sprintjump
+		private float jump_cooldown; 				//Float of when allow_ground_slowdown is allowed to be flipped
+		private float JUMP_COOLDOWN_VALUE = 1.0f;	//Value of "cooldown" representing time boolean can't be flipped after sprintjump
+		private bool allow_ground_slowdown; 		//boolean representing if groundcheck can disable sprintjump.
+
+		public float movement_multiplier = 2.5f; //Represent speedup when LEFTSHIFT is pressed
 
 		private void Awake()
 		{
@@ -29,15 +36,20 @@ namespace UnityStandardAssets._2D
 			m_CeilingCheck = transform.Find("CeilingCheck");
 			m_Anim = GetComponent<Animator>();
 			m_Rigidbody2D = GetComponent<Rigidbody2D>();
+
+			jump_speedup = false;
 		}
 
 
 		private void FixedUpdate()
 		{
 			m_Grounded = false;
+
 			// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 			// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
+			
+
 			for (int i = 0; i < colliders.Length; i++)
 			{
 				if (colliders[i].gameObject != gameObject)
@@ -46,25 +58,36 @@ namespace UnityStandardAssets._2D
 			m_Anim.SetBool("Ground", m_Grounded);
 			m_Anim.SetBool ("isJump", !m_Grounded);
 
-			// Set the vertical animation
-//			m_Anim.SetFloat("vSpeed", m_Rigidbody2D.velocity.y);
+			//Allow boolean to be flipped after cooldown depleted after sprintjumping
+			if (jump_speedup && Time.time > jump_cooldown && !allow_ground_slowdown){
+				allow_ground_slowdown = true;
+			}
 		}
 
 
 		public void Move(float move, bool crouch, bool jump, bool run)
 		{
-			// If crouching, check to see if the character can stand up
-//			if (!crouch && m_Anim.GetBool("Crouch"))
-//			{
-//				// If the character has a ceiling preventing them from standing up, keep them crouching
-//				if (Physics2D.OverlapCircle(m_CeilingCheck.position, k_CeilingRadius, m_WhatIsGround))
-//				{
-//					crouch = true;
-//				}
-//			}
+			//If shift was held when jump pressed, should keep momentum
+			if (m_Grounded && jump && run){
+				jump_speedup = true;
 
-			// Set whether or not the character is crouching in the animator
-//			m_Anim.SetBool("Crouch", crouch);
+				//Add cooldown and make else if below not triggerable until cooldown depleted
+				jump_cooldown = Time.time + JUMP_COOLDOWN_VALUE;
+				allow_ground_slowdown = false;
+			} else if (m_Grounded && jump_speedup && allow_ground_slowdown){
+				//Only set it to false after cooldown after sprintjump if grounded
+				jump_speedup = false;
+			}
+
+			//When letting go of LEFTSHIFT when speed jumping, make LEFTSHIFT no longer make you go faster
+			if (jump_speedup && !run){
+				jump_speedup = false;
+			}
+
+			//TODO REMOVE BECAUSE DEBUGGING
+			if (!m_Grounded && !jump_speedup){
+				Debug.Log("jump: " + jump + " run: " + run);
+			}
 
 			//only control the player if grounded or airControl is turned on
 			if (m_Grounded || m_AirControl)
@@ -74,13 +97,11 @@ namespace UnityStandardAssets._2D
 				move = (crouch ? move*m_CrouchSpeed : move);
 
 				m_Anim.SetBool ("isWalking", true);
-				// The Speed animator parameter is set to the absolute value of the horizontal input.
-//				m_Anim.SetFloat("Speed", Mathf.Abs(move));
 
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
 				float x_velocity = 1.0f;
-				if (run == true && m_Grounded == true){
-					x_velocity = run_multiplier;
+				if (run == true && m_Grounded == true || jump_speedup && run){
+					x_velocity = movement_multiplier;
 				}
 
 				// Move the character
