@@ -19,7 +19,7 @@ public class InventoryDisplay : MonoBehaviour {
 		/**
 		 * Checks if the item has been picked up, if so the render the item.
 		 * */
-		if (ItemManager.itemManager.itemList.Contains (itemName)) {
+		if (POCC.GameManager.getInstance().playerHasItem(itemName)) {
 			renderers.enabled = true;
 		}
 	}
