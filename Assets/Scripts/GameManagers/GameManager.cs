@@ -95,7 +95,6 @@ namespace POCC {
 		 * back to default values.
 		 */
 		public void resetHealth(){
-			Debug.Log("Reseting health");
 			_health = DEFAULT_HEALTH;
 		}
 
