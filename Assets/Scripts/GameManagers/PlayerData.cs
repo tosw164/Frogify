@@ -5,10 +5,10 @@ namespace POCC
 	/**
 	 * Class used to hold the values that should be persisted
 	 * between executions. Simply a "data container"
-	 * 
+	 *
 	 * Reference: Unity Live Training 3 March 2014:
 	 * 		https://www.youtube.com/watch?v=J6FfcJpbPXE
-	 */ 
+	 */
 	[Serializable] //states that the class is serialziable
 	public class PlayerData
 	{
@@ -17,7 +17,7 @@ namespace POCC
 		private long _collectableScore;
 		private string _levelString;
 
-		//List for achievement??
+		//TODO: Add fields regarding achievements
 
 		public PlayerData(int health, long aScore, long cScore, String levelString){
 			_health = health;

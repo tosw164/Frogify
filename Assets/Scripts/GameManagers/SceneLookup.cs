@@ -4,7 +4,7 @@ namespace POCC
 {
 	/**
 	 * This class will simply provide a means of looking
-	 * up certain values in the project.
+	 * up scenes in the game.
 	 */
 	public class SceneLookup
 	{

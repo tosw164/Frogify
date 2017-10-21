@@ -1,10 +1,10 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using System;
 using System.IO;
+using System.Collections;
 using System.Collections.Generic;
-using System;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace POCC {
 
@@ -51,7 +51,7 @@ namespace POCC {
 		/**
 		 * Method for retrieving the singleton instance.
 		 */
-		public static GameManager getInstance(){
+		public static GameManager getInstance() {
 			if (manager == null) {
 				manager = new GameManager();
 			}
@@ -66,15 +66,17 @@ namespace POCC {
 		//======================================================
 		//Update Methods:
 
-		public void incrementHealth(){
+		public void incrementHealth() {
 			health++;
 		}
 
-		public void decrementHealth(){
+		public void decrementHealth() {
 			health--;
-			Debug.Log ("Took damage, current health is: " + health);
+			Debug.Log("Took damage, current health is: " + health);
+
 			if (health == 0) {
 				health = DEFAULT_HEALTH;//set health BACK to default value
+
 				//TODO: SHould this be reset by the gameover screen?
 				switchScene(SceneType.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 			}
@@ -99,15 +101,15 @@ namespace POCC {
 
 		public void incrementCollectableScore(Collectable collectable){
 			//If it is a normal gold fly, just increment by 1
-			if (collectable.Equals (Collectable.GOLDFLY)) {
+			if (collectable.Equals(Collectable.GOLDFLY)) {
 				collectableScore++;
 			}
 		}
 
 		public void incrementArgumentationScore(ArgumentationValue argueVal){
-			//If it is a normal gold fly, just increment by 1
-			if (argueVal.Equals (ArgumentationValue.FIRST_ATTEMPT)) {
-				argumentationScore+=10;
+			//If it is their first attempt, and got it right, increment by 10
+			if (argueVal.Equals(ArgumentationValue.FIRST_ATTEMPT)) {
+				argumentationScore += 10;
 			}
 		}
 
@@ -203,10 +205,10 @@ namespace POCC {
 			FileStream file = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
 
 			//Now need to say WHAT data you want to save. YDou need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
- 			PlayerData gameData = new PlayerData(health,argumentationScore,collectableScore, levelString);
+ 			PlayerData gameData = new PlayerData(health, argumentationScore, collectableScore, levelString);
 
-			bf.Serialize (file, gameData);
-			file.Close ();
+			bf.Serialize(file, gameData);
+			file.Close();
 
 		}
 
@@ -214,20 +216,20 @@ namespace POCC {
 		 * Method for actually loading in data and setting up the
 		 */
 		public void Load(){
-			if (File.Exists (Application.persistentDataPath + "/pepInfo.dat")) {
+			if (File.Exists(Application.persistentDataPath + "/pepInfo.dat")) {
 				BinaryFormatter bf = new BinaryFormatter();
 
 				//Doesn't need file mode because just opening it and KNOW it arledy exists
 				FileStream saveFile = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
 
 				//Reading in FROM the save file - need cast to be able to get it.
-				PlayerData gameData = (PlayerData) bf.Deserialize(saveFile);
-				saveFile.Close ();
+				PlayerData gameData = (PlayerData)bf.Deserialize(saveFile);
+				saveFile.Close();
 
-				this.health = gameData.getHealth ();
-				this.argumentationScore = gameData.getArgueScore ();
-				this.collectableScore = gameData.getCollectScore ();
-				this.levelString = gameData.getLevelString ();
+				this.health = gameData.getHealth();
+				this.argumentationScore = gameData.getArgueScore();
+				this.collectableScore = gameData.getCollectScore();
+				this.levelString = gameData.getLevelString();
 			}
 			//IF HERE, THEN MAYBE SAY THERES NO SAVED DATA.
 			//maybe when loading sceen.
