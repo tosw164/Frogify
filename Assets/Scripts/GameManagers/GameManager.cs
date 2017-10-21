@@ -95,6 +95,7 @@ namespace POCC {
 		 * back to default values.
 		 */
 		public void resetHealth(){
+			Debug.Log("Reseting health");
 			_health = DEFAULT_HEALTH;
 		}
 
@@ -131,6 +132,13 @@ namespace POCC {
 		public void addPlayerItem(string itemName) {
 			_playerItems.Add(itemName);
 		}
+
+		/**
+		 * Clears the player's inventory
+		 */
+		 public void clearInventory() {
+			 _playerItems.Clear();
+		 }
 		//======================================================
 
 

@@ -10,8 +10,8 @@ namespace POCC {
 		protected SceneType _sceneType;
 
 		public Scene() {
-			_startupHooks = startupHookBase;
-			_teardownHooks = teardownHookBase;
+			_startupHooks = this.startupHookBase;
+			_teardownHooks = this.teardownHookBase;
 		}
 
 		protected void startupHookBase() {
