@@ -6,15 +6,15 @@ namespace POCC
 	 * This class will simply provide a means of looking
 	 * up scenes in the game.
 	 */
-	public class SceneLookup
+	public class Lookup
 	{
 
-		public SceneLookup ()
+		public Lookup ()
 		{
 
 		}
 
-		public static string lookup(SceneType sceneType) {
+		public static string sceneLookup(SceneType sceneType) {
 			switch(sceneType) {
 				case SceneType.GAME_OVER:
 					return "DeathScene";

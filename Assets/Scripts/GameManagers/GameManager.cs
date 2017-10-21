@@ -176,7 +176,7 @@ namespace POCC {
 			}
 
 			// Switch scenes
-			SceneManager.LoadScene(SceneLookup.lookup(newScene));
+			SceneManager.LoadScene(Lookup.sceneLookup(newScene));
 
 			// Post-switch opertations go here
 			if (posthooks != null) {
