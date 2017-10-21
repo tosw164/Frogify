@@ -9,19 +9,19 @@ using System.Collections;
  */
 public class Spider : MonoBehaviour {
 
-	public Transform transform;
+	private Transform transform;
 
 	//The upper limit of movement
-	public float top_y;
+	public float top_y = 5f;
 
 	//The bottom limit of movement
-	public float bottom_y;
+	public float bottom_y = 0f;
 
 	//The timer for how long the spider shakes
-	public float shakeTimerLimit;
+	public float shakeTimerLimit = 2f;
 	private float shakeTimer;
 
-	public float movement_speed;
+	public float movement_speed = 2f;
 
 	//The pausing counter between shakes - how vigourously the spider shakes
 	private float shakeCounterPause = 0.05f;
@@ -52,6 +52,7 @@ public class Spider : MonoBehaviour {
 		prevShake = true;
 		move_down = true;
 
+		transform = gameObject.transform;
 
 		//Iniital values to 0
 		shakeTimer = 0f;
