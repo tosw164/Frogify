@@ -74,7 +74,10 @@ namespace POCC {
 		// Update Methods:
 
 		public void incrementHealth() {
-			_health++;
+			// Only increment health if it is less than the maximum
+			if (_health < DEFAULT_HEALTH) {
+				_health++;
+			}
 		}
 
 		public void decrementHealth() {
