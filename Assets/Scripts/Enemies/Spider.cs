@@ -1,10 +1,20 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * This script represents the dropping spider.
+ * The spider shakes before dropping down at an accelerated rate, and then moves back up and resets.
+ * The amount of time the spider shakes, the top and bottom limit of its movement, and its speed can be set.
+ * 
+ */
 public class Spider : MonoBehaviour {
 
 	public Transform transform;
+
+	//The upper limit of movement
 	public float top_y;
+
+	//The bottom limit of movement
 	public float bottom_y;
 
 	//The timer for how long the spider shakes
@@ -18,8 +28,10 @@ public class Spider : MonoBehaviour {
 
 	private bool move_down;
 
-	//Tracks the shaking left and right
+	//Whether or not it's in shaking 
 	private bool shake;
+
+	//Tracks the shaking left and right, to know which way to shake next
 	private bool prevShake;
 
 
@@ -56,10 +68,11 @@ public class Spider : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+		//If spider is in the shake state, should be shaking
 		if (shake == true) {
 			shakeSpider ();
 		} else {
-			Debug.Log ("DROP");
+			//Moves up once its gone below the bottom limit, and vice versa
 			if (transform.position.y < bottom_y) {
 				move_down = false;
 			} else if (transform.position.y > top_y) {
@@ -69,6 +82,7 @@ public class Spider : MonoBehaviour {
 
 			}
 
+			//Acceleration for the drop
 			counter = counter + (5 * Time.deltaTime);
 
 			if (move_down) {
@@ -80,11 +94,13 @@ public class Spider : MonoBehaviour {
 
 	}
 
-
+	//Called when spider is shaking
 	void shakeSpider(){
-		shakeTimer += Time.deltaTime;
-//		Debug.Log (shakeTimer);
 
+		//How long the shaking state has been going on for
+		shakeTimer += Time.deltaTime;
+
+		//Once it has reached the shaketimerlimit, stops shaking and resets
 		if (shakeTimer > shakeTimerLimit) {
 			shake = false;
 			//Sets the timer for the amount shake to 0 again
@@ -95,6 +111,10 @@ public class Spider : MonoBehaviour {
 			transform.position = new Vector2(origPositionX, transform.position.y);
 
 		}
+
+
+		//Counter for period of time between each shake movement (as shaking each frame update would be too fast)
+		//Depending on the prevShake, shakes left or right alternating
 		shakeCounter += Time.deltaTime;	
 		if (shakeCounter > shakeCounterPause) {
 			if (prevShake) {
@@ -104,6 +124,7 @@ public class Spider : MonoBehaviour {
 				transform.position = new Vector2(origPositionX + amount, transform.position.y);
 				prevShake = true;
 			}
+			//Sets counter between shake movement back to zero
 			shakeCounter = 0f;
 		}
 
