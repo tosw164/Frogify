@@ -9,11 +9,6 @@ namespace POCC
 	public class Lookup
 	{
 
-		public Lookup ()
-		{
-
-		}
-
 		public static string sceneLookup(SceneType sceneType) {
 			switch(sceneType) {
 				case SceneType.GAME_OVER:
