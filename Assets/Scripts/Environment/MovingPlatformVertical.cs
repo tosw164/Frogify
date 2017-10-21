@@ -44,4 +44,18 @@ public class MovingPlatformVertical : MonoBehaviour {
 			transform.Translate (Vector2.down * movement_speed * Time.deltaTime);
 		}
 	}
+
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.CompareTag("Player")) {
+			other.gameObject.transform.parent = transform;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.gameObject.CompareTag("Player")) {
+			other.gameObject.transform.parent = null;
+		}
+	}
+		
 }

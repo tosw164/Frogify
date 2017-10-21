@@ -6,7 +6,7 @@ using System.Collections;
  * This script is used for the moving platform - the assigned object moves left and right (set left and right limits) with a set 
  * movement speed.
  */
-public class MovingPlatform : MonoBehaviour {
+public class MovingPlatformHorizontal : MonoBehaviour {
 
 	//Public fields, assigned, relative to current position
 	public int dLeft_x;
@@ -42,6 +42,20 @@ public class MovingPlatform : MonoBehaviour {
 			transform.Translate (Vector2.left * movement_speed * Time.deltaTime);
 		} else if (!move_left) {
 			transform.Translate (Vector2.right * movement_speed * Time.deltaTime);
+		}
+	}
+
+
+
+	void OnTriggerEnter2D(Collider2D other) {
+		if(other.gameObject.CompareTag("Player")) {
+			other.gameObject.transform.parent = transform;
+		}
+	}
+
+	void OnTriggerExit2D(Collider2D other) {
+		if (other.gameObject.CompareTag("Player")) {
+			other.gameObject.transform.parent = null;
 		}
 	}
 }
