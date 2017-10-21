@@ -27,6 +27,9 @@ namespace UnityStandardAssets._2D
 		private float JUMP_COOLDOWN_VALUE = 1.0f;	//Value of "cooldown" representing time boolean can't be flipped after sprintjump
 		private bool allow_ground_slowdown; 		//boolean representing if groundcheck can disable sprintjump.
 
+		private float X_VELOCITY_LIMIT = 30f;
+		private float Y_VELOCITY_LIMIT = 20f;
+
 		public float movement_multiplier = 2.5f; //Represent speedup when LEFTSHIFT is pressed
 
 		private void Awake()
@@ -43,6 +46,16 @@ namespace UnityStandardAssets._2D
 
 		private void FixedUpdate()
 		{
+			if (m_Rigidbody2D.velocity.y > Y_VELOCITY_LIMIT){
+//				Debug.Log ("SURPASSED Y " + m_Rigidbody2D.velocity);
+				m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, Y_VELOCITY_LIMIT);
+			}
+
+			if (m_Rigidbody2D.velocity.x > Y_VELOCITY_LIMIT){
+//				Debug.Log ("SURPASSED X " + m_Rigidbody2D.velocity);
+				m_Rigidbody2D.velocity = new Vector2(X_VELOCITY_LIMIT, m_Rigidbody2D.velocity.y);
+			}
+
 			m_Grounded = false;
 
 			// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
