@@ -3,24 +3,31 @@ using System.Collections;
 
 public class Snek : MonoBehaviour {
 
-	public float endX;
-	public float endY;
+	public bool isLeft = true;
+	public float deltaX = 20f;
 
 	public float speed = 1f;
 
-	Vector2 startPosition;
-	Vector2 endPosition;
-
+	private float origX;
 
 	// Use this for initialization
 	void Start () {
-		startPosition = transform.position;
-		endPosition = new Vector2 (endX, endY);
+		origX = transform.position.x;
 	}
 	
 	// Update is called once per frame
 	void Update () {
 		float step = speed * Time.deltaTime;
-		transform.Translate (Vector2.left * step);
+		if (isLeft) {
+			transform.Translate (Vector2.left * step);
+			if (transform.position.x < (origX - deltaX)) {
+				Destroy (this.gameObject);
+			}
+		} else {
+			transform.Translate (Vector2.right * step);
+			if (transform.position.x > (deltaX + origX)) {
+				Destroy (this.gameObject);
+			}
+		}
 	}
 }
