@@ -28,7 +28,8 @@ public class EnemyDamageOnContact : MonoBehaviour {
 			if (!collisionFlag) 
 			{
 				collisionFlag = true;
-				HealthManager.healthManager.decrementHealth();
+				POCC.GameManager manager = POCC.GameManager.getInstance ();
+				manager.decrementHealth ();
 				StartCoroutine(Knockback(0.02f, 300, pep.gameObject.transform.position,pep));
 			}	
 		}
