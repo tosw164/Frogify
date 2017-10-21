@@ -210,11 +210,11 @@ namespace POCC {
 		 * Method for actually loading in data and setting up the
 		 */
 		public void Load(){
-			if (File.Exists(Application.persistentDataPath + "/pepInfo.dat")) {
+			if (File.Exists(Config.PERSISTENCE_FILE)) {
 				BinaryFormatter bf = new BinaryFormatter();
 
 				//Doesn't need file mode because just opening it and KNOW it arledy exists
-				FileStream saveFile = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
+				FileStream saveFile = File.Open(Config.PERSISTENCE_FILE, FileMode.Open);
 
 				//Reading in FROM the save file - need cast to be able to get it.
 				PlayerData gameData = (PlayerData)bf.Deserialize(saveFile);
