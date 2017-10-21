@@ -9,7 +9,7 @@ using System.Collections;
  */
 public class Spider : MonoBehaviour {
 
-	public Transform transform;
+	private Transform transform;
 
 	//The upper limit of movement
 	public float top_y = 5f;
@@ -52,6 +52,7 @@ public class Spider : MonoBehaviour {
 		prevShake = true;
 		move_down = true;
 
+		transform = gameObject.transform;
 
 		//Iniital values to 0
 		shakeTimer = 0f;
