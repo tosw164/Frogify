@@ -75,7 +75,7 @@ namespace POCC {
 			if (health == 0) {
 				health = DEFAULT_HEALTH;//set health BACK to default value
 				//TODO: SHould this be reset by the gameover screen?
-				switchScene (POCC.SceneLookup.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+				switchScene (POCC.SceneLookup.lookup(POCC.SceneType.GAME_OVER));//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 			}
 		}
 

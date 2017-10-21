@@ -8,29 +8,36 @@ namespace POCC
 	 */
 	public class SceneLookup
 	{
-		public static string MAIN_MENU = "MainMenu";
-		public static string GAME_OVER = "DeathScene";
-		public static string END_LEVEL_SCENE = "ExitScreen";
-		public static string TUTORIAL_1 = "";
-		public static string TUTORIAL_2 = "";
-		public static string HUB_1 = "";
-		public static string LOGOS = "";
-		public static string HUB_2 = "";
-		public static string BEARLANA = "";
-		public static string PATHOS_1 = "";
-		public static string PATHOS_2 = "";
-		public static string HUB_3 = "";
-		public static string ETHOS_1 = "";
-		public static string ETHOS_2 = "";
-		public static string HUB_4 = "";
-		public static string END_OF_YEAR = "";
-
 
 		public SceneLookup ()
 		{
 
 		}
 
+		public static string lookup(SceneType sceneType) {
+			switch(sceneType) {
+				case SceneType.GAME_OVER:
+					return "DeathScene";
+				case SceneType.END_LEVEL_SCENE:
+					return "ExitScreen";
+				case SceneType.TUTORIAL_1:
+				case SceneType.TUTORIAL_2:
+				case SceneType.HUB_1:
+				case SceneType.LOGOS:
+				case SceneType.HUB_2:
+				case SceneType.BEARLANA:
+				case SceneType.PATHOS_1:
+				case SceneType.HUB_3:
+				case SceneType.ETHOS_1:
+				case SceneType.ETHOS_2:
+				case SceneType.HUB_4:
+				case SceneType.END_OF_YEAR:
+				default:
+					// Unimplemented scene, map does not exist
+				case SceneType.MAIN_MENU:
+					return "MainMenu";
+			}
+		}
 
 	}
 }
