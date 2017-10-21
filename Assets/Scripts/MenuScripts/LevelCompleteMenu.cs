@@ -32,7 +32,7 @@ public class LevelCompleteMenu : MonoBehaviour {
 
 		Transform scoreChild =  transform.Find("Panel/Panel/Score");
 		Text score = scoreChild.GetComponent<Text>();
-		score.text = "" + POCC.GameManager.getInstance().getCollectableScore();
+		score.text = "" + POCC.GameManager.getInstance().getTotalScore();
 
 
 
