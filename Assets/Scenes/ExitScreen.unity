@@ -91,48 +91,6 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1505648656}
   m_Script: {fileID: 11500000, guid: 4387d00ce569e4eae9b8992e2c302d30, type: 3}
---- !u!1001 &546200697
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 192.41203
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 240.20724
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 493308, guid: 34552856375f2424882bf1dea407d178, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 34552856375f2424882bf1dea407d178, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &756699620
 GameObject:
   m_ObjectHideFlags: 1
@@ -510,4 +468,4 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3

@@ -13,13 +13,16 @@ public class LevelCompleteMenu : MonoBehaviour {
 		this.gameObject.SetActive (true);
 		Transform fliesChild =  transform.Find("Panel/Panel/Flies");
 		Text flies = fliesChild.GetComponent<Text>();
-		flies.text = "" + ScoreManager.manager.collectableScore;
+		flies.text = "" + POCC.GameManager.getInstance().getCollectableScore();
 
 		//check the user's choice with the answer. If correct, add 10 points
 		Transform creatureChild =  transform.Find("Panel/Panel/Creature");
 		Text creature = creatureChild.GetComponent<Text>();
-		if (answer == ScoreManager.manager.choice) {
-			ScoreManager.manager.collectableScore += 10;
+		string playerChoice = POCC.GameManager.getInstance().getChoice();
+		Debug.Log(playerChoice + " is stored");
+
+		if (answer == playerChoice) {
+			POCC.GameManager.getInstance().incrementArgumentationScore(POCC.ArgumentationValue.FIRST_ATTEMPT);
 			creature.text = "10";
 		} else {
 			creature.text = "0";
@@ -29,14 +32,14 @@ public class LevelCompleteMenu : MonoBehaviour {
 
 		Transform scoreChild =  transform.Find("Panel/Panel/Score");
 		Text score = scoreChild.GetComponent<Text>();
-		score.text = "" + ScoreManager.manager.collectableScore;
+		score.text = "" + POCC.GameManager.getInstance().getTotalScore();
 
 
 
 
 		Transform choiceChild =  transform.Find("Panel/FeedbackPanel/Choice");
 		Text choice = choiceChild.GetComponent<Text> ();
-		choice.text = "" + ScoreManager.manager.choice;
+		choice.text = "" + POCC.GameManager.getInstance().getChoice();
 
 	}
 
