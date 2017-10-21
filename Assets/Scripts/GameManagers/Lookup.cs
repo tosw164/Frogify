@@ -9,18 +9,18 @@ namespace POCC
 	public class Lookup
 	{
 
-		public static string sceneLookup(SceneType sceneType) {
+		public static Scene sceneLookup(SceneType sceneType) {
 			switch(sceneType) {
 				case SceneType.GAME_OVER:
-					return "DeathScene";
+					return new GameOverScene();
+				case SceneType.BEARLANA:
+					return new PrototypeLevelScene();
 				case SceneType.END_LEVEL_SCENE:
-					return "ExitScreen";
 				case SceneType.TUTORIAL_1:
 				case SceneType.TUTORIAL_2:
 				case SceneType.HUB_1:
 				case SceneType.LOGOS:
 				case SceneType.HUB_2:
-				case SceneType.BEARLANA:
 				case SceneType.PATHOS_1:
 				case SceneType.HUB_3:
 				case SceneType.ETHOS_1:
@@ -30,7 +30,7 @@ namespace POCC
 				default:
 					// Unimplemented scene, map does not exist
 				case SceneType.MAIN_MENU:
-					return "MainMenu";
+					return new MainMenuScene();
 			}
 		}
 

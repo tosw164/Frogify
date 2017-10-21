@@ -48,6 +48,7 @@ namespace POCC {
 		// Represents the player's inventory.
 		private List<string> _playerItems;
 
+		private Scene _currentScene = new Scene();
 
 		//======================================================
 
@@ -83,7 +84,8 @@ namespace POCC {
 			if (_health == 0) {
 				// Set scene to game over scene and reset health back to default
 				// TODO: Should this be reset by the game over screen?
-				switchScene(SceneType.GAME_OVER, ()=>{resetHealth();});
+				//switchScene(SceneType.GAME_OVER, ()=>{resetHealth();});
+				switchScene(Lookup.sceneLookup(SceneType.GAME_OVER));
 			}
 		}
 
@@ -168,19 +170,31 @@ namespace POCC {
 		// Helper Methods:
 
 		// Helper method to switch scene when required.
-		public void switchScene(SceneType newScene, Action prehooks = null, Action posthooks = null) {
-			// Pre-switch operations go here
-			if (prehooks != null) {
-				prehooks();
-			}
+		//public void switchScene(SceneType newScene, Action prehooks = null, Action posthooks = null) {
+			//// Pre-switch operations go here
+			//if (prehooks != null) {
+				//prehooks();
+			//}
 
-			// Switch scenes
-			SceneManager.LoadScene(Lookup.sceneLookup(newScene));
+			//// Switch scenes
+			//SceneManager.LoadScene(Lookup.sceneLookup(newScene));
 
-			// Post-switch operations go here
-			if (posthooks != null) {
-				posthooks();
-			}
+			//// Post-switch operations go here
+			//if (posthooks != null) {
+				//posthooks();
+			//}
+		//}
+
+		public void switchScene(Scene scene) {
+			_currentScene.getTeardownHooks()();
+			SceneManager.LoadScene(scene.getLocation());
+			sceneChangeHook();
+			scene.getStartupHooks()();
+			_currentScene = scene;
+		}
+
+		public void sceneChangeHook() {
+			// Do things here
 		}
 
 		public void testPre() {
