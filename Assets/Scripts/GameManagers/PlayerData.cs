@@ -15,15 +15,15 @@ namespace POCC
 		private int _health;
 		private long _argumentationScore;
 		private long _collectableScore;
-		private string _levelString;
+		private SceneType _level;
 
 		//TODO: Add fields regarding achievements
 
-		public PlayerData(int health, long aScore, long cScore, String levelString){
+		public PlayerData(int health, long aScore, long cScore, SceneType level){
 			_health = health;
 			_argumentationScore = aScore;
 			_collectableScore = cScore;
-			_levelString = levelString;
+			_level = level;
 		}
 
 		public int getHealth(){
@@ -38,8 +38,8 @@ namespace POCC
 			return _collectableScore;
 		}
 
-		public string getLevelString(){
-			return _levelString;
+		public SceneType getLevel(){
+			return _level;
 		}
 	}
 }

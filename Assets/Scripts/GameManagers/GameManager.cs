@@ -36,7 +36,7 @@ namespace POCC {
 
 		//On startup the string is just main menu, as Pep progresses, shoudl
 		//modify this string to know where to place him again.
-		private string levelString = "MAIN_MENU";
+		private SceneType level = SceneType.MAIN_MENU;
 
 		private string argumentationChoice = "";
 
@@ -195,10 +195,10 @@ namespace POCC {
 			BinaryFormatter bf = new BinaryFormatter();
 
 			//Using unity built in persistentDataPath in order to be more professional
-			FileStream file = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
+			FileStream file = File.Open(Config.PERSISTENCE_FILE, FileMode.Open);
 
 			//Now need to say WHAT data you want to save. YDou need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
- 			PlayerData gameData = new PlayerData(health, argumentationScore, collectableScore, levelString);
+ 			PlayerData gameData = new PlayerData(health, argumentationScore, collectableScore, level);
 
 			bf.Serialize(file, gameData);
 			file.Close();
@@ -222,7 +222,7 @@ namespace POCC {
 				this.health = gameData.getHealth();
 				this.argumentationScore = gameData.getArgueScore();
 				this.collectableScore = gameData.getCollectScore();
-				this.levelString = gameData.getLevelString();
+				this.level = gameData.getLevel();
 			}
 			//IF HERE, THEN MAYBE SAY THERES NO SAVED DATA.
 			//maybe when loading sceen.
