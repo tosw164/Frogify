@@ -76,7 +76,7 @@ namespace POCC {
 			if (health == 0) {
 				health = DEFAULT_HEALTH;//set health BACK to default value
 				//TODO: SHould this be reset by the gameover screen?
-				switchScene(POCC.SceneType.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+				switchScene(SceneType.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 			}
 		}
 
@@ -97,16 +97,16 @@ namespace POCC {
 			argumentationScore = 0;
 		}
 
-		public void incrementCollectableScore(POCC.Collectable collectable){
+		public void incrementCollectableScore(Collectable collectable){
 			//If it is a normal gold fly, just increment by 1
-			if (collectable.Equals (POCC.Collectable.GOLDFLY)) {
+			if (collectable.Equals (Collectable.GOLDFLY)) {
 				collectableScore++;
 			}
 		}
 
-		public void incrementArgumentationScore(POCC.ArgumentationValue argueVal){
+		public void incrementArgumentationScore(ArgumentationValue argueVal){
 			//If it is a normal gold fly, just increment by 1
-			if (argueVal.Equals (POCC.ArgumentationValue.FIRST_ATTEMPT)) {
+			if (argueVal.Equals (ArgumentationValue.FIRST_ATTEMPT)) {
 				argumentationScore+=10;
 			}
 		}
@@ -203,7 +203,7 @@ namespace POCC {
 			FileStream file = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
 
 			//Now need to say WHAT data you want to save. YDou need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
- 			POCC.PlayerData gameData = new POCC.PlayerData(health,argumentationScore,collectableScore, levelString);
+ 			PlayerData gameData = new PlayerData(health,argumentationScore,collectableScore, levelString);
 
 			bf.Serialize (file, gameData);
 			file.Close ();
@@ -221,7 +221,7 @@ namespace POCC {
 				FileStream saveFile = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
 
 				//Reading in FROM the save file - need cast to be able to get it.
-				POCC.PlayerData gameData = (POCC.PlayerData) bf.Deserialize(saveFile);
+				PlayerData gameData = (PlayerData) bf.Deserialize(saveFile);
 				saveFile.Close ();
 
 				this.health = gameData.getHealth ();
