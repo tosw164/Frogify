@@ -48,7 +48,7 @@ public class Spider : MonoBehaviour {
 		if (shake == true) {
 			shakeSpider ();
 		} else {
-			Debug.Log ("DROP");
+			// Debug.Log ("DROP");
 			if (transform.position.y < bottom_y) {
 				move_down = false;
 			} else if (transform.position.y > top_y) {
