@@ -5,7 +5,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
 public class GameManager : MonoBehaviour {
-	
+
 	private static GameManager manager;
 
 
@@ -26,9 +26,9 @@ public class GameManager : MonoBehaviour {
 	//Values for each respective score.
 	private long argumentationScore = 0;
 
-	//THIS MIGHT BE REDUNDANT DUE TO COLLECTIBLES ELSEWHERE.
+	//THIS MIGHT BE REDUNDANT DUE TO COLLECTABLES ELSEWHERE.
 	//Stored here to potentially facilitaed consolidation of scoring.
-	private long collectibleScore = 0;
+	private long collectableScore = 0;
 
 
 	//======================================================
@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
 			Destroy (gameObject);
 		}
 	}
-	
+
 
 	//Update Methods:
 
@@ -67,13 +67,22 @@ public class GameManager : MonoBehaviour {
 	 * back to default values.
 	 */
 	public void resetHealth(){
-		health = DEFAULT_HEALTH;	
+		health = DEFAULT_HEALTH;
+	}
+
+	/**
+	 * This should be called by other classes in order to reset score
+	 * back to default values.
+	 */
+	public void resetScore() {
+		collectableScore = 0;
+		argumentationScore = 0;
 	}
 
 	public void incrementCollectableScore(POCC.Collectable collectable){
 		//If it is a normal gold fly, just increment by 1
 		if (collectable.Equals (POCC.Collectable.GOLDFLY)) {
-			collectibleScore++;
+			collectableScore++;
 		}
 	}
 
@@ -82,6 +91,16 @@ public class GameManager : MonoBehaviour {
 		if (argueVal.Equals (POCC.ArgumentationValue.FIRST_ATTEMPT)) {
 			argumentationScore+=10;
 		}
+	}
+
+	//TODO: Need to refactor this
+	// This is the code that saves the player choice after talking to bearlana
+	//called by the dialogue to load exit scenes
+	public void saveChoice(string playerChoice){
+		Debug.Log (playerChoice);
+		ScoreManager.manager.choice = playerChoice;
+		Debug.Log ("choiceAssigned");
+
 	}
 
 
