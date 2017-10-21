@@ -8,75 +8,81 @@ using UnityEngine.SceneManagement;
 
 namespace POCC {
 
+	/**
+	 * This class represents the overall manager for the game. It is a
+	 * singleton, and holds all of the state for the game.
+	 */
 	public class GameManager {
 
-		private static GameManager manager;
+		private static GameManager _manager;
 
 
 		//======================================================
-		//Default Values
+		// Default Values
 		private static int DEFAULT_HEALTH = 3;
 		//======================================================
 
 
 
 		//======================================================
-		//Fields to be managed
+		// Fields to be managed
 
 		//private just to enforce that health should only be incremented
 		//via use of methods - just to help debugging/controlling the value.
-		private int health = DEFAULT_HEALTH;
+		private int _health = DEFAULT_HEALTH;
 
 		//Values for each respective score.
-		private long argumentationScore = 0;
+		private long _argumentationScore = 0;
 
 		//THIS MIGHT BE REDUNDANT DUE TO COLLECTABLES ELSEWHERE.
-		//Stored here to potentially facilitaed consolidation of scoring.
-		private long collectableScore = 0;
+		//Stored here to potentially facilitated consolidation of scoring.
+		private long _collectableScore = 0;
 
-		//On startup the string is just main menu, as Pep progresses, shoudl
+		//On startup the string is just main menu, as Pep progresses, should
 		//modify this string to know where to place him again.
-		private SceneType level = SceneType.MAIN_MENU;
+		private SceneType _level = SceneType.MAIN_MENU;
 
-		private string argumentationChoice = "";
+		// For saving temporary argumentation choices.
+		private string _argumentationChoice = "";
 
-		private List<string> playerItems;
+		// Represents the player's inventory.
+		private List<string> _playerItems;
 
 
 		//======================================================
 
 		//======================================================
-		//Singleton Methods:
+		// Singleton Methods:
 
 		/**
 		 * Method for retrieving the singleton instance.
 		 */
 		public static GameManager getInstance() {
-			if (manager == null) {
-				manager = new GameManager();
+			if (_manager == null) {
+				_manager = new GameManager();
 			}
-			return manager;
+			return _manager;
 		}
 
 		public GameManager() {
-			playerItems = new List<string>();
+			_playerItems = new List<string>();
 		}
 
 
 		//======================================================
-		//Update Methods:
+		// Update Methods:
 
 		public void incrementHealth() {
-			health++;
+			_health++;
 		}
 
 		public void decrementHealth() {
-			health--;
-			Debug.Log("Took damage, current health is: " + health);
+			_health--;
+			Debug.Log("Took damage, current health is: " + _health);
 
-			if (health == 0) {
+			if (_health == 0) {
 				// Set scene to game over scene and reset health back to default
-				//TODO: SHould this be reset by the gameover screen?
+				// TODO: Should this be reset by the game over screen?
 				switchScene(SceneType.GAME_OVER, ()=>{resetHealth();});
 			}
 		}
@@ -86,7 +92,7 @@ namespace POCC {
 		 * back to default values.
 		 */
 		public void resetHealth(){
-			health = DEFAULT_HEALTH;
+			_health = DEFAULT_HEALTH;
 		}
 
 		/**
@@ -94,25 +100,25 @@ namespace POCC {
 		 * back to default values.
 		 */
 		public void resetScore() {
-			collectableScore = 0;
-			argumentationScore = 0;
+			_collectableScore = 0;
+			_argumentationScore = 0;
 		}
 
 		public void incrementCollectableScore(Collectable collectable){
-			collectableScore += Lookup.collectableScoreLookup(collectable);
+			_collectableScore += Lookup.collectableScoreLookup(collectable);
 		}
 
 		public void incrementArgumentationScore(ArgumentationValue argueVal){
-			argumentationScore += Lookup.argumentationScoreLookup(argueVal);
+			_argumentationScore += Lookup.argumentationScoreLookup(argueVal);
 		}
 
-		//TODO: Need to refactor this
+		// TODO: Need to refactor this
 		// This is the code that saves the player choice after talking to bearlana
-		//called by the dialogue to load exit scenes
+		// called by the dialogue to load exit scenes
 		public void saveChoice(string playerChoice){
-			Debug.Log (playerChoice);
-			argumentationChoice = playerChoice;
-			Debug.Log ("choiceAssigned " + argumentationChoice);
+			Debug.Log(playerChoice);
+			_argumentationChoice = playerChoice;
+			Debug.Log("choiceAssigned " + _argumentationChoice);
 
 		}
 
@@ -120,24 +126,24 @@ namespace POCC {
 		 * Add a item to the players inventory.
 		 */
 		public void addPlayerItem(string itemName) {
-			playerItems.Add(itemName);
+			_playerItems.Add(itemName);
 		}
 		//======================================================
 
 
 		//======================================================
-		//Getter Methods:
+		// Getter Methods:
 
 		public float getHealth(){
-			return health;
+			return _health;
 		}
 
 		public long getArgumentationScore() {
-			return argumentationScore;
+			return _argumentationScore;
 		}
 
 		public long getCollectableScore() {
-			return collectableScore;
+			return _collectableScore;
 		}
 
 		public long getTotalScore() {
@@ -145,25 +151,25 @@ namespace POCC {
 		}
 
 		public string getChoice() {
-			return argumentationChoice;
+			return _argumentationChoice;
 		}
 
 		public List<string> getPlayerItems() {
-			return playerItems;
+			return _playerItems;
 		}
 
 		public bool playerHasItem(string itemName) {
-			return playerItems.Contains(itemName);
+			return _playerItems.Contains(itemName);
 		}
 		//======================================================
 
 
 		//======================================================
-		//Helper Methods:
+		// Helper Methods:
 
-		//Helper method to switch scene when required.
+		// Helper method to switch scene when required.
 		public void switchScene(SceneType newScene, Action prehooks = null, Action posthooks = null) {
-			// Pre-switch opertations go here
+			// Pre-switch operations go here
 			if (prehooks != null) {
 				prehooks();
 			}
@@ -171,7 +177,7 @@ namespace POCC {
 			// Switch scenes
 			SceneManager.LoadScene(Lookup.sceneLookup(newScene));
 
-			// Post-switch opertations go here
+			// Post-switch operations go here
 			if (posthooks != null) {
 				posthooks();
 			}
@@ -189,17 +195,19 @@ namespace POCC {
 		/*
 		 * Method of actually saving data - it instantiates another container class
 		 * that will then hold the data and be serialized to disk.
-		 * Will be called whenever theres a change in level to persist whats needed.
+		 * Will be called whenever there's a change in level to persist whats needed.
 		 */
 		public void Save(){
 			BinaryFormatter bf = new BinaryFormatter();
 
-			//Using unity built in persistentDataPath in order to be more professional
+			// Open the file that will be used for persistence
 			FileStream file = File.Open(Config.PERSISTENCE_FILE, FileMode.Open);
 
-			//Now need to say WHAT data you want to save. YDou need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
- 			PlayerData gameData = new PlayerData(health, argumentationScore, collectableScore, level);
+			// Construct GameData object that will hold all of the information
+			// for the save state
+			PlayerData gameData = new PlayerData(_health, _argumentationScore, _collectableScore, _level);
 
+			// Serialise, save and close file
 			bf.Serialize(file, gameData);
 			file.Close();
 
@@ -212,20 +220,20 @@ namespace POCC {
 			if (File.Exists(Config.PERSISTENCE_FILE)) {
 				BinaryFormatter bf = new BinaryFormatter();
 
-				//Doesn't need file mode because just opening it and KNOW it arledy exists
+				//Doesn't need file mode because just opening it and KNOW it already exists
 				FileStream saveFile = File.Open(Config.PERSISTENCE_FILE, FileMode.Open);
 
 				//Reading in FROM the save file - need cast to be able to get it.
 				PlayerData gameData = (PlayerData)bf.Deserialize(saveFile);
 				saveFile.Close();
 
-				this.health = gameData.getHealth();
-				this.argumentationScore = gameData.getArgueScore();
-				this.collectableScore = gameData.getCollectScore();
-				this.level = gameData.getLevel();
+				_health = gameData.getHealth();
+				_argumentationScore = gameData.getArgueScore();
+				_collectableScore = gameData.getCollectScore();
+				_level = gameData.getLevel();
 			}
-			//IF HERE, THEN MAYBE SAY THERES NO SAVED DATA.
-			//maybe when loading sceen.
+			//IF HERE, THEN MAYBE SAY THERE'S NO SAVED DATA.
+			//maybe when loading screen.
 		}
 		//======================================================
 
