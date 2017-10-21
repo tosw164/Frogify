@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 using System.Collections.Generic;
+using System;
 
 namespace POCC {
 
@@ -75,7 +76,7 @@ namespace POCC {
 			if (health == 0) {
 				health = DEFAULT_HEALTH;//set health BACK to default value
 				//TODO: SHould this be reset by the gameover screen?
-				switchScene (POCC.SceneLookup.lookup(POCC.SceneType.GAME_OVER));//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+				switchScene(POCC.SceneType.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
 			}
 		}
 
@@ -166,9 +167,29 @@ namespace POCC {
 		//Helper Methods:
 
 		//Helper method to switch scene when required.
-		public void switchScene(string sceneName){
-			SceneManager.LoadScene (sceneName);
+		public void switchScene(SceneType newScene, Action prehooks = null, Action posthooks = null) {
+			// Pre-switch opertations go here
+			if (prehooks != null) {
+				prehooks();
+			}
+
+			// Switch scenes
+			SceneManager.LoadScene(SceneLookup.lookup(newScene));
+
+			// Post-switch opertations go here
+			if (posthooks != null) {
+				posthooks();
+			}
 		}
+
+		public void testPre() {
+			Debug.Log("Prehook here");
+		}
+
+		public void testPost() {
+			Debug.Log("Posthook here");
+		}
+
 
 		/*
 		 * Method of actually saving data - it instantiates another container class
