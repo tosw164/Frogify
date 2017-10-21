@@ -14,7 +14,7 @@ using System.Collections.Generic;
  * 
  * You have to populate the required items yourself. 
  * The required items convention is to have a camelCase and is stored in the 
- * singleton GameManager.
+ * singleton POCC.GameManager.
  * 
 **/
 public class CollideMessage : MonoBehaviour {
