@@ -3,13 +3,14 @@
 namespace POCC
 {
 	/**
-	 * This class will simply provide a means of looking 
+	 * This class will simply provide a means of looking
 	 * up certain values in the project.
 	 */
 	public class SceneLookup
 	{
 		public static string MAIN_MENU = "MainMenu";
-		public static string GAME_OVER = "ExitScreen";
+		public static string GAME_OVER = "DeathScene";
+		public static string END_LEVEL_SCENE = "ExitScreen";
 		public static string TUTORIAL_1 = "";
 		public static string TUTORIAL_2 = "";
 		public static string HUB_1 = "";
@@ -27,10 +28,9 @@ namespace POCC
 
 		public SceneLookup ()
 		{
-				
+
 		}
 
 
 	}
 }
-
