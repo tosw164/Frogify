@@ -92,7 +92,8 @@ GameObject:
   - 4: {fileID: 444940}
   - 212: {fileID: 21274272}
   - 61: {fileID: 6106546}
-  - 114: {fileID: 11461134}
+  - 114: {fileID: 11499286}
+  - 61: {fileID: 6183394}
   m_Layer: 0
   m_Name: HoriztontalPlatform
   m_TagString: Untagged
@@ -149,7 +150,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 190518}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -26.73, y: -57.85, z: 0}
+  m_LocalPosition: {x: -21.845276, y: -57.177425, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -255,7 +256,21 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 0.30999997, y: 0.31999996}
---- !u!114 &11461134
+--- !u!61 &6183394
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190518}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 1.28427, y: 0.11903}
+  serializedVersion: 2
+  m_Size: {x: 2.8785434, y: 0.15194264}
+--- !u!114 &11499286
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -263,12 +278,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 190518}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 028cabf35db3b4f4ba8d425393a07728, type: 3}
+  m_Script: {fileID: 11500000, guid: ff80ab9a15b4f440e911230b0c5a5b18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dLeft_x: 0
   dRight_x: 260
   movement_speed: 5
+  expiryTime: 24
 --- !u!212 &21221100
 SpriteRenderer:
   m_ObjectHideFlags: 1
