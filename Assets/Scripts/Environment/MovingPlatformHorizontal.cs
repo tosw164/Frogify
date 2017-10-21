@@ -46,13 +46,16 @@ public class MovingPlatformHorizontal : MonoBehaviour {
 	}
 
 
-
+	//Triggered when Pep jumps on the platform
+	//Sets Pep to become a child of the platform, and inherits the movement script
 	void OnTriggerEnter2D(Collider2D other) {
 		if(other.gameObject.CompareTag("Player")) {
 			other.gameObject.transform.parent = transform;
 		}
 	}
 
+	//Triggered when Pep jumps off the platform
+	//Sets Pep's parent back to null
 	void OnTriggerExit2D(Collider2D other) {
 		if (other.gameObject.CompareTag("Player")) {
 			other.gameObject.transform.parent = null;
