@@ -8,15 +8,18 @@ public class InventoryDisplay : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		//Initialise the component.
 		renderers = GetComponent<Renderer> ();
+		//Disable the renderer so it is not visible.
 		renderers.enabled = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log(ItemManager.itemManager.itemList.Contains (itemName));
+		/**
+		 * Checks if the item has been picked up, if so the render the item.
+		 * */
 		if (ItemManager.itemManager.itemList.Contains (itemName)) {
-			Debug.Log("pickedup");
 			renderers.enabled = true;
 		}
 	}
