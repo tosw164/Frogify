@@ -6,7 +6,7 @@ using System.Collections;
  * This script is used for the moving platform - the assigned object moves left and right (set left and right limits) with a set 
  * movement speed.
  */
-public class MovingPlatform : MonoBehaviour {
+public class MovingPlatformHorizontal : MonoBehaviour {
 
 	//Public fields, assigned, relative to current position
 	public int dLeft_x;
