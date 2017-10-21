@@ -10,11 +10,11 @@ GameObject:
   - 4: {fileID: 450970}
   - 212: {fileID: 21263202}
   - 114: {fileID: 11456446}
-  - 114: {fileID: 11431068}
   - 61: {fileID: 6170514}
+  - 114: {fileID: 11434150}
   m_Layer: 0
   m_Name: Spider
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,12 +41,12 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 4.22, y: 3.19}
---- !u!114 &11431068
+--- !u!114 &11434150
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -54,7 +54,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 138166}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e053b0a94752146e79954ce4df1b5565, type: 3}
+  m_Script: {fileID: 11500000, guid: 56c774ca5ee3d48b1affbc6821fefc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &11456446
@@ -68,10 +68,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 087cd9c352cd74341b9b9acac1ef2996, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transform: {fileID: 450970}
   top_y: 5
   bottom_y: 0
-  shakingLength: 3
+  shakeTimerLimit: 2
+  movement_speed: 2
 --- !u!212 &21263202
 SpriteRenderer:
   m_ObjectHideFlags: 1
