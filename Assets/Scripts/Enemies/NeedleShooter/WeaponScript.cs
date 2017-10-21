@@ -20,15 +20,21 @@ public class WeaponScript : MonoBehaviour
     /// </summary>
     public float shootingRate = 0.25f;
 
+    public int shotAngleInZ;
+
     //--------------------------------
-    // 2 - Cooldown
+    // 2 - Cooldown and animator
     //--------------------------------
 
     private float shootCooldown;
+    private Animator shooting;
 
     void Start()
     {
+        Debug.Log("In WeaponScript start");
+        shooting = GetComponentInParent<Animator>();
         shootCooldown = 0f;
+        transform.rotation = Quaternion.Euler(0, 0, shotAngleInZ);
     }
 
     void Update()
@@ -48,8 +54,12 @@ public class WeaponScript : MonoBehaviour
     /// </summary>
     public void Attack(bool isEnemy)
     {
+        shooting.SetBool("Shoot", true);
         if (CanAttack)
         {
+
+            StartCoroutine(Waiting());
+
             shootCooldown = shootingRate;
 
             // Create a new shot
@@ -71,6 +81,8 @@ public class WeaponScript : MonoBehaviour
             {
                 move.direction = this.transform.right; // towards in 2D space is the right of the sprite
             }
+            shooting.SetBool("Shoot", false);
+            Debug.Log(shooting.GetBool("Shoot"));
         }
     }
 
@@ -84,4 +96,13 @@ public class WeaponScript : MonoBehaviour
             return shootCooldown <= 0f;
         }
     }
+
+    IEnumerator Waiting() {
+       
+        yield return new WaitForSeconds(2.75f);
+        shooting.SetBool("Shoot", true);
+        Debug.Log(shooting.GetBool("Shoot"));
+        //yield return new WaitForSeconds(1f);
+    }
+
 }

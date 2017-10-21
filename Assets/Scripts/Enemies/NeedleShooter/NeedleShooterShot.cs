@@ -9,6 +9,8 @@ public class NeedleShooterShot : MonoBehaviour
   /// Damage inflicted
   /// </summary>
   public int damage = 1;
+    public int bulletTimeAlive = 2; // time bullet stays alive in seconds
+
 
     /// <summary>
     /// Projectile damage player or enemies?
@@ -18,6 +20,6 @@ public class NeedleShooterShot : MonoBehaviour
     void Start()
     {
         // 2 - Limited time to live to avoid any leak
-        Destroy(gameObject, 20); // 20sec
+        Destroy(gameObject, bulletTimeAlive); // 20sec
     }
 }

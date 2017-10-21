@@ -6,20 +6,23 @@ using System.Collections;
 /// </summary>
 public class EnemyScript : MonoBehaviour
 {
-    private WeaponScript weapon;
+    private WeaponScript[] weapons; // store the weapons as a child of this object
 
     void Awake()
     {
         // Retrieve the weapon only once
-        weapon = GetComponent<WeaponScript>();
+        weapons = GetComponentsInChildren<WeaponScript>();
     }
 
     void Update()
     {
-        // Auto-fire
-        if (weapon != null && weapon.CanAttack)
+        foreach (WeaponScript weapon in weapons)
         {
-            weapon.Attack(true);
+            // Auto-fire
+            if (weapon != null && weapon.CanAttack)
+            {
+                weapon.Attack(true);
+            }
         }
     }
 }
