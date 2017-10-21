@@ -33,9 +33,19 @@ public class GameManager : MonoBehaviour {
 
 	//======================================================
 
+	//======================================================
+	//Singleton Methods:
+	/**
+	 * Method for retrieving the singleton instance.
+	 */
+	public static GameManager getInstance(){
+		return manager;
+	}
 
-
-
+	/**
+	 * Ensure the existance of the sole singleton instance, by destroying
+	 * any subsequent instantiations of the GameManager.
+	 */
 	void Awake () {
 		if (manager == null) {
 			DontDestroyOnLoad (gameObject);
@@ -46,6 +56,7 @@ public class GameManager : MonoBehaviour {
 	}
 
 
+	//======================================================
 	//Update Methods:
 
 	public void incrementHealth(){
@@ -102,8 +113,10 @@ public class GameManager : MonoBehaviour {
 		Debug.Log ("choiceAssigned");
 
 	}
+	//======================================================
 
 
+	//======================================================
 	//Getter Methods:
 	public float getHealth(){
 		return health;
@@ -120,10 +133,14 @@ public class GameManager : MonoBehaviour {
 	public long getTotalScore() {
 		return getCollectableScore() + getArgumentationScore();
 	}
+	//======================================================
 
 
 
 
+
+	//======================================================
+	//Helper Methods
 
 	//Helper method to switch scene when required.
 	public void switchScene(int sceneNum){
@@ -140,8 +157,6 @@ public class GameManager : MonoBehaviour {
 		//Now need to say WHAT data you want to save. You need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
 
 	}
+	//======================================================
 
-	public static GameManager getInstance(){
-		return manager;
-	}
 }
