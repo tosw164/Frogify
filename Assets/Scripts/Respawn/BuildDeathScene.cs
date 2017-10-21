@@ -11,7 +11,7 @@ public class BuildDeathScene : MonoBehaviour {
 
 		Transform scoreChild =  transform.Find("Panel/Panel/Score");
 		Text score = scoreChild.GetComponent<Text>();
-		score.text = "" + ScoreManager.manager.collectableScore;
+		score.text = "" + POCC.GameManager.getInstance().getCollectableScore();
 
 
 	}
