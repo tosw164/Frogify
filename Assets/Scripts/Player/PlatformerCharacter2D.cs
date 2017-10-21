@@ -30,7 +30,7 @@ namespace UnityStandardAssets._2D
 		private float X_VELOCITY_LIMIT = 30f;
 		private float Y_VELOCITY_LIMIT = 20f;
 
-		public float movement_multiplier = 2.5f; //Represent speedup when LEFTSHIFT is pressed
+		public float movement_multiplier = 2.0f; //Represent speedup when LEFTSHIFT is pressed
 
 		private void Awake()
 		{
