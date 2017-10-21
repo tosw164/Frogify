@@ -6,7 +6,7 @@ using System.IO;
 
 public class GameManager : MonoBehaviour {
 	
-	public static GameManager manager;
+	private static GameManager manager;
 
 
 	//======================================================
@@ -107,5 +107,9 @@ public class GameManager : MonoBehaviour {
 
 		//Now need to say WHAT data you want to save. You need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
 
+	}
+
+	public static GameManager getInstance(){
+		return manager;
 	}
 }
