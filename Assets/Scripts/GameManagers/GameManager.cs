@@ -75,10 +75,9 @@ namespace POCC {
 			Debug.Log("Took damage, current health is: " + health);
 
 			if (health == 0) {
-				health = DEFAULT_HEALTH;//set health BACK to default value
-
+				// Set scene to game over scene and reset health back to default
 				//TODO: SHould this be reset by the gameover screen?
-				switchScene(SceneType.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+				switchScene(SceneType.GAME_OVER, ()=>{resetHealth();});
 			}
 		}
 
