@@ -3,6 +3,8 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
+using System.Collections.Generic;
+
 namespace POCC {
 
 	public class GameManager {
@@ -37,11 +39,14 @@ namespace POCC {
 
 		private string argumentationChoice = "";
 
+		private List<string> playerItems;
+
 
 		//======================================================
 
 		//======================================================
 		//Singleton Methods:
+
 		/**
 		 * Method for retrieving the singleton instance.
 		 */
@@ -50,6 +55,10 @@ namespace POCC {
 				manager = new GameManager();
 			}
 			return manager;
+		}
+
+		public GameManager() {
+			playerItems = new List<string>();
 		}
 
 
@@ -110,11 +119,19 @@ namespace POCC {
 			Debug.Log ("choiceAssigned " + argumentationChoice);
 
 		}
+
+		/**
+		 * Add a item to the players inventory.
+		 */
+		public void addPlayerItem(string itemName) {
+			playerItems.Add(itemName);
+		}
 		//======================================================
 
 
 		//======================================================
 		//Getter Methods:
+
 		public float getHealth(){
 			return health;
 		}
@@ -134,11 +151,19 @@ namespace POCC {
 		public string getChoice() {
 			return argumentationChoice;
 		}
+
+		public List<string> getPlayerItems() {
+			return playerItems;
+		}
+
+		public bool playerHasItem(string itemName) {
+			return playerItems.Contains(itemName);
+		}
 		//======================================================
 
 
-
-
+		//======================================================
+		//Helper Methods:
 
 		//Helper method to switch scene when required.
 		public void switchScene(string sceneName){
@@ -186,7 +211,7 @@ namespace POCC {
 			//IF HERE, THEN MAYBE SAY THERES NO SAVED DATA.
 			//maybe when loading sceen.
 		}
-	//======================================================
+		//======================================================
 
 	}
 }
