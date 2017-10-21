@@ -4,7 +4,7 @@ using System.Collections;
 using System.Collections.Generic;       //Allows us to use Lists. 
 
 /**
- * Unity's open source GameManager skeleton
+ * Unity's open source POCC.GameManager skeleton
  * Source : https://unity3d.com/learn/tutorials/projects/2d-roguelike-tutorial/writing-game-manager
  * 
  * 
@@ -12,7 +12,7 @@ using System.Collections.Generic;       //Allows us to use Lists.
 public class ItemManager : MonoBehaviour
 {
 
-	public static ItemManager itemManager = null;              //Static instance of GameManager which allows it to be accessed by any other script.
+	public static ItemManager itemManager = null;              //Static instance of POCC.GameManager which allows it to be accessed by any other script.
 	private int level = 3;                                  //Current level number, expressed in game as "Day 1".
 
 	public List<string> itemList;
@@ -29,7 +29,7 @@ public class ItemManager : MonoBehaviour
 		//If instance already exists and it's not this:
 		else if (itemManager != this)
 
-			//Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a GameManager.
+			//Then destroy this. This enforces our singleton pattern, meaning there can only ever be one instance of a POCC.GameManager.
 			Destroy(gameObject);    
 
 		//Sets this to not be destroyed when reloading scene
