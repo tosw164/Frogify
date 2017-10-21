@@ -109,6 +109,19 @@ public class GameManager : MonoBehaviour {
 		return health;
 	}
 
+	public int getArgumentationScore() {
+		return argumentationScore;
+	}
+
+	public int getCollectableScore() {
+		return collectableScore;
+	}
+
+	public int getTotalScore() {
+		return getCollectableScore() + getArgumentationScore();
+	}
+
+
 
 
 
