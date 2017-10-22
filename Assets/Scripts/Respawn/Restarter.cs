@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
+using POCC;
+using POCC.Scenes;
 
 //Obtained from https://docs.unity3d.com/ScriptReference/MonoBehaviour.OnCollisionEnter2D.html
 
@@ -8,8 +9,7 @@ public class Restarter : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 
 		if (coll.gameObject.tag == "Player") {
-			SceneManager.LoadScene(3);
-			POCC.GameManager.getInstance().resetHealth();
+			GameManager.getInstance().switchScene(Lookup.sceneLookup(SceneType.GAME_OVER));
 		}
 	}
 }
