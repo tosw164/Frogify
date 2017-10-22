@@ -12,10 +12,10 @@ public class Spider : MonoBehaviour {
 	private Transform transform;
 
 	//The upper limit of movement
-	public float top_y = 5f;
+	public float dTop_y = 5f;
 
 	//The bottom limit of movement
-	public float bottom_y = 0f;
+	public float dBottom_y = 0f;
 
 	//The timer for how long the spider shakes
 	public float shakeTimerLimit = 2f;
@@ -76,9 +76,9 @@ public class Spider : MonoBehaviour {
 			shakeSpider ();
 		} else {
 			//Moves up once its gone below the bottom limit, and vice versa
-			if (transform.position.y < (bottom_y + origPositionY)) {
+			if (transform.position.y < (dBottom_y+origPositionY)) {
 				move_down = false;
-			} else if (transform.position.y > (top_y + origPositionY)) {
+			} else if (transform.position.y > (dTop_y+origPositionY)) {
 				shake = true;
 				move_down = true;
 				counter = 0.0f;

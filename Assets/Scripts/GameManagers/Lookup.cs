@@ -21,11 +21,16 @@ namespace POCC
 				case SceneType.END_LEVEL_SCENE:
 					return new SceneBuilder(new EndLevelScene()).build();
 				case SceneType.TUTORIAL_1:
+					return builder.setLocation ("TutorialLevel").build();
 				case SceneType.TUTORIAL_2:
+					return builder.setLocation ("TutorialLevelRunAway").build();
 				case SceneType.HUB_1:
 				case SceneType.LOGOS:
 				case SceneType.HUB_2:
 				case SceneType.PATHOS_1:
+					return builder.setLocation ("PathosLevelSpider").build();
+				case SceneType.PATHOS_2:
+					return builder.setLocation ("PathosLevelSpiderFollow").build();
 				case SceneType.HUB_3:
 				case SceneType.ETHOS_1:
 				case SceneType.ETHOS_2:
