@@ -30741,11 +30741,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -44.15
+      value: -34.4
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -15.1
+      value: -5.7
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.z
@@ -31526,11 +31526,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 445344, guid: 06fd279b298314eaa872a7f301e694c0, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -11.622
+      value: -11.615
       objectReference: {fileID: 0}
     - target: {fileID: 445344, guid: 06fd279b298314eaa872a7f301e694c0, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -4.533
+      value: -4.279
       objectReference: {fileID: 0}
     - target: {fileID: 445344, guid: 06fd279b298314eaa872a7f301e694c0, type: 2}
       propertyPath: m_LocalPosition.z
@@ -44530,6 +44530,120 @@ SpriteRenderer:
   m_Color: {r: 0.8156863, g: 0.14901961, b: 0.14901961, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1273867578
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -32.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.046875
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 161926, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_Name
+      value: SnekTriggerObject (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 440280, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -17.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 16.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 146776, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.003444146
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.0012535667
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.3420179
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9396863
+      objectReference: {fileID: 0}
+    - target: {fileID: 443120, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -40
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454782, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: speed
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169532, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_Offset.x
+      value: 0.17685641
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169532, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_Offset.y
+      value: 3.2260053
+      objectReference: {fileID: 0}
+    - target: {fileID: 6169532, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_Size.y
+      value: 19.159962
+      objectReference: {fileID: 0}
+    - target: {fileID: 21221158, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_FlipY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21221158, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11454782, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+      propertyPath: isLeft
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: cac7f57f4b70e42d9835f36e3fbcab81, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1277682345
 GameObject:
   m_ObjectHideFlags: 0
