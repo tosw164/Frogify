@@ -9,11 +9,11 @@ namespace POCC {
 			_teardownHooks = this.teardownHookBase;
 		}
 
-		protected void startupHookBase() {
+		protected override void startupHookBase() {
 			GameManager.getInstance().clearInventory();
 		}
 
-		protected void teardownHookBase() {
+		protected override void teardownHookBase() {
 			GameManager.getInstance().resetScore();
 		}
 	}

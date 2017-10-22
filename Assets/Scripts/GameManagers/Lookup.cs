@@ -16,6 +16,7 @@ namespace POCC
 				case SceneType.BEARLANA:
 					return new PrototypeLevelScene();
 				case SceneType.END_LEVEL_SCENE:
+					return new EndLevelScene();
 				case SceneType.TUTORIAL_1:
 				case SceneType.TUTORIAL_2:
 				case SceneType.HUB_1:

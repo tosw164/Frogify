@@ -14,10 +14,10 @@ namespace POCC {
 			_teardownHooks = this.teardownHookBase;
 		}
 
-		protected void startupHookBase() {
+		protected virtual void startupHookBase() {
 		}
 
-		protected void teardownHookBase() {
+		protected virtual void teardownHookBase() {
 		}
 
 		public string getLocation() {
