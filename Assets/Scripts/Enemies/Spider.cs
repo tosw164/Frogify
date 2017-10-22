@@ -45,6 +45,7 @@ public class Spider : MonoBehaviour {
 	float counter;
 
 	private float origPositionX;
+	private float origPositionY;
 
 	// Use this for initialization
 	void Start () {
@@ -62,6 +63,7 @@ public class Spider : MonoBehaviour {
 
 		//Saves original position
 		origPositionX = transform.position.x;
+		origPositionY = transform.position.y;
 
 
 	}
@@ -74,9 +76,9 @@ public class Spider : MonoBehaviour {
 			shakeSpider ();
 		} else {
 			//Moves up once its gone below the bottom limit, and vice versa
-			if (transform.position.y < bottom_y) {
+			if (transform.position.y < (bottom_y + origPositionY)) {
 				move_down = false;
-			} else if (transform.position.y > top_y) {
+			} else if (transform.position.y > (top_y + origPositionY)) {
 				shake = true;
 				move_down = true;
 				counter = 0.0f;
