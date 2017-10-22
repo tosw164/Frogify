@@ -10,14 +10,13 @@ namespace POCC.Scenes {
 		protected SceneType _sceneType;
 
 		public Scene() {
-			this(null, null);
-		}
-
-		public Scene(SceneType sceneType, string sceneLocation) {
-			_sceneType = sceneType;
-			_sceneLocation = sceneLocation;
 			_startupHooks = this.startupHookBase;
 			_teardownHooks = this.teardownHookBase;
+		}
+
+		public Scene(SceneType sceneType, string sceneLocation) : this() {
+			_sceneType = sceneType;
+			_sceneLocation = sceneLocation;
 		}
 
 		protected virtual void startupHookBase() {
