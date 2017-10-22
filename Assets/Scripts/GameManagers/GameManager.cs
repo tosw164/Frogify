@@ -49,11 +49,13 @@ namespace POCC {
 		// Represents the player's inventory.
 		private List<string> _playerItems;
 
-		private POCC.Scenes.Scene _currentScene = new POCC.Scenes.Scene();
+		private POCC.Scenes.Scene _currentScene = Lookup.sceneLookup(SceneType.TUTORIAL_1);
 
 		private Achievements.AchievementManager _achievementManger;
 
 		private List<String> _currentAchievements = new List<String>();
+
+		private Stack<POCC.Scenes.Scene> _tempScenes;
 
 		//======================================================
 
@@ -72,7 +74,8 @@ namespace POCC {
 
 		public GameManager() {
 			_playerItems = new List<string>();
-			_achievementManger = new POCC.Achievements.AchievementManager ();
+			_achievementManger = new Achievements.AchievementManager();
+			_tempScenes = new Stack<POCC.Scenes.Scene>();
 		}
 
 
@@ -207,7 +210,7 @@ namespace POCC {
 		public void switchScene(POCC.Scenes.Scene scene) {
 			_currentScene.getTeardownHooks()();
 			SceneManager.LoadScene(scene.getLocation());
-			sceneChangeHook();
+			scene = sceneChangeHook(scene);
 			scene.getStartupHooks()();
 			_currentScene = scene;
 		}
@@ -216,8 +219,21 @@ namespace POCC {
 		 * Hook that the game manager can use if needing to do some general setting
 		 * of state
 		 */
-		public void sceneChangeHook() {
+		public POCC.Scenes.Scene sceneChangeHook(POCC.Scenes.Scene scene) {
 			// Do things here
+			if (scene.getSceneType() == SceneType.GAME_OVER) {
+				_tempScenes.Push(_currentScene);
+				return scene;
+			}
+			else if (_currentScene.getSceneType() == SceneType.GAME_OVER && scene.getSceneType() != SceneType.MAIN_MENU) {
+				POCC.Scenes.Scene tempScene = _tempScenes.Pop();
+
+				// TODO: Consider differences if used switchScene(scene)
+				SceneManager.LoadScene(tempScene.getLocation());
+
+				return tempScene;
+			}
+			return scene;
 		}
 
 		public void testPre() {
