@@ -18,6 +18,12 @@ namespace POCC.Achievements{
 
 		public AchievementManager(){
 			_achivementTypeCount = new Dictionary<AchievementType, int> ();
+
+			_achivementTypeCount.Add (AchievementType.LEVEL, 0);
+			_achivementTypeCount.Add (AchievementType.NPC_PERSUADED, 0);
+			_achivementTypeCount.Add (AchievementType.COLLECTABLES, 0);
+			_achivementTypeCount.Add (AchievementType.HIDDEN_ITEMS, 0);
+
 			_achievementGroups = new Dictionary<AchievementType, List<Achievement>> ();
 			addAchivements ();
 
@@ -31,10 +37,6 @@ namespace POCC.Achievements{
 		public void RegisterAchievementEvent(AchievementType achType){
 			//Do a check to make sure the type is actually in the dictionary
 			//just as a precaution.
-			if (!_achivementTypeCount.ContainsKey (achType)) {
-				return;
-			}
-				
 			switch(achType){
 			case AchievementType.LEVEL:
 				_achivementTypeCount[achType]++;
@@ -63,17 +65,15 @@ namespace POCC.Achievements{
 		 */
 		public void ParseAchievements(AchievementType achType){
 			List<Achievement> achievementList = _achievementGroups [achType];
-			foreach(Achievement currentAchievement in achievementList){
+			foreach(var currentAchievement in achievementList){
 				if (currentAchievement._unlocked == false) {
 					if( achType == AchievementType.COLLECTABLES ) {
 						if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
-							//currentAchievement._unlocked = true;
-							//RaiseAchievementUnlocked(currentAchievement);
+							GameManager.getInstance ().handleAchievement (currentAchievement);
 						}
 					}
 					else if(_achivementTypeCount[achType] >= currentAchievement._unlockCount ){
-						//currentAchievement._unlocked = true;
-						//RaiseAchievementUnlocked(achType);
+						GameManager.getInstance ().handleAchievement (currentAchievement);
 					}
 				}
 			}
@@ -125,9 +125,9 @@ namespace POCC.Achievements{
 			// Achievements for Collectables
 			//========================================================================
 			List<Achievement> collectablesBasedAcheivements = new List<Achievement>();
-			collectablesBasedAcheivements.Add (new Achievement(25,false,"25 Collectables Obtained"));
-			collectablesBasedAcheivements.Add (new Achievement(50,false,"50 Collectables Obtained"));
-			collectablesBasedAcheivements.Add (new Achievement(75,false,"75 Collectables Obtained"));
+			collectablesBasedAcheivements.Add (new Achievement(1,false,"1 Collectables Obtained"));
+			collectablesBasedAcheivements.Add (new Achievement(2,false,"2 Collectables Obtained"));
+			collectablesBasedAcheivements.Add (new Achievement(3,false,"3 Collectables Obtained"));
 
 			_achievementGroups.Add (AchievementType.COLLECTABLES, collectablesBasedAcheivements);
 
