@@ -256,12 +256,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 7336456}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.86, y: -1.76, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -8.973334, y: 0.39000005, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 108
 --- !u!1 &7836621
 GameObject:
   m_ObjectHideFlags: 0
@@ -3232,7 +3232,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406160, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
       propertyPath: m_Text
-      value: Hello, little Pep!
+      value: If you want to convince me to leave, tell me how it will affect what
+        I hold dear the most.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
@@ -3618,12 +3619,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 154689660}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.45, y: -2.69, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 22.130001, y: 0.080000006, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 99
 --- !u!1 &155389563
 GameObject:
   m_ObjectHideFlags: 0
@@ -5523,12 +5524,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 266668401}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.46, y: 9.79, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -7.506667, y: 4.2400002, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 106
 --- !u!1 &269604668
 GameObject:
   m_ObjectHideFlags: 0
@@ -8514,9 +8515,6 @@ GameObject:
   - 114: {fileID: 440723055}
   - 114: {fileID: 440723052}
   - 114: {fileID: 440723051}
-  - 114: {fileID: 440723050}
-  - 114: {fileID: 440723049}
-  - 114: {fileID: 440723048}
   - 114: {fileID: 440723045}
   - 114: {fileID: 440723046}
   - 114: {fileID: 440723044}
@@ -8525,6 +8523,7 @@ GameObject:
   - 61: {fileID: 440723059}
   - 114: {fileID: 440723058}
   - 114: {fileID: 440723060}
+  - 114: {fileID: 440723048}
   m_Layer: 0
   m_Name: FrogChief
   m_TagString: Untagged
@@ -8599,7 +8598,20 @@ MonoBehaviour:
     width: 921
     height: 840
   selectedBlock: {fileID: 440723042}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 440723041}
+  - {fileID: 440723043}
+  - {fileID: 440723057}
+  - {fileID: 440723056}
+  - {fileID: 440723055}
+  - {fileID: 440723054}
+  - {fileID: 440723053}
+  - {fileID: 440723052}
+  - {fileID: 440723051}
+  - {fileID: 440723046}
+  - {fileID: 440723045}
+  - {fileID: 440723048}
+  - {fileID: 440723044}
   variables: []
   description: 
   stepPause: 0
@@ -8670,11 +8682,9 @@ MonoBehaviour:
   - {fileID: 440723053}
   - {fileID: 440723052}
   - {fileID: 440723051}
-  - {fileID: 440723050}
-  - {fileID: 440723049}
-  - {fileID: 440723048}
   - {fileID: 440723046}
   - {fileID: 440723045}
+  - {fileID: 440723048}
   - {fileID: 440723044}
   - {fileID: 440723043}
 --- !u!114 &440723043
@@ -8745,7 +8755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 11
   indentLevel: 0
-  storyText: The Logos tribe is to the right, I believe... I hope I can convince them.
+  storyText: 'Speak to their hearts..? Whatever does that mean? '
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -8816,35 +8826,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 10
+  itemId: 16
   indentLevel: 0
-  storyText: 'Go to each tribe''s village: tribe Logos, tribe Pathos, and tribe Ethos.
-    The Logos tribe may be easiest to convince - try them first.'
-  description: 
-  character: {fileID: 440723047}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 318445161}
---- !u!114 &440723049
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 440723037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 9
-  indentLevel: 0
-  storyText: How can I convince them, Chief???
+  storyText: Oh well, to tribe Pathos. I believe they're to the right, with those
+    green rooftops.
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -8856,32 +8841,6 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 357188666}
---- !u!114 &440723050
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 440723037}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 8
-  indentLevel: 0
-  storyText: Hmm... As much as I want to believe you, Pep, our village may not. If
-    we can't get them to believe, then I'm afraid there's nothing I can do.
-  description: 
-  character: {fileID: 440723047}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 318445161}
 --- !u!114 &440723051
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -8895,7 +8854,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: I was too busy running for my life to worry about that, Chief.
+  storyText: I'll do that, chief! Just you wait!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -8920,7 +8879,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: What you say is a wild but startling statement, Pep. Do you have evidence?
+  storyText: Tribe Pathos has always been the heart of our village. Chief Pathos can
+    be a bit unreasonable at times... but if you speak to their hearts, they're willing
+    to listen.
   description: 
   character: {fileID: 440723047}
   portrait: {fileID: 0}
@@ -8945,8 +8906,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 2
   indentLevel: 0
-  storyText: I saw them! They're destroying the forest as we speak, and they're coming
-    this way!
+  storyText: You're right chief. Who should I try to convince next?
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -8971,7 +8931,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 3
   indentLevel: 0
-  storyText: Calm down, Pep, and tell me exactly what happened.
+  storyText: Well done, Pep, well done. But remember, our village has two more tribes
+    to worry about. And I refuse to let anyone leave until we all agree to!
   description: 
   character: {fileID: 440723047}
   portrait: {fileID: 0}
@@ -9025,7 +8986,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: Chief Krogg! The humans! I saw the humans!
+  storyText: I did it, Chief! I convinced the Logos tribe to leave the forest! Can
+    we leave now?
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -10588,7 +10550,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406160, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
       propertyPath: m_Text
-      value: Zzz...
+      value: I find that metaphores and exaggeration gets me to believe...
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
@@ -11105,8 +11067,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532360511}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 45.5, y: -7.67, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 19.813334, y: -1.5799999, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 729725484}
@@ -11120,8 +11082,8 @@ Transform:
   - {fileID: 971140267}
   - {fileID: 1679375541}
   - {fileID: 340672774}
-  m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 102
 --- !u!1 &533781444
 GameObject:
   m_ObjectHideFlags: 0
@@ -12277,12 +12239,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 588263222}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -40.86, y: 9.79, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -8.973334, y: 4.2400002, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 105
 --- !u!1 &589042142
 GameObject:
   m_ObjectHideFlags: 0
@@ -16578,12 +16540,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 807486283}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.46, y: -1.76, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -7.506667, y: 0.39000005, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 107
 --- !u!1 &810428623
 GameObject:
   m_ObjectHideFlags: 0
@@ -16879,6 +16841,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1834072058}
   m_RootOrder: 113
+--- !u!114 &828164239 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11499904, guid: 7a86928eda70f4352a72d0f314a742d4,
+    type: 2}
+  m_PrefabInternal: {fileID: 1339457645}
+  m_Script: {fileID: 11500000, guid: ee8371d2b2fe14a9ca0a9465140027de, type: 3}
 --- !u!1 &831648935
 GameObject:
   m_ObjectHideFlags: 0
@@ -17993,12 +17961,34 @@ GameObject:
   - 114: {fileID: 885225108}
   - 114: {fileID: 885225107}
   - 114: {fileID: 885225106}
-  - 114: {fileID: 885225105}
-  - 114: {fileID: 885225104}
-  - 114: {fileID: 885225103}
-  - 114: {fileID: 885225100}
-  - 114: {fileID: 885225101}
   - 114: {fileID: 885225099}
+  - 114: {fileID: 885225100}
+  - 114: {fileID: 885225103}
+  - 114: {fileID: 885225115}
+  - 114: {fileID: 885225118}
+  - 114: {fileID: 885225117}
+  - 114: {fileID: 885225116}
+  - 114: {fileID: 885225104}
+  - 114: {fileID: 885225101}
+  - 114: {fileID: 885225119}
+  - 114: {fileID: 885225128}
+  - 114: {fileID: 885225137}
+  - 114: {fileID: 885225129}
+  - 114: {fileID: 885225136}
+  - 114: {fileID: 885225135}
+  - 114: {fileID: 885225134}
+  - 114: {fileID: 885225133}
+  - 114: {fileID: 885225132}
+  - 114: {fileID: 885225131}
+  - 114: {fileID: 885225130}
+  - 114: {fileID: 885225120}
+  - 114: {fileID: 885225127}
+  - 114: {fileID: 885225126}
+  - 114: {fileID: 885225125}
+  - 114: {fileID: 885225124}
+  - 114: {fileID: 885225123}
+  - 114: {fileID: 885225122}
+  - 114: {fileID: 885225121}
   - 114: {fileID: 885225097}
   m_Layer: 0
   m_Name: LogosLeader
@@ -18069,12 +18059,13 @@ MonoBehaviour:
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
-    x: -351
-    y: -351
-    width: 1248
-    height: 841
+    x: -352
+    y: -356
+    width: 1344
+    height: 960
   selectedBlock: {fileID: 885225098}
-  selectedCommands: []
+  selectedCommands:
+  - {fileID: 885225097}
   variables: []
   description: 
   stepPause: 0
@@ -18088,6 +18079,103 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &885225097
 MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b097b9790a8a1456a86bc4d322b487db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 58
+  indentLevel: 0
+  menuDialog: {fileID: 828164239}
+--- !u!114 &885225098
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 48
+    y: 48
+    width: 120
+    height: 40
+  itemId: 0
+  blockName: LogosEntry
+  description: 
+  eventHandler: {fileID: 885225112}
+  commandList:
+  - {fileID: 885225111}
+  - {fileID: 885225110}
+  - {fileID: 885225109}
+  - {fileID: 885225108}
+  - {fileID: 885225107}
+  - {fileID: 885225106}
+  - {fileID: 885225097}
+  - {fileID: 885225099}
+  - {fileID: 885225137}
+  - {fileID: 885225128}
+  - {fileID: 885225119}
+--- !u!114 &885225099
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  text: Which item would best convince Chief Logos?
+  description: 
+  targetBlock: {fileID: 885225100}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &885225100
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 295
+    y: 44
+    width: 120
+    height: 40
+  itemId: 30
+  blockName: OptionApple
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 885225118}
+  - {fileID: 885225117}
+  - {fileID: 885225116}
+  - {fileID: 885225115}
+  - {fileID: 885225104}
+  - {fileID: 885225103}
+  - {fileID: 885225101}
+--- !u!114 &885225101
+MonoBehaviour:
   m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
@@ -18097,7 +18185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 28
+  itemId: 38
   indentLevel: 0
   targetObject: {fileID: 2141783156}
   targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
@@ -18112,125 +18200,6 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
---- !u!114 &885225098
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885225093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nodeRect:
-    serializedVersion: 2
-    x: 49
-    y: 49
-    width: 120
-    height: 40
-  itemId: 0
-  blockName: LogosEntry
-  description: 
-  eventHandler: {fileID: 885225112}
-  commandList:
-  - {fileID: 885225111}
-  - {fileID: 885225110}
-  - {fileID: 885225109}
-  - {fileID: 885225108}
-  - {fileID: 885225107}
-  - {fileID: 885225106}
-  - {fileID: 885225105}
-  - {fileID: 885225104}
-  - {fileID: 885225103}
-  - {fileID: 885225101}
-  - {fileID: 885225100}
-  - {fileID: 885225099}
-  - {fileID: 885225097}
---- !u!114 &885225099
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885225093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 27
-  indentLevel: 0
-  display: 2
-  stage: {fileID: 0}
-  character: {fileID: 2141783158}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 1282776212}
-  toPosition: {fileID: 1188869040}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 1
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
---- !u!114 &885225100
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885225093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 23
-  indentLevel: 0
-  storyText: Hmm.... I'm sure there are things in the forest that I can bring to Chief
-    Logos. Just you wait, Chief!
-  description: 
-  character: {fileID: 2141783158}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 357188666}
---- !u!114 &885225101
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885225093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 25
-  indentLevel: 0
-  display: 2
-  stage: {fileID: 0}
-  character: {fileID: 885225102}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 0}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
 --- !u!114 &885225102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18258,24 +18227,27 @@ MonoBehaviour:
   m_GameObject: {fileID: 885225093}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 22
+  itemId: 32
   indentLevel: 0
-  storyText: Bring me something that I can see with my own eyes. Perhaps then I may
-    be willing to listen.
-  description: 
-  character: {fileID: 885225102}
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 2141783158}
+  replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 318445161}
+  offset: 0
+  fromPosition: {fileID: 1282776212}
+  toPosition: {fileID: 2027749020}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!114 &885225104
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18287,9 +18259,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 21
+  itemId: 37
   indentLevel: 0
-  storyText: But Chief-
+  storyText: Yes!! I convinced him! I have to tell Chief Krogg of the news!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -18301,32 +18273,6 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 357188666}
---- !u!114 &885225105
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885225093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 20
-  indentLevel: 0
-  storyText: Words, words. Where's your proof? Where's your data? Do the humans really
-    mean us harm? Answer these questions, Pep!
-  description: 
-  character: {fileID: 885225102}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 318445161}
 --- !u!114 &885225106
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18340,7 +18286,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 19
   indentLevel: 0
-  storyText: I saw them! I'm telling the truth!
+  storyText: I've got more! Look at all of this...
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -18365,7 +18311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: Oh dear, isn't it little Pep. Making wild claims, as per usual.
+  storyText: Those are... An apple? What do you expect me to do with this??
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -18419,7 +18365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 16
   indentLevel: 0
-  storyText: Chief Logos, look what I've brought
+  storyText: Chief Logos, look what I've brought!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -18527,6 +18473,605 @@ MonoBehaviour:
   isRepeatable: 0
   targetFlowchart: {fileID: 885225096}
   needededItems: []
+--- !u!114 &885225115
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 33
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 885225102}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &885225116
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 36
+  indentLevel: 0
+  storyText: Perhaps it is prudent to get more evidence... But I believe you, Pep.
+    Tribe Logos shall leave the forest.
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225117
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  storyText: Have I convinced you, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225118
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  storyText: 'Hmm... Those teethmarks are unlike anything I''ve seen before... And
+    so large! This is unsettling, Pep. '
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225119
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 39
+  indentLevel: 0
+  text: Cigarette
+  description: 
+  targetBlock: {fileID: 885225120}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &885225120
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 299
+    y: 163
+    width: 120
+    height: 40
+  itemId: 50
+  blockName: OptionCig
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 885225127}
+  - {fileID: 885225126}
+  - {fileID: 885225125}
+  - {fileID: 885225124}
+  - {fileID: 885225123}
+  - {fileID: 885225122}
+  - {fileID: 885225121}
+--- !u!114 &885225121
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 57
+  indentLevel: 0
+  targetObject: {fileID: 2141783156}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: enableMovement
+  targetMethodText: 'enableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &885225122
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 56
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 2141783158}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 1282776212}
+  toPosition: {fileID: 2027749020}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &885225123
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 55
+  indentLevel: 0
+  storyText: Yes!! I convinced him! I have to tell Chief Krogg of the news!
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225124
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 54
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 885225102}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &885225125
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 53
+  indentLevel: 0
+  storyText: Perhaps it is prudent to get more evidence... But I believe you, Pep.
+    Tribe Logos shall leave the forest.
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225126
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 52
+  indentLevel: 0
+  storyText: Have I convinced you, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225127
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  indentLevel: 0
+  storyText: 'Hmm... Those teethmarks are unlike anything I''ve seen before... And
+    so large! This is unsettling, Pep. '
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225128
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 40
+  indentLevel: 0
+  text: Hat
+  description: 
+  targetBlock: {fileID: 885225129}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
+--- !u!114 &885225129
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d3d73aef2cfc4f51abf34ac00241f60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nodeRect:
+    serializedVersion: 2
+    x: 293
+    y: 102
+    width: 120
+    height: 40
+  itemId: 42
+  blockName: OptionHat
+  description: 
+  eventHandler: {fileID: 0}
+  commandList:
+  - {fileID: 885225136}
+  - {fileID: 885225135}
+  - {fileID: 885225134}
+  - {fileID: 885225133}
+  - {fileID: 885225132}
+  - {fileID: 885225131}
+  - {fileID: 885225130}
+--- !u!114 &885225130
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  indentLevel: 0
+  targetObject: {fileID: 2141783156}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: enableMovement
+  targetMethodText: 'enableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &885225131
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 2141783158}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 1282776212}
+  toPosition: {fileID: 2027749020}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &885225132
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 47
+  indentLevel: 0
+  storyText: Yes!! I convinced him! I have to tell Chief Krogg of the news!
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225133
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 46
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 885225102}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &885225134
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 45
+  indentLevel: 0
+  storyText: Perhaps it is prudent to get more evidence... But I believe you, Pep.
+    Tribe Logos shall leave the forest.
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225135
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 44
+  indentLevel: 0
+  storyText: Have I convinced you, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225136
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 43
+  indentLevel: 0
+  storyText: 'Hmm... Those teethmarks are unlike anything I''ve seen before... And
+    so large! This is unsettling, Pep. '
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225137
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 841589fc622bc494aa5405f416fa1301, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 41
+  indentLevel: 0
+  text: Apple
+  description: 
+  targetBlock: {fileID: 885225100}
+  hideIfVisited: 0
+  interactable:
+    booleanRef: {fileID: 0}
+    booleanVal: 1
+  setMenuDialog: {fileID: 0}
 --- !u!1 &886069620
 GameObject:
   m_ObjectHideFlags: 0
@@ -19406,6 +19951,16 @@ Transform:
   - {fileID: 11439510}
   - {fileID: 1820578904}
   - {fileID: 292671467}
+  - {fileID: 154689662}
+  - {fileID: 1024749185}
+  - {fileID: 1080442360}
+  - {fileID: 532360514}
+  - {fileID: 942802379}
+  - {fileID: 983639498}
+  - {fileID: 588263224}
+  - {fileID: 266668403}
+  - {fileID: 807486285}
+  - {fileID: 7336458}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &938552502
@@ -19520,12 +20075,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 942802377}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.05, y: 7.17, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 20.663334, y: 3.3666668, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 103
 --- !u!1 &943047005
 GameObject:
   m_ObjectHideFlags: 0
@@ -20131,12 +20686,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 983639496}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 52.45, y: 7.17, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 22.130001, y: 3.3666668, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 104
 --- !u!1 &988055300
 GameObject:
   m_ObjectHideFlags: 0
@@ -20780,12 +21335,12 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1024749183}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 48.05, y: -2.69, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: 20.663334, y: 0.080000006, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 100
 --- !u!1 &1025796934
 GameObject:
   m_ObjectHideFlags: 0
@@ -22124,8 +22679,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1080442357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.48, y: -7.67, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalPosition: {x: -5.8466673, y: -1.5799999, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1356311290}
@@ -22139,8 +22694,8 @@ Transform:
   - {fileID: 2039417977}
   - {fileID: 1443325888}
   - {fileID: 1951158531}
-  m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_Father: {fileID: 930083865}
+  m_RootOrder: 101
 --- !u!1 &1082591405
 GameObject:
   m_ObjectHideFlags: 0
@@ -23149,7 +23704,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406160, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
       propertyPath: m_Text
-      value: Welcome to the Pathos tribe!
+      value: 'Welcome to the Pathos tribe! '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
@@ -26783,6 +27338,88 @@ Transform:
   m_Children: []
   m_Father: {fileID: 292671467}
   m_RootOrder: 115
+--- !u!1001 &1339457645
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 148
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 146
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22467244, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7a86928eda70f4352a72d0f314a742d4, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1348157354
 GameObject:
   m_ObjectHideFlags: 0
@@ -27670,7 +28307,8 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406160, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
       propertyPath: m_Text
-      value: Oh, hello there!
+      value: 'Just remember: what you think is important might not be the same as
+        what I think is important!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
@@ -29208,7 +29846,19 @@ GameObject:
   - 114: {fileID: 1459207436}
   - 114: {fileID: 1459207434}
   - 114: {fileID: 1459207435}
+  - 114: {fileID: 1459207451}
+  - 114: {fileID: 1459207450}
+  - 114: {fileID: 1459207449}
+  - 114: {fileID: 1459207448}
   - 114: {fileID: 1459207433}
+  - 114: {fileID: 1459207447}
+  - 114: {fileID: 1459207446}
+  - 114: {fileID: 1459207445}
+  - 114: {fileID: 1459207443}
+  - 114: {fileID: 1459207442}
+  - 114: {fileID: 1459207441}
+  - 114: {fileID: 1459207440}
+  - 114: {fileID: 1459207444}
   - 114: {fileID: 1459207439}
   m_Layer: 0
   m_Name: PathosLeader
@@ -29279,13 +29929,12 @@ MonoBehaviour:
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
-    x: -350
+    x: -351
     y: -350
-    width: 920
+    width: 921
     height: 840
-  selectedBlock: {fileID: 1459207434}
-  selectedCommands:
-  - {fileID: 1459207439}
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -29305,41 +29954,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459207429}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 1
+  itemId: 18
   indentLevel: 0
-  targetObject: {fileID: 174120, guid: 693dd0c6d86e642b19d486f4d77bc6ad, type: 2}
-  targetComponentAssemblyName: SceneSwitchAdapter, Assembly-CSharp, Version=0.0.0.0,
-    Culture=neutral, PublicKeyToken=null
-  targetComponentFullname: UnityEngine.Component[]
-  targetComponentText: SceneSwitchAdapter
-  targetMethod: switchTo
-  targetMethodText: 'switchTo (Int32): Void'
-  methodParameters:
-  - objValue:
-      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
-        PublicKeyToken=b77a5c561934e089
-      typeFullname: System.Int32
-      intValue: 9
-      boolValue: 0
-      floatValue: 0
-      stringValue: 
-      colorValue: {r: 0, g: 0, b: 0, a: 0}
-      gameObjectValue: {fileID: 0}
-      materialValue: {fileID: 0}
-      objectValue: {fileID: 0}
-      spriteValue: {fileID: 0}
-      textureValue: {fileID: 0}
-      vector2Value: {x: 0, y: 0}
-      vector3Value: {x: 0, y: 0, z: 0}
-    variableKey: 
-  saveReturnValue: 0
-  returnValueVariableKey: 
-  returnValueType: System.Void
-  showInherited: 0
-  callMode: 0
+  storyText: Hush, little Pep... Now is not the time for your imaginations... Our
+    child! Our child has gone missing!
+  description: 
+  character: {fileID: 1459207438}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
 --- !u!114 &1459207434
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -29353,17 +29985,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 50
+    x: 49
     y: 50
     width: 120
     height: 40
   itemId: 0
-  blockName: New Block
+  blockName: PathosEntry
   description: 
   eventHandler: {fileID: 1459207435}
   commandList:
-  - {fileID: 1459207439}
+  - {fileID: 1459207451}
+  - {fileID: 1459207450}
+  - {fileID: 1459207449}
+  - {fileID: 1459207448}
   - {fileID: 1459207433}
+  - {fileID: 1459207447}
+  - {fileID: 1459207446}
+  - {fileID: 1459207445}
+  - {fileID: 1459207444}
+  - {fileID: 1459207443}
+  - {fileID: 1459207442}
+  - {fileID: 1459207441}
+  - {fileID: 1459207440}
+  - {fileID: 1459207439}
 --- !u!114 &1459207435
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -29402,9 +30046,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.2106905, y: 1.4748526}
   serializedVersion: 2
-  m_Size: {x: 3.78, y: 5.08}
+  m_Size: {x: 12.629104, y: 8.0297}
 --- !u!114 &1459207438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29416,11 +30060,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: 
-  nameColor: {r: 1, g: 1, b: 1, a: 1}
+  nameText: Chief Pathos
+  nameColor: {r: 0.19755623, g: 0.6397059, b: 0.20060551, a: 1}
   soundEffect: {fileID: 0}
   portraits:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 0d71d6cf86e684750a45d83a40e87f5f, type: 3}
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
@@ -29432,12 +30076,110 @@ MonoBehaviour:
   m_GameObject: {fileID: 1459207429}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 28
+  indentLevel: 0
+  targetObject: {fileID: 174120, guid: 693dd0c6d86e642b19d486f4d77bc6ad, type: 2}
+  targetComponentAssemblyName: SceneSwitchAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: SceneSwitchAdapter
+  targetMethod: switchTo
+  targetMethodText: 'switchTo (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 9
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1459207440
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 26
+  indentLevel: 0
+  targetObject: {fileID: 2141783156}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: enableMovement
+  targetMethodText: 'enableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1459207441
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 2141783158}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 1282776212}
+  toPosition: {fileID: 1188869040}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1459207442
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 2
+  itemId: 23
   indentLevel: 0
-  storyText: HI
+  storyText: Saving the village can wait. I have to find the poor little froglet.
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -29448,7 +30190,248 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &1459207443
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 22
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 440723047}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 0}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1459207444
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 27
+  indentLevel: 0
+  storyText: No, don't! It's much too dangerous for you... I'm sure tribe Ethos will
+    find him, just wait and see.
+  description: 
+  character: {fileID: 1459207438}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &1459207445
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 21
+  indentLevel: 0
+  storyText: I'll find your child, Chief. You can trust me.
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &1459207446
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 20
+  indentLevel: 0
+  storyText: It's been two days, at least... Oh, what are we going to do, Pep! He's
+    just a little froglet...
+  description: 
+  character: {fileID: 1459207438}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &1459207447
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 19
+  indentLevel: 0
+  storyText: Oh no, that's terrible! Since when??
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &1459207448
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 17
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1459207438}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 0d71d6cf86e684750a45d83a40e87f5f, type: 3}
+  offset: 0
+  fromPosition: {fileID: 0}
+  toPosition: {fileID: 576527837}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 0
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1459207449
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 16
+  indentLevel: 0
+  storyText: Chief Pathos! We have to leave! The humans are coming and they're burning
+    down the forest, driving away all the animals!
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &1459207450
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 15
+  indentLevel: 0
+  targetObject: {fileID: 2141783156}
+  targetComponentAssemblyName: UnityStandardAssets._2D.Platformer2DUserControl, Assembly-CSharp,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: Platformer2DUserControl
+  targetMethod: disableMovement
+  targetMethodText: 'disableMovement (): Void'
+  methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1459207451
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 3
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 2141783158}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
+  offset: 0
+  fromPosition: {fileID: 1282776212}
+  toPosition: {fileID: 2027749020}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &1459567355
 GameObject:
   m_ObjectHideFlags: 0
@@ -37065,7 +38048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11406160, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
       propertyPath: m_Text
-      value: Hi, Pep!
+      value: Sometimes, when all else fails, go for what you feel is right.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 211de51a613c3431aa66fe2abfebcb35, type: 2}
@@ -39249,11 +40232,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 18.5
+      value: 39.46
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15.3
+      value: -2.84
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.z
