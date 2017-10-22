@@ -857,6 +857,9 @@ GameObject:
   - 4: {fileID: 77134276}
   - 212: {fileID: 77134275}
   - 60: {fileID: 77134277}
+  - 114: {fileID: 77134278}
+  - 61: {fileID: 77134279}
+  - 114: {fileID: 77134280}
   m_Layer: 0
   m_Name: Human
   m_TagString: Untagged
@@ -901,8 +904,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 77134274}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 170.72, y: -1.65, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 171.71, y: -0.01, z: 0}
+  m_LocalScale: {x: 2.7418692, y: 2.9602203, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
@@ -992,6 +995,45 @@ PolygonCollider2D:
       - {x: 0.044999998, y: -1.665}
       - {x: 0.035, y: -1.5649999}
       - {x: -0.055, y: -1.425}
+--- !u!114 &77134278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77134274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56c774ca5ee3d48b1affbc6821fefc9d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!61 &77134279
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77134274}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -0.57026744, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1.0110186, y: 3.41}
+--- !u!114 &77134280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 77134274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028cabf35db3b4f4ba8d425393a07728, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dLeft_x: 32
+  dRight_x: 0
+  movement_speed: 1
 --- !u!1001 &85228764
 Prefab:
   m_ObjectHideFlags: 0
@@ -12961,6 +13003,7 @@ GameObject:
   - 114: {fileID: 1111829225}
   - 114: {fileID: 1111829227}
   - 114: {fileID: 1111829226}
+  - 114: {fileID: 1111829228}
   m_Layer: 10
   m_Name: tile_jungle_treelimb_2
   m_TagString: Untagged
@@ -13006,7 +13049,7 @@ MonoBehaviour:
     height: 844
   selectedBlock: {fileID: 1111829219}
   selectedCommands:
-  - {fileID: 1111829222}
+  - {fileID: 1111829228}
   variables: []
   description: 
   stepPause: 0
@@ -13099,6 +13142,7 @@ MonoBehaviour:
   - {fileID: 1111829220}
   - {fileID: 1111829227}
   - {fileID: 1111829224}
+  - {fileID: 1111829228}
   - {fileID: 1111829226}
   - {fileID: 1111829218}
   - {fileID: 1111829222}
@@ -13211,7 +13255,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 4
   indentLevel: 0
-  storyText: AHHHH HUMANS!!! I MUST TELL THE TRIBE
+  storyText: '*Pant pant* That was close! This should be far enough.'
   description: 
   character: {fileID: 1285748631}
   portrait: {fileID: 0}
@@ -13295,6 +13339,32 @@ MonoBehaviour:
   move: 0
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &1111829228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1111829214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: Humans, this far into the forest? If there's one thing I know, it's that
+    humans never come alone. I have to tell the tribe. This forest is no longer safe!
+  description: 
+  character: {fileID: 1285748631}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 0}
 --- !u!1 &1113406065
 GameObject:
   m_ObjectHideFlags: 0
