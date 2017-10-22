@@ -30166,6 +30166,8 @@ GameObject:
   - 114: {fileID: 1459207440}
   - 114: {fileID: 1459207444}
   - 114: {fileID: 1459207439}
+  - 114: {fileID: 1459207453}
+  - 114: {fileID: 1459207452}
   m_Layer: 0
   m_Name: PathosLeader
   m_TagString: Untagged
@@ -30238,9 +30240,10 @@ MonoBehaviour:
     x: -351
     y: -350
     width: 921
-    height: 840
-  selectedBlock: {fileID: 0}
-  selectedCommands: []
+    height: 841
+  selectedBlock: {fileID: 1459207434}
+  selectedCommands:
+  - {fileID: 1459207452}
   variables: []
   description: 
   stepPause: 0
@@ -30292,7 +30295,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 49
-    y: 50
+    y: 51
     width: 120
     height: 40
   itemId: 0
@@ -30313,7 +30316,9 @@ MonoBehaviour:
   - {fileID: 1459207442}
   - {fileID: 1459207441}
   - {fileID: 1459207440}
+  - {fileID: 1459207453}
   - {fileID: 1459207439}
+  - {fileID: 1459207452}
 --- !u!114 &1459207435
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -30738,6 +30743,42 @@ MonoBehaviour:
   move: 1
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &1459207452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 30
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &1459207453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459207429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 29
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
 --- !u!1 &1459567355
 GameObject:
   m_ObjectHideFlags: 0
@@ -36371,7 +36412,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 885225096}
+  selectedFlowchart: {fileID: 1459207432}
 --- !u!4 &1780395735
 Transform:
   m_ObjectHideFlags: 1

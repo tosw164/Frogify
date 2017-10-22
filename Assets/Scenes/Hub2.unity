@@ -19091,6 +19091,8 @@ GameObject:
   - 114: {fileID: 907917552}
   - 114: {fileID: 907917551}
   - 114: {fileID: 907917550}
+  - 114: {fileID: 907917562}
+  - 114: {fileID: 907917561}
   m_Layer: 0
   m_Name: ethosLeader
   m_TagString: Untagged
@@ -19166,7 +19168,7 @@ MonoBehaviour:
     height: 842
   selectedBlock: {fileID: 907917541}
   selectedCommands:
-  - {fileID: 907917549}
+  - {fileID: 907917561}
   variables: []
   description: 
   stepPause: 0
@@ -19258,7 +19260,9 @@ MonoBehaviour:
   - {fileID: 907917548}
   - {fileID: 907917547}
   - {fileID: 907917546}
+  - {fileID: 907917562}
   - {fileID: 907917540}
+  - {fileID: 907917561}
 --- !u!114 &907917542
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19719,6 +19723,42 @@ MonoBehaviour:
   move: 1
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &907917561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907917536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 35
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &907917562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 907917536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 34
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
 --- !u!1 &910270379
 GameObject:
   m_ObjectHideFlags: 0
