@@ -102,7 +102,7 @@ public class WeaponScript : MonoBehaviour
         yield return new WaitForSeconds(2.75f);
         shooting.SetBool("Shoot", true);
         Debug.Log(shooting.GetBool("Shoot"));
-        //yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(1f);
     }
 
 }

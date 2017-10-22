@@ -92,9 +92,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0.04007594, y: -0.29227018}
+  m_Offset: {x: 0.3156535, y: -0.07082423}
   serializedVersion: 2
-  m_Size: {x: 0.5152682, y: 0.77367085}
+  m_Size: {x: 0.55463696, y: 0.8228809}
 --- !u!95 &9530766
 Animator:
   serializedVersion: 3
@@ -104,7 +104,7 @@ Animator:
   m_GameObject: {fileID: 173722}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: a3a191d5026ef4e4b8d8609ae8c668fa, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5928cbde76a41d24db84f83691c6cb8a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shotPrefab: {fileID: 484936, guid: b3dc36eddecb0ef4ea7642dfdee60172, type: 2}
-  shootingRate: 1.7
+  shootingRate: 2
   shotAngleInZ: 0
 --- !u!114 &11491494
 MonoBehaviour:
