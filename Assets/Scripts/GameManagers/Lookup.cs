@@ -23,6 +23,7 @@ namespace POCC
 				case SceneType.TUTORIAL_1:
 					return builder.setLocation ("TutorialLevel").build();
 				case SceneType.TUTORIAL_2:
+					return builder.setLocation ("TutorialLevelRunAway").build();
 				case SceneType.HUB_1:
 				case SceneType.LOGOS:
 				case SceneType.HUB_2:
