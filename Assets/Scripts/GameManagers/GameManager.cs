@@ -51,6 +51,10 @@ namespace POCC {
 
 		private POCC.Scenes.Scene _currentScene = new POCC.Scenes.Scene();
 
+		private Achievements.AchievementManager _achievementManger;
+
+		private List<Achievements.Achievement> _currentAchievements = new List<Achievements.Achievement>();
+
 		//======================================================
 
 		//======================================================
@@ -68,6 +72,7 @@ namespace POCC {
 
 		public GameManager() {
 			_playerItems = new List<string>();
+			_achievementManger = new POCC.Achievements.AchievementManager ();
 		}
 
 
@@ -110,6 +115,9 @@ namespace POCC {
 
 		public void incrementCollectableScore(Collectable collectable){
 			_collectableScore += Lookup.collectableScoreLookup(collectable);
+
+			//Also send a collectable event for achievements.
+			_achievementManger.RegisterAchievementEvent (Achievements.AchievementType.COLLECTABLES);
 		}
 
 		public void incrementArgumentationScore(ArgumentationValue argueVal){
@@ -139,6 +147,19 @@ namespace POCC {
 		 public void clearInventory() {
 			 _playerItems.Clear();
 		 }
+
+		/**
+		 * Method for handling when an achievement has occured - it will set the field
+		 * in the achievement and also add it to a list such that the achievement menu
+		 * can reference it.
+		 */
+		public void handleAchievement(Achievements.Achievement achievement){
+			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
+			achievement._unlocked = true;
+
+			//Add to the achievement list in order to then check that.
+			_currentAchievements.Add (achievement);
+		}
 		//======================================================
 
 
@@ -167,6 +188,10 @@ namespace POCC {
 
 		public List<string> getPlayerItems() {
 			return _playerItems;
+		}
+
+		public List<Achievements.Achievement> getAchievements() {
+			return _currentAchievements;
 		}
 
 		public bool playerHasItem(string itemName) {
