@@ -10,6 +10,12 @@ namespace POCC.Scenes {
 		protected SceneType _sceneType;
 
 		public Scene() {
+			this(null, null);
+		}
+
+		public Scene(SceneType sceneType, string sceneLocation) {
+			_sceneType = sceneType;
+			_sceneLocation = sceneLocation;
 			_startupHooks = this.startupHookBase;
 			_teardownHooks = this.teardownHookBase;
 		}
@@ -22,6 +28,10 @@ namespace POCC.Scenes {
 
 		public string getLocation() {
 			return _sceneLocation;
+		}
+
+		public SceneType getSceneType() {
+			return _sceneType;
 		}
 
 		public Action getStartupHooks() {
