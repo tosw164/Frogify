@@ -1,81 +1,101 @@
-﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
-using System.Runtime.Serialization.Formatters.Binary;
+﻿using System;
 using System.IO;
+using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using POCC.Scenes;
 
 namespace POCC {
 
+	/**
+	 * This class represents the overall manager for the game. It is a
+	 * singleton, and holds all of the state for the game.
+	 */
 	public class GameManager {
 
-		private static GameManager manager;
+		private static GameManager _manager;
 
 
 		//======================================================
-		//Default Values
+		// Default Values
 		private static int DEFAULT_HEALTH = 3;
 		//======================================================
 
 
 
 		//======================================================
-		//Fields to be managed
+		// Fields to be managed
 
 		//private just to enforce that health should only be incremented
 		//via use of methods - just to help debugging/controlling the value.
-		private int health = DEFAULT_HEALTH;
+		private int _health = DEFAULT_HEALTH;
 
 		//Values for each respective score.
-		private long argumentationScore = 0;
+		private long _argumentationScore = 0;
 
 		//THIS MIGHT BE REDUNDANT DUE TO COLLECTABLES ELSEWHERE.
-		//Stored here to potentially facilitaed consolidation of scoring.
-		private long collectableScore = 0;
+		//Stored here to potentially facilitated consolidation of scoring.
+		private long _collectableScore = 0;
 
-		//On startup the string is just main menu, as Pep progresses, shoudl
+		//On startup the string is just main menu, as Pep progresses, should
 		//modify this string to know where to place him again.
-		private string levelString = "MAIN_MENU";
+		private SceneType _level = SceneType.MAIN_MENU;
 
-		private string argumentationChoice = "";
+		// For saving temporary argumentation choices.
+		private string _argumentationChoice = "";
 
-		private List<string> playerItems;
+		// Represents the player's inventory.
+		private List<string> _playerItems;
 
+		private POCC.Scenes.Scene _currentScene = new POCC.Scenes.Scene();
+
+		private Achievements.AchievementManager _achievementManger;
+
+		private List<String> _currentAchievements = new List<String>();
+
+		private Stack<POCC.Scenes.Scene> _tempScenes;
 
 		//======================================================
 
 		//======================================================
-		//Singleton Methods:
+		// Singleton Methods:
 
 		/**
 		 * Method for retrieving the singleton instance.
 		 */
-		public static GameManager getInstance(){
-			if (manager == null) {
-				manager = new GameManager();
+		public static GameManager getInstance() {
+			if (_manager == null) {
+				_manager = new GameManager();
 			}
-			return manager;
+			return _manager;
 		}
 
 		public GameManager() {
-			playerItems = new List<string>();
+			_playerItems = new List<string>();
+			_achievementManger = new Achievements.AchievementManager();
+			_tempScenes = new Stack<POCC.Scenes.Scene>();
 		}
 
 
 		//======================================================
-		//Update Methods:
+		// Update Methods:
 
-		public void incrementHealth(){
-			health++;
+		public void incrementHealth() {
+			// Only increment health if it is less than the maximum
+			if (_health < DEFAULT_HEALTH) {
+				_health++;
+			}
 		}
 
-		public void decrementHealth(){
-			health--;
-			Debug.Log ("Took damage, current health is: " + health);
-			if (health == 0) {
-				health = DEFAULT_HEALTH;//set health BACK to default value
-				//TODO: SHould this be reset by the gameover screen?
-				switchScene (POCC.SceneLookup.GAME_OVER);//Probably a good idea to CHANGE THIS. DONT MAKE IT FULLY INDEX BASED.
+		public void decrementHealth() {
+			_health--;
+			Debug.Log("Took damage, current health is: " + _health);
+
+			if (_health == 0) {
+				// Set scene to game over scene and reset health back to default
+				switchScene(Lookup.sceneLookup(SceneType.GAME_OVER));
 			}
 		}
 
@@ -84,7 +104,7 @@ namespace POCC {
 		 * back to default values.
 		 */
 		public void resetHealth(){
-			health = DEFAULT_HEALTH;
+			_health = DEFAULT_HEALTH;
 		}
 
 		/**
@@ -92,31 +112,28 @@ namespace POCC {
 		 * back to default values.
 		 */
 		public void resetScore() {
-			collectableScore = 0;
-			argumentationScore = 0;
+			_collectableScore = 0;
+			_argumentationScore = 0;
 		}
 
-		public void incrementCollectableScore(POCC.Collectable collectable){
-			//If it is a normal gold fly, just increment by 1
-			if (collectable.Equals (POCC.Collectable.GOLDFLY)) {
-				collectableScore++;
-			}
+		public void incrementCollectableScore(Collectable collectable){
+			_collectableScore += Lookup.collectableScoreLookup(collectable);
+
+			//Also send a collectable event for achievements.
+			_achievementManger.RegisterAchievementEvent (Achievements.AchievementType.COLLECTABLES);
 		}
 
-		public void incrementArgumentationScore(POCC.ArgumentationValue argueVal){
-			//If it is a normal gold fly, just increment by 1
-			if (argueVal.Equals (POCC.ArgumentationValue.FIRST_ATTEMPT)) {
-				argumentationScore+=10;
-			}
+		public void incrementArgumentationScore(ArgumentationValue argueVal){
+			_argumentationScore += Lookup.argumentationScoreLookup(argueVal);
 		}
 
-		//TODO: Need to refactor this
+		// TODO: Need to refactor this
 		// This is the code that saves the player choice after talking to bearlana
-		//called by the dialogue to load exit scenes
+		// called by the dialogue to load exit scenes
 		public void saveChoice(string playerChoice){
-			Debug.Log (playerChoice);
-			argumentationChoice = playerChoice;
-			Debug.Log ("choiceAssigned " + argumentationChoice);
+			Debug.Log(playerChoice);
+			_argumentationChoice = playerChoice;
+			Debug.Log("choiceAssigned " + _argumentationChoice);
 
 		}
 
@@ -124,24 +141,44 @@ namespace POCC {
 		 * Add a item to the players inventory.
 		 */
 		public void addPlayerItem(string itemName) {
-			playerItems.Add(itemName);
+			_playerItems.Add(itemName);
+		}
+
+		/**
+		 * Clears the player's inventory
+		 */
+		 public void clearInventory() {
+			 _playerItems.Clear();
+		 }
+
+		/**
+		 * Method for handling when an achievement has occured - it will set the field
+		 * in the achievement and also add it to a list such that the achievement menu
+		 * can reference it.
+		 */
+		public void handleAchievement(Achievements.Achievement achievement){
+			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
+			achievement._unlocked = true;
+
+			//Add to the achievement list in order to then check that.
+			_currentAchievements.Add (achievement._achievementMessage);
 		}
 		//======================================================
 
 
 		//======================================================
-		//Getter Methods:
+		// Getter Methods:
 
 		public float getHealth(){
-			return health;
+			return _health;
 		}
 
 		public long getArgumentationScore() {
-			return argumentationScore;
+			return _argumentationScore;
 		}
 
 		public long getCollectableScore() {
-			return collectableScore;
+			return _collectableScore;
 		}
 
 		public long getTotalScore() {
@@ -149,43 +186,83 @@ namespace POCC {
 		}
 
 		public string getChoice() {
-			return argumentationChoice;
+			return _argumentationChoice;
 		}
 
 		public List<string> getPlayerItems() {
-			return playerItems;
+			return _playerItems;
+		}
+
+		public List<String> getAchievements() {
+			return _currentAchievements;
 		}
 
 		public bool playerHasItem(string itemName) {
-			return playerItems.Contains(itemName);
+			return _playerItems.Contains(itemName);
 		}
 		//======================================================
 
 
 		//======================================================
-		//Helper Methods:
+		// Helper Methods:
 
-		//Helper method to switch scene when required.
-		public void switchScene(string sceneName){
-			SceneManager.LoadScene (sceneName);
+		// Helper method to switch scene when required.
+		public void switchScene(POCC.Scenes.Scene scene) {
+			_currentScene.getTeardownHooks()();
+			SceneManager.LoadScene(scene.getLocation());
+			scene = sceneChangeHook(scene);
+			scene.getStartupHooks()();
+			_currentScene = scene;
 		}
+
+		/**
+		 * Hook that the game manager can use if needing to do some general setting
+		 * of state
+		 */
+		public POCC.Scenes.Scene sceneChangeHook(POCC.Scenes.Scene scene) {
+			// Do things here
+			if (scene.getSceneType() == SceneType.GAME_OVER) {
+				_tempScenes.Push(_currentScene);
+				return scene;
+			}
+			else if (_currentScene.getSceneType() == SceneType.GAME_OVER) {
+				POCC.Scenes.Scene tempScene = _tempScenes.Pop();
+
+				// TODO: Consider differences if used switchScene(scene)
+				SceneManager.LoadScene(tempScene.getLocation());
+
+				return tempScene;
+			}
+			return scene;
+		}
+
+		public void testPre() {
+			Debug.Log("Prehook here");
+		}
+
+		public void testPost() {
+			Debug.Log("Posthook here");
+		}
+
 
 		/*
 		 * Method of actually saving data - it instantiates another container class
 		 * that will then hold the data and be serialized to disk.
-		 * Will be called whenever theres a change in level to persist whats needed.
+		 * Will be called whenever there's a change in level to persist whats needed.
 		 */
 		public void Save(){
 			BinaryFormatter bf = new BinaryFormatter();
 
-			//Using unity built in persistentDataPath in order to be more professional
-			FileStream file = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
+			// Open the file that will be used for persistence
+			FileStream file = File.Open(Config.PERSISTENCE_FILE, FileMode.Open);
 
-			//Now need to say WHAT data you want to save. YDou need an object you can write to the file… You need a CLEAN CLASS that will just contain data.
- 			POCC.PlayerData gameData = new POCC.PlayerData(health,argumentationScore,collectableScore, levelString);
+			// Construct GameData object that will hold all of the information
+			// for the save state
+			PlayerData gameData = new PlayerData(_health, _argumentationScore, _collectableScore, _level);
 
-			bf.Serialize (file, gameData);
-			file.Close ();
+			// Serialise, save and close file
+			bf.Serialize(file, gameData);
+			file.Close();
 
 		}
 
@@ -193,23 +270,23 @@ namespace POCC {
 		 * Method for actually loading in data and setting up the
 		 */
 		public void Load(){
-			if (File.Exists (Application.persistentDataPath + "/pepInfo.dat")) {
+			if (File.Exists(Config.PERSISTENCE_FILE)) {
 				BinaryFormatter bf = new BinaryFormatter();
 
-				//Doesn't need file mode because just opening it and KNOW it arledy exists
-				FileStream saveFile = File.Open(Application.persistentDataPath + "/pepInfo.dat", FileMode.Open);
+				//Doesn't need file mode because just opening it and KNOW it already exists
+				FileStream saveFile = File.Open(Config.PERSISTENCE_FILE, FileMode.Open);
 
 				//Reading in FROM the save file - need cast to be able to get it.
-				POCC.PlayerData gameData = (POCC.PlayerData) bf.Deserialize(saveFile);
-				saveFile.Close ();
+				PlayerData gameData = (PlayerData)bf.Deserialize(saveFile);
+				saveFile.Close();
 
-				this.health = gameData.getHealth ();
-				this.argumentationScore = gameData.getArgueScore ();
-				this.collectableScore = gameData.getCollectScore ();
-				this.levelString = gameData.getLevelString ();
+				_health = gameData.getHealth();
+				_argumentationScore = gameData.getArgueScore();
+				_collectableScore = gameData.getCollectScore();
+				_level = gameData.getLevel();
 			}
-			//IF HERE, THEN MAYBE SAY THERES NO SAVED DATA.
-			//maybe when loading sceen.
+			//IF HERE, THEN MAYBE SAY THERE'S NO SAVED DATA.
+			//maybe when loading screen.
 		}
 		//======================================================
 
