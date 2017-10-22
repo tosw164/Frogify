@@ -28,6 +28,9 @@ namespace POCC
 				case SceneType.LOGOS:
 				case SceneType.HUB_2:
 				case SceneType.PATHOS_1:
+					return builder.setLocation ("PathosLevelSpider").build();
+				case SceneType.PATHOS_2:
+					return builder.setLocation ("PathosLevelSpiderFollow").build();
 				case SceneType.HUB_3:
 				case SceneType.ETHOS_1:
 				case SceneType.ETHOS_2:
