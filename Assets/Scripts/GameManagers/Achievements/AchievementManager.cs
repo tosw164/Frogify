@@ -18,8 +18,67 @@ namespace POCC.Achievements{
 
 		public AchievementManager(){
 			_achivementTypeCount = new Dictionary<AchievementType, int> ();
+			_achievementGroups = new Dictionary<AchievementType, List<Achievement>> ();
+			addAchivements ();
 
 		}
+
+		/**
+		 * This is for handling whenever an action that can correspond to an 
+		 * achievement is triggered. It will be called on this object and then it
+		 * will increment the field holding the counts for each of the achievement categories
+		 */ 
+		public void RegisterAchievementEvent(AchievementType achType){
+			//Do a check to make sure the type is actually in the dictionary
+			//just as a precaution.
+			if (!_achivementTypeCount.ContainsKey (achType)) {
+				return;
+			}
+				
+			switch(achType){
+			case AchievementType.LEVEL:
+				_achivementTypeCount[achType]++;
+				break;
+			case AchievementType.NPC_PERSUADED:
+				_achivementTypeCount[achType]++;
+				break;
+			case AchievementType.COLLECTABLES:
+				_achivementTypeCount[achType]++;
+				break;
+			case AchievementType.HIDDEN_ITEMS:
+				_achivementTypeCount[achType]++;
+				break;
+			}
+
+			ParseAchievements(achType);
+		}
+
+		/**
+		 * This method is called after each change to one of the achievement groups, it will
+		 * check if any new achievements ahve been achieved after a value has been changed. It
+		 * will only check for the achievements if it hasn't been achieved.
+		 * 
+		 * After the achievement is unlocked then it will call the relevant method to pass in the
+		 * achievement that was achieved
+		 */
+		public void ParseAchievements(AchievementType achType){
+			List<Achievement> achievementList = _achievementGroups [achType];
+			foreach(Achievement currentAchievement in achievementList){
+				if (currentAchievement._unlocked == false) {
+					if( achType == AchievementType.COLLECTABLES ) {
+						if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
+							//currentAchievement._unlocked = true;
+							//RaiseAchievementUnlocked(currentAchievement);
+						}
+					}
+					else if(_achivementTypeCount[achType] >= currentAchievement._unlockCount ){
+						//currentAchievement._unlocked = true;
+						//RaiseAchievementUnlocked(achType);
+					}
+				}
+			}
+		}
+
 
 		/**
 		 * This method is responsible for populating all the different achievements
@@ -29,20 +88,6 @@ namespace POCC.Achievements{
 		 * we just placed it in the code here for now
 		 */
 		private void addAchivements(){
-			/*
-			Achievement testAch = new Achievement ();
-			testAch._unlockCount = 1;
-			testAch._unlocked = false;
-			testAch._achievementMessage = "First Level Completed"; 
-			Debug.Log("about to convert..");
-			string achToJSON = JsonUtility.ToJson(testAch, true);
-			Debug.Log(achToJSON);
-
-			Achievement[] levelBasedList = JsonHelper.FromJson<Achievement>("LevelAchievementData.json");
-			foreach (Achievement ach in levelBasedList) {
-				Debug.Log ("Value for string:" + ach._achievementMessage);
-			}
-			*/
 
 			//========================================================================
 			// Achievements for Levels
@@ -54,6 +99,17 @@ namespace POCC.Achievements{
 			levelBasedAcheivements.Add (new Achievement(3,false,"Last Level Completed"));
 
 			_achievementGroups.Add (AchievementType.LEVEL, levelBasedAcheivements);
+
+
+			//Testing for when want to switch to JSON
+
+			//Achievement[] testArray = levelBasedAcheivements.ToArray();
+			//string achToJSON = JsonHelper.ToJson<Achievement>(testArray, true);
+			//Debug.Log(achToJSON);
+			//Achievement[] levelBasedList = JsonHelper.FromJson<Achievement>("LevelAchievementData.json");
+			//Debug.Log(levelBasedList[0]._achievementMessage);
+			//Debug.Log(levelBasedList[1]._achievementMessage);
+
 
 			//========================================================================
 			// Achievements for NPC Persuasion
