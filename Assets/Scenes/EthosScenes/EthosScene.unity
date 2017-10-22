@@ -51873,11 +51873,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -92
+      value: 82.5
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -40.7
+      value: -67.8
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.z
@@ -80511,10 +80511,10 @@ GameObject:
   - 114: {fileID: 1874628438}
   - 114: {fileID: 1874628439}
   - 114: {fileID: 1874628437}
-  - 114: {fileID: 1874628440}
   - 212: {fileID: 1874628442}
   - 111: {fileID: 1874628441}
   - 114: {fileID: 1874628443}
+  - 114: {fileID: 1874628440}
   m_Layer: 0
   m_Name: Snakeyang
   m_TagString: Untagged
@@ -80583,7 +80583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: 0, y: 1}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
@@ -81007,7 +81007,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 548
-    y: 74
+    y: 75
     width: 127
     height: 40
   itemId: 16
@@ -81251,22 +81251,47 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &1874628440
 MonoBehaviour:
-  m_ObjectHideFlags: 2
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874628407}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  _sceneName:
-    stringRef: {fileID: 0}
-    stringVal: EthosScene1
-  loadingImage: {fileID: 2800000, guid: 240a824b08d4e463494a58cfd6f23772, type: 3}
-  sceneNameOLD: 
+  targetObject: {fileID: 174120, guid: 693dd0c6d86e642b19d486f4d77bc6ad, type: 2}
+  targetComponentAssemblyName: SceneSwitchAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: SceneSwitchAdapter
+  targetMethod: switchTo
+  targetMethodText: 'switchTo (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 6
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!111 &1874628441
 Animation:
   m_ObjectHideFlags: 0
