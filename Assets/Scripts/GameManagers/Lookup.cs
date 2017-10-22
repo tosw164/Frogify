@@ -26,7 +26,10 @@ namespace POCC
 					return builder.setLocation ("TutorialLevelRunAway").build();
 				case SceneType.HUB_1:
 					return builder.setLocation ("Hub0").build();
-				case SceneType.LOGOS:
+				case SceneType.LOGOS_1:
+					return builder.setLocation ("LogosLevel1").build();
+				case SceneType.LOGOS_2:
+					return builder.setLocation ("LogosLevel2").build();
 				case SceneType.HUB_2:
 					return builder.setLocation ("Hub1").build();
 				case SceneType.PATHOS_1:

@@ -21,6 +21,8 @@ namespace POCC.Scenes {
 		ETHOS_1=12,
 		ETHOS_2=13,
 		HUB_4=14,
-		END_OF_YEAR=15
+		END_OF_YEAR=15,
+		LOGOS_1=16,
+		LOGOS_2=17
 	}
 }
