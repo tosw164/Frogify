@@ -148,6 +148,11 @@ namespace POCC {
 			 _playerItems.Clear();
 		 }
 
+		/**
+		 * Method for handling when an achievement has occured - it will set the field
+		 * in the achievement and also add it to a list such that the achievement menu
+		 * can reference it.
+		 */
 		public void handleAchievement(Achievements.Achievement achievement){
 			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
 			achievement._unlocked = true;

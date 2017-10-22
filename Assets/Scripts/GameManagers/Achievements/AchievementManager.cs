@@ -125,9 +125,9 @@ namespace POCC.Achievements{
 			// Achievements for Collectables
 			//========================================================================
 			List<Achievement> collectablesBasedAcheivements = new List<Achievement>();
-			collectablesBasedAcheivements.Add (new Achievement(1,false,"1 Collectables Obtained"));
-			collectablesBasedAcheivements.Add (new Achievement(2,false,"2 Collectables Obtained"));
-			collectablesBasedAcheivements.Add (new Achievement(3,false,"3 Collectables Obtained"));
+			collectablesBasedAcheivements.Add (new Achievement(10,false,"10 Collectables Obtained"));
+			collectablesBasedAcheivements.Add (new Achievement(20,false,"20 Collectables Obtained"));
+			collectablesBasedAcheivements.Add (new Achievement(30,false,"30 Collectables Obtained"));
 
 			_achievementGroups.Add (AchievementType.COLLECTABLES, collectablesBasedAcheivements);
 
