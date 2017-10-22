@@ -14,6 +14,11 @@ namespace POCC.Scenes {
 			_teardownHooks = this.teardownHookBase;
 		}
 
+		public Scene(SceneType sceneType, string sceneLocation) : this() {
+			_sceneType = sceneType;
+			_sceneLocation = sceneLocation;
+		}
+
 		protected virtual void startupHookBase() {
 		}
 
@@ -22,6 +27,10 @@ namespace POCC.Scenes {
 
 		public string getLocation() {
 			return _sceneLocation;
+		}
+
+		public SceneType getSceneType() {
+			return _sceneType;
 		}
 
 		public Action getStartupHooks() {
