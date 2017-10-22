@@ -53,7 +53,7 @@ namespace POCC {
 
 		private Achievements.AchievementManager _achievementManger;
 
-		private List<Achievements.Achievement> _currentAchievements = new List<Achievements.Achievement>();
+		private List<String> _currentAchievements = new List<String>();
 
 		//======================================================
 
@@ -158,7 +158,7 @@ namespace POCC {
 			achievement._unlocked = true;
 
 			//Add to the achievement list in order to then check that.
-			_currentAchievements.Add (achievement);
+			_currentAchievements.Add (achievement._achievementMessage);
 		}
 		//======================================================
 
@@ -190,7 +190,7 @@ namespace POCC {
 			return _playerItems;
 		}
 
-		public List<Achievements.Achievement> getAchievements() {
+		public List<String> getAchievements() {
 			return _currentAchievements;
 		}
 
