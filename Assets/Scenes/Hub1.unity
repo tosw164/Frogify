@@ -30243,7 +30243,7 @@ MonoBehaviour:
     height: 841
   selectedBlock: {fileID: 1459207434}
   selectedCommands:
-  - {fileID: 1459207452}
+  - {fileID: 1459207439}
   variables: []
   description: 
   stepPause: 0
@@ -30404,7 +30404,7 @@ MonoBehaviour:
       typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Int32
-      intValue: 9
+      intValue: 1
       boolValue: 0
       floatValue: 0
       stringValue: 
@@ -30745,7 +30745,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &1459207452
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1459207429}
@@ -30763,7 +30763,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1459207453
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1459207429}

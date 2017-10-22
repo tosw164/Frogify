@@ -4537,7 +4537,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 132422044}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -33.2, y: -7.29, z: 0}
+  m_LocalPosition: {x: 80.78, y: -68.48, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -51225,9 +51225,8 @@ MonoBehaviour:
     y: -350
     width: 1061
     height: 875
-  selectedBlock: {fileID: 1476946669}
-  selectedCommands:
-  - {fileID: 1476946680}
+  selectedBlock: {fileID: 0}
+  selectedCommands: []
   variables: []
   description: 
   stepPause: 0
@@ -51539,7 +51538,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1476946678
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476946664}
@@ -51582,7 +51581,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1476946679
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476946664}
@@ -51600,7 +51599,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1476946680
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1476946664}
