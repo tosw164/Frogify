@@ -6,6 +6,8 @@ using System.Collections;
  * Whenever player is inside the water, the player gets damaged every second,
  */
 public class OilWater : MonoBehaviour {
+	public float _damageInterval=5;
+
 	private bool _playerInWater = false;
 	private float _timeInWater = 0f;
 
@@ -30,7 +32,7 @@ public class OilWater : MonoBehaviour {
 		if (other.tag == "Player") {
 			_playerInWater = true;
 			//user manager to damage player
-			if(_timeInWater >= 5) {
+			if(_timeInWater >= _damageInterval) {
 				_timeInWater = 0;
 				POCC.GameManager.getInstance().decrementHealth();
 			}
