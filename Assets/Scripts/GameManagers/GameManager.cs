@@ -190,6 +190,10 @@ namespace POCC {
 			return _playerItems;
 		}
 
+		public List<Achievements.Achievement> getAchievements() {
+			return _currentAchievements;
+		}
+
 		public bool playerHasItem(string itemName) {
 			return _playerItems.Contains(itemName);
 		}
