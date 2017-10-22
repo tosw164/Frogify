@@ -8,7 +8,7 @@ namespace POCC
 	 */
 	public enum Collectable
 	{
-		GOLDFLY	
+		GOLDFLY
 	}
 }
 
