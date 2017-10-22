@@ -11,15 +11,19 @@ namespace POCC
 	{
 
 		public static Scene sceneLookup(SceneType sceneType) {
+			SceneBuilder builder = new SceneBuilder(sceneType);
+
 			switch(sceneType) {
 				case SceneType.GAME_OVER:
-					return new GameOverScene();
+					return new SceneBuilder(new GameOverScene()).build();
 				case SceneType.BEARLANA:
-					return new PrototypeLevelScene();
+					return new SceneBuilder(new PrototypeLevelScene()).build();
 				case SceneType.END_LEVEL_SCENE:
-					return new EndLevelScene();
+					return new SceneBuilder(new EndLevelScene()).build();
 				case SceneType.TUTORIAL_1:
+					return builder.setLocation ("TutorialLevel").build();
 				case SceneType.TUTORIAL_2:
+					return builder.setLocation ("TutorialLevelRunAway").build();
 				case SceneType.HUB_1:
 				case SceneType.LOGOS:
 				case SceneType.HUB_2:
@@ -32,7 +36,7 @@ namespace POCC
 				default:
 					// Unimplemented scene, map does not exist
 				case SceneType.MAIN_MENU:
-					return new MainMenuScene();
+					return new SceneBuilder(new MainMenuScene()).build();
 			}
 		}
 

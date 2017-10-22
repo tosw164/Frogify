@@ -49,7 +49,13 @@ namespace POCC {
 		// Represents the player's inventory.
 		private List<string> _playerItems;
 
-		private POCC.Scenes.Scene _currentScene = new POCC.Scenes.Scene();
+		private POCC.Scenes.Scene _currentScene = Lookup.sceneLookup(SceneType.TUTORIAL_1);
+
+		private Achievements.AchievementManager _achievementManger;
+
+		private List<String> _currentAchievements = new List<String>();
+
+		private Stack<POCC.Scenes.Scene> _tempScenes;
 
 		//======================================================
 
@@ -68,6 +74,8 @@ namespace POCC {
 
 		public GameManager() {
 			_playerItems = new List<string>();
+			_achievementManger = new Achievements.AchievementManager();
+			_tempScenes = new Stack<POCC.Scenes.Scene>();
 		}
 
 
@@ -110,6 +118,9 @@ namespace POCC {
 
 		public void incrementCollectableScore(Collectable collectable){
 			_collectableScore += Lookup.collectableScoreLookup(collectable);
+
+			//Also send a collectable event for achievements.
+			_achievementManger.RegisterAchievementEvent (Achievements.AchievementType.COLLECTABLES);
 		}
 
 		public void incrementArgumentationScore(ArgumentationValue argueVal){
@@ -139,6 +150,19 @@ namespace POCC {
 		 public void clearInventory() {
 			 _playerItems.Clear();
 		 }
+
+		/**
+		 * Method for handling when an achievement has occured - it will set the field
+		 * in the achievement and also add it to a list such that the achievement menu
+		 * can reference it.
+		 */
+		public void handleAchievement(Achievements.Achievement achievement){
+			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
+			achievement._unlocked = true;
+
+			//Add to the achievement list in order to then check that.
+			_currentAchievements.Add (achievement._achievementMessage);
+		}
 		//======================================================
 
 
@@ -169,6 +193,10 @@ namespace POCC {
 			return _playerItems;
 		}
 
+		public List<String> getAchievements() {
+			return _currentAchievements;
+		}
+
 		public bool playerHasItem(string itemName) {
 			return _playerItems.Contains(itemName);
 		}
@@ -182,7 +210,7 @@ namespace POCC {
 		public void switchScene(POCC.Scenes.Scene scene) {
 			_currentScene.getTeardownHooks()();
 			SceneManager.LoadScene(scene.getLocation());
-			sceneChangeHook();
+			scene = sceneChangeHook(scene);
 			scene.getStartupHooks()();
 			_currentScene = scene;
 		}
@@ -191,8 +219,21 @@ namespace POCC {
 		 * Hook that the game manager can use if needing to do some general setting
 		 * of state
 		 */
-		public void sceneChangeHook() {
+		public POCC.Scenes.Scene sceneChangeHook(POCC.Scenes.Scene scene) {
 			// Do things here
+			if (scene.getSceneType() == SceneType.GAME_OVER) {
+				_tempScenes.Push(_currentScene);
+				return scene;
+			}
+			else if (_currentScene.getSceneType() == SceneType.GAME_OVER && scene.getSceneType() != SceneType.MAIN_MENU) {
+				POCC.Scenes.Scene tempScene = _tempScenes.Pop();
+
+				// TODO: Consider differences if used switchScene(scene)
+				SceneManager.LoadScene(tempScene.getLocation());
+
+				return tempScene;
+			}
+			return scene;
 		}
 
 		public void testPre() {
