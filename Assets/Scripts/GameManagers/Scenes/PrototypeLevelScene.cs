@@ -1,6 +1,6 @@
 using System;
 
-namespace POCC {
+namespace POCC.Scenes {
 	public class PrototypeLevelScene : Scene {
 		public PrototypeLevelScene() : base() {
 			_sceneType = SceneType.BEARLANA;

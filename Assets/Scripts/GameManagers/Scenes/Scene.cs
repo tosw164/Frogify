@@ -1,6 +1,6 @@
 using System;
 
-namespace POCC {
+namespace POCC.Scenes {
 	public class Scene {
 		protected Action _startupHooks;
 		protected Action _teardownHooks;

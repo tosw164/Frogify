@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using POCC.Scenes;
 
 namespace POCC {
 
@@ -48,7 +49,7 @@ namespace POCC {
 		// Represents the player's inventory.
 		private List<string> _playerItems;
 
-		private Scene _currentScene = new Scene();
+		private POCC.Scenes.Scene _currentScene = new POCC.Scenes.Scene();
 
 		//======================================================
 
@@ -178,7 +179,7 @@ namespace POCC {
 		// Helper Methods:
 
 		// Helper method to switch scene when required.
-		public void switchScene(Scene scene) {
+		public void switchScene(POCC.Scenes.Scene scene) {
 			_currentScene.getTeardownHooks()();
 			SceneManager.LoadScene(scene.getLocation());
 			sceneChangeHook();

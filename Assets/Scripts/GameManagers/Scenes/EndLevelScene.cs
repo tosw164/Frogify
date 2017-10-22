@@ -1,16 +1,15 @@
 using System;
 
-namespace POCC {
-	public class GameOverScene : Scene {
-		public GameOverScene() : base() {
-			_sceneType = SceneType.GAME_OVER;
-			_sceneLocation = "DeathScene";
+namespace POCC.Scenes {
+	public class EndLevelScene : Scene {
+		public EndLevelScene() : base() {
+			_sceneType = SceneType.END_LEVEL_SCENE;
+			_sceneLocation = "ExitScreen";
 			_startupHooks = this.startupHookBase;
 			_teardownHooks = this.teardownHookBase;
 		}
 
 		protected override void startupHookBase() {
-			GameManager.getInstance().resetHealth();
 			GameManager.getInstance().clearInventory();
 		}
 

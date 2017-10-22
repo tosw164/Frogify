@@ -1,6 +1,6 @@
 using System;
 
-namespace POCC {
+namespace POCC.Scenes {
 
 	/**
 	 * An enum to represent the different scenes of the game.

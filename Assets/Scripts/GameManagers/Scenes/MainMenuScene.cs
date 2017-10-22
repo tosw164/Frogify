@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace POCC {
+namespace POCC.Scenes {
 	public class MainMenuScene : Scene {
 		public MainMenuScene() : base() {
 			_sceneType = SceneType.MAIN_MENU;

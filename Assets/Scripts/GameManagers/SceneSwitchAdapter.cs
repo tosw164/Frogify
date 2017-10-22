@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using POCC;
+using POCC.Scenes;
 
 public class SceneSwitchAdapter : MonoBehaviour {
 	public void switchTo(int sceneCode) {
