@@ -7792,7 +7792,7 @@ GameObject:
   m_PrefabInternal: {fileID: 999704707}
 --- !u!114 &398012146
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -7814,10 +7814,10 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 2134076076}
 --- !u!114 &398012147
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -7846,7 +7846,7 @@ MonoBehaviour:
   waitUntilFinished: 0
 --- !u!114 &398012148
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -7872,7 +7872,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &398012149
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -7898,7 +7898,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &398012150
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -7911,7 +7911,7 @@ MonoBehaviour:
   waitForFrames: 5
 --- !u!114 &398012151
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -7961,7 +7961,7 @@ MonoBehaviour:
     height: 840
   selectedBlock: {fileID: 398012151}
   selectedCommands:
-  - {fileID: 398012153}
+  - {fileID: 398012146}
   variables: []
   description: 
   stepPause: 0
@@ -7975,7 +7975,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &398012153
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 398012145}
@@ -39646,11 +39646,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22496580, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 633
+      value: 652
       objectReference: {fileID: 0}
     - target: {fileID: 22496580, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -36.934998
+      value: -81
       objectReference: {fileID: 0}
     - target: {fileID: 22496580, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_SizeDelta.y
