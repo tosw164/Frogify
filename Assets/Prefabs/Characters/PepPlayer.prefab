@@ -50,7 +50,7 @@ GameObject:
   - 114: {fileID: 11421484}
   - 120: {fileID: 12042038}
   - 114: {fileID: 11471036}
-  - 114: {fileID: 11432712}
+  - 114: {fileID: 11415206}
   m_Layer: 9
   m_Name: PepPlayer
   m_TagString: Player
@@ -257,6 +257,17 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11415206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177004}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7dcc06ad6d4643ff85b029f05650d0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &11421484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,18 +302,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294963711
-  run_multiplier: 2.5
---- !u!114 &11432712
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177004}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c197f448e20f246349309c690c9a5aa1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  movement_multiplier: 2.5
 --- !u!114 &11433600
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -339,7 +339,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: Pep
-  nameColor: {r: 0, g: 1, b: 0.048275948, a: 1}
+  nameColor: {r: 0.24816178, g: 0.75, b: 0.2723885, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}

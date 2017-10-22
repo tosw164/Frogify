@@ -5,11 +5,11 @@ public class InitializeScore : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		ScoreManager.manager.setZero ();
+		POCC.GameManager.getInstance().resetScore();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-	
+
 	}
 }
