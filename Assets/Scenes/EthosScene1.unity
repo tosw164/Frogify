@@ -1857,6 +1857,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
+--- !u!114 &57595326 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11492346, guid: ab883cfbf346e4d10b101fd5717752ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1555176129}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
 --- !u!1 &58027033
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,7 +2985,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22496580, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -36.934998
+      value: -86
       objectReference: {fileID: 0}
     - target: {fileID: 22496580, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_SizeDelta.y
@@ -30741,11 +30747,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -35.74
+      value: -16.37
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -61.1
+      value: -0.66
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.z
@@ -50883,6 +50889,7 @@ GameObject:
   - 114: {fileID: 1476946672}
   - 114: {fileID: 1476946676}
   - 114: {fileID: 1476946677}
+  - 114: {fileID: 1476946678}
   m_Layer: 0
   m_Name: Dialogue
   m_TagString: Untagged
@@ -50913,8 +50920,9 @@ MonoBehaviour:
     y: -350
     width: 1061
     height: 875
-  selectedBlock: {fileID: 0}
-  selectedCommands: []
+  selectedBlock: {fileID: 1476946669}
+  selectedCommands:
+  - {fileID: 1476946672}
   variables: []
   description: 
   stepPause: 0
@@ -51026,6 +51034,7 @@ MonoBehaviour:
   - {fileID: 1476946673}
   - {fileID: 1476946676}
   - {fileID: 1476946677}
+  - {fileID: 1476946678}
 --- !u!114 &1476946670
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -51078,7 +51087,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 7
   indentLevel: 0
-  storyText: 'It''s a shame I couldn''t convinve him. I guess some creatures just
+  storyText: 'It''s a shame I couldn''t convince him. I guess some creatures just
     can''t be convinced! '
   description: 
   character: {fileID: 132422045}
@@ -51156,7 +51165,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: ARGG...gurglegurgle....
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1951172558}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -51165,7 +51174,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 57595326}
 --- !u!114 &1476946676
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -51216,6 +51225,49 @@ MonoBehaviour:
   targetMethod: enableMovement
   targetMethodText: 'enableMovement (): Void'
   methodParameters: []
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &1476946678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1476946664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  targetObject: {fileID: 174120, guid: 693dd0c6d86e642b19d486f4d77bc6ad, type: 2}
+  targetComponentAssemblyName: SceneSwitchAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: SceneSwitchAdapter
+  targetMethod: switchTo
+  targetMethodText: 'switchTo (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 14
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
   saveReturnValue: 0
   returnValueVariableKey: 
   returnValueType: System.Void
@@ -67447,6 +67499,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b737e6028dbc1472c81343bdfa22228f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1951172558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1951172551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: Snakeyang
+  nameColor: {r: 0.056769017, g: 0.5514706, b: 0.060180727, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!4 &1951913548 stripped
 Transform:
   m_PrefabParentObject: {fileID: 427322, guid: 0bfc625a0a7d840d1b42ab936f5f9bb2, type: 2}
