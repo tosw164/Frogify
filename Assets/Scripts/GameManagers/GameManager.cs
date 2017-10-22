@@ -49,7 +49,7 @@ namespace POCC {
 		// Represents the player's inventory.
 		private List<string> _playerItems;
 
-		private POCC.Scenes.Scene _currentScene = new POCC.Scenes.Scene();
+		private POCC.Scenes.Scene _currentScene = Lookup.sceneLookup(SceneType.TUTORIAL_1);
 
 		private Achievements.AchievementManager _achievementManger;
 
@@ -225,7 +225,7 @@ namespace POCC {
 				_tempScenes.Push(_currentScene);
 				return scene;
 			}
-			else if (_currentScene.getSceneType() == SceneType.GAME_OVER) {
+			else if (_currentScene.getSceneType() == SceneType.GAME_OVER && scene.getSceneType() != SceneType.MAIN_MENU) {
 				POCC.Scenes.Scene tempScene = _tempScenes.Pop();
 
 				// TODO: Consider differences if used switchScene(scene)
