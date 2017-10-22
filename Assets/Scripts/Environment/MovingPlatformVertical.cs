@@ -11,7 +11,7 @@ public class MovingPlatformVertical : MonoBehaviour {
 	//Public fields, assigned, relative to current position
 	public int dTop_y;
 	public int dBottom_y;
-	public int movement_speed;
+	public float movement_speed;
 
 	private float origPosition;
 	private bool move_up;
