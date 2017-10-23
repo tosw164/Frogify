@@ -23,6 +23,9 @@ namespace POCC.Scenes {
 		HUB_4=14,
 		END_OF_YEAR=15,
 		LOGOS_1=16,
-		LOGOS_2=17
+		LOGOS_2=17,
+		EXIT_1=18,
+		EXIT_2=19,
+		EXIT_3=20
 	}
 }

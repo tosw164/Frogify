@@ -8,7 +8,7 @@ public class SnekTrigger : MonoBehaviour {
 			gameObject.transform.GetChild (0).gameObject.SetActive (true);
 		}
 
-		GameObject camera = GameObject.Find ("PepPlayer");
+		GameObject camera = GameObject.Find ("CameraUI");
 		CameraShake cameraScript = camera.GetComponentInChildren<CameraShake> ();
 		cameraScript.ShakeCamera(1, 1);
 
