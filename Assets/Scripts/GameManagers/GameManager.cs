@@ -91,8 +91,6 @@ namespace POCC {
 
 		public void decrementHealth() {
 			_health--;
-			Debug.Log("Took damage, current health is: " + _health);
-
 			if (_health == 0) {
 				// Set scene to game over scene and reset health back to default
 				switchScene(Lookup.sceneLookup(SceneType.GAME_OVER));
@@ -134,8 +132,6 @@ namespace POCC {
 		public void saveChoice(string playerChoice){
 			Debug.Log(playerChoice);
 			_argumentationChoice = playerChoice;
-			Debug.Log("choiceAssigned " + _argumentationChoice);
-
 		}
 
 		/**
@@ -158,7 +154,6 @@ namespace POCC {
 		 * can reference it.
 		 */
 		public void handleAchievement(Achievements.Achievement achievement){
-			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
 			AcheivementNotification notificationbox = GameObject.Find ("AcheivementBox").GetComponent<AcheivementNotification>();
 			notificationbox.ShowMessage (achievement.getAchievementMessage());
 			//Add to the achievement list in order to then check that.

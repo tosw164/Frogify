@@ -75,10 +75,6 @@ namespace POCC.Achievements{
 				Achievement currentAchievement = achievementList [i];
 				if (!currentAchievement._unlocked) {
 					if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
-						Debug.Log (currentAchievement._achievementMessage);
-						Debug.Log (currentAchievement._unlockCount);
-						Debug.Log (currentAchievement._unlocked);
-						Debug.Log ("Achievement unlocked in achievo manager");
 						GameManager.getInstance ().handleAchievement (currentAchievement);
 						currentAchievement._unlocked = true;
 					}
