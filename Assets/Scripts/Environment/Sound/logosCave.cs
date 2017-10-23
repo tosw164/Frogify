@@ -5,8 +5,12 @@ public class logosCave : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        FindObjectOfType<AudioManager>().StopAll();
-        FindObjectOfType<AudioManager>().Play("logosMusicHappy");
+        if (!FindObjectOfType<AudioManager>().isPlaying("pathosMusic"))
+        {
+
+            FindObjectOfType<AudioManager>().StopAll();
+            FindObjectOfType<AudioManager>().Play("pathosMusic");
+        }
     }
 	
 	
