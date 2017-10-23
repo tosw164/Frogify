@@ -26651,6 +26651,10 @@ GameObject:
   - 114: {fileID: 1271123791}
   - 114: {fileID: 1271123790}
   - 114: {fileID: 1271123789}
+  - 114: {fileID: 1271123813}
+  - 114: {fileID: 1271123812}
+  - 114: {fileID: 1271123811}
+  - 114: {fileID: 1271123773}
   m_Layer: 0
   m_Name: PathosLeader
   m_TagString: Untagged
@@ -26681,9 +26685,9 @@ MonoBehaviour:
     y: -350
     width: 1275
     height: 975
-  selectedBlock: {fileID: 1271123782}
+  selectedBlock: {fileID: 1271123788}
   selectedCommands:
-  - {fileID: 1271123772}
+  - {fileID: 1271123793}
   variables: []
   description: 
   stepPause: 0
@@ -26737,7 +26741,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 32
   indentLevel: 0
-  text: I saw the humans. I have proof!
+  text: Remember what the humans did last time? We know what they are capable of.
+    It is known.
   description: 
   targetBlock: {fileID: 1271123788}
   hideIfVisited: 0
@@ -26780,8 +26785,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 30
   indentLevel: 0
-  text: The humans are coming, you can trust me on this. You know I am a responsible
-    frog now.
+  text: I've brought your child back. You know I am a responsible frog!
   description: 
   targetBlock: {fileID: 1271123803}
   hideIfVisited: 0
@@ -26802,7 +26806,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 28
   indentLevel: 0
-  text: Hmm... What does Chief Pathos care about the most in the world?
+  text: The Pathos argument is about bringing out their emotions... About what they
+    care about... Sure, I'll give it a go!
   description: 
   targetBlock: {fileID: 1271123767}
   hideIfVisited: 0
@@ -26824,6 +26829,32 @@ MonoBehaviour:
   itemId: 27
   indentLevel: 0
   menuDialog: {fileID: 1557941727}
+--- !u!114 &1271123773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271123765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 78
+  indentLevel: 0
+  storyText: The Pathos argument is about how your argument affects what I care about.
+    It's about bringing out emotions. Try it, Pep!
+  description: 
+  character: {fileID: 1271123785}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
 --- !u!114 &1271123774
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -26837,7 +26868,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 20
   indentLevel: 0
-  storyText: Pep, I am willing to listen. I owe you at least this much.
+  storyText: 'Pep, you have convinced me. You have spoken to my heart by bringing
+    back to me my dearest child. '
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27052,6 +27084,10 @@ MonoBehaviour:
   - {fileID: 1271123776}
   - {fileID: 1271123775}
   - {fileID: 1271123774}
+  - {fileID: 1271123813}
+  - {fileID: 1271123812}
+  - {fileID: 1271123811}
+  - {fileID: 1271123773}
   - {fileID: 1271123772}
   - {fileID: 1271123771}
   - {fileID: 1271123770}
@@ -27244,7 +27280,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 72
   indentLevel: 0
-  storyText: It looks like I convinced her... I should tell Chief Krogg of the news.
+  storyText: Yes!! I convinced her! I have to tell Chief Krogg of the news!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -27298,7 +27334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 70
   indentLevel: 0
-  storyText: Perhaps... I'll talk to my tribe but I will vouch for you Pep.
+  storyText: I'll see you later, Pep. And thanks again.
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27323,7 +27359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 69
   indentLevel: 0
-  storyText: Have I convinced you, Chief?
+  storyText: Pathos is about what the listener cares about... Got it, Chief!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -27348,8 +27384,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 68
   indentLevel: 0
-  storyText: Yes, Chief Logos have told us about your proof but... I never really
-    liked them. Oh well, if they're leaving I suppose we should consider it.
+  storyText: What you say makes sense, but it still doesn't talk to my emotions. You
+    have to talk about what I care about, like my child.
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27483,8 +27519,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 54
   indentLevel: 0
-  storyText: You have, Pep. You have managed to speak to my heart and brought my child
-    to safety. Tribe Pathos is with you.
+  storyText: I'll see you later, Pep. And thanks again.
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27509,7 +27544,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 53
   indentLevel: 0
-  storyText: Have I convinced you, Chief?
+  storyText: Pathos is about exaggeration, and what you care about... Got it, Chief!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -27534,8 +27569,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 52
   indentLevel: 0
-  storyText: Oh, no, not the children! Anything but them, what have they done wrong??
-    Those monsters!
+  storyText: That's correct, Pep! You argued about how it will affect the children,
+    which I care about the most. And you exaggerated what you said to speak to my
+    emotions.
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27644,7 +27680,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 64
   indentLevel: 0
-  storyText: I think I've convinced her. I have to tell Chief Krogg of the news!
+  storyText: Yes!! I convinced her! I have to tell Chief Krogg of the news!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -27698,7 +27734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 62
   indentLevel: 0
-  storyText: I suppose so, Pep. I'll have to talk to my tribe but I'll vouch for you.
+  storyText: I hope I taught you something, Pep. I'll see you around!
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27723,7 +27759,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 61
   indentLevel: 0
-  storyText: Have I convinced you, Chief?
+  storyText: Pathos is about what the listener cares about... Got it, Chief!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -27748,9 +27784,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 60
   indentLevel: 0
-  storyText: We're grateful you saved our child, Pep, but that doesn't necessarily
-    mean we should trust you. But nevertheless, you wouldn't say that just to spite
-    us...
+  storyText: You spoke about yourself, but what you should have talked about is me
+    and what I care about. That is Pathos.
   description: 
   character: {fileID: 1271123785}
   portrait: {fileID: 0}
@@ -27762,6 +27797,82 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 318445161}
+--- !u!114 &1271123811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271123765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 77
+  indentLevel: 0
+  storyText: What's that, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &1271123812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271123765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 76
+  indentLevel: 0
+  storyText: Before you go, Pep, let me teach you the Pathos argument. It's the least
+    I can do.
+  description: 
+  character: {fileID: 1271123785}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &1271123813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1271123765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 75
+  indentLevel: 0
+  storyText: 'You won''t regret it, Chief! '
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
 --- !u!1 &1271138176
 GameObject:
   m_ObjectHideFlags: 0
@@ -37223,7 +37334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 907917539}
+  selectedFlowchart: {fileID: 1271123766}
 --- !u!4 &1780395735
 Transform:
   m_ObjectHideFlags: 1
