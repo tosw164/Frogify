@@ -9,7 +9,7 @@ public class NeedleShooterShot : MonoBehaviour
   /// Damage inflicted
   /// </summary>
   public int damage = 1;
-    public int bulletTimeAlive = 2; // time bullet stays alive in seconds
+	public float bulletTimeAlive = 2f; // time bullet stays alive in seconds
 
 
     /// <summary>
