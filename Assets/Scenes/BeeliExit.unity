@@ -905,7 +905,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &446726047
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,7 +1114,7 @@ RectTransform:
   - {fileID: 1783257723}
   - {fileID: 990272036}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -1180,7 +1180,7 @@ Canvas:
   m_GameObject: {fileID: 454608587}
   m_Enabled: 1
   serializedVersion: 2
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 423832801}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -1189,7 +1189,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!1 &469483424
 GameObject:
@@ -1620,7 +1620,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1788692276}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.58033335
+  m_Size: 0.5803333
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2285,7 +2285,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1 &960519546
 GameObject:
   m_ObjectHideFlags: 0
@@ -3025,6 +3025,26 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 22494934, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494934, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22494934, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22420934, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22420934, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
   m_IsPrefabParent: 0
@@ -3174,7 +3194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Creature of the Forest: Bearlana'
+  m_Text: 'Creature of the Forest: Beeli'
 --- !u!222 &1274495764
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3459,7 +3479,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!212 &1374133870
 SpriteRenderer:
   m_ObjectHideFlags: 0
