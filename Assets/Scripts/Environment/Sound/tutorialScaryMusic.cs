@@ -6,7 +6,7 @@ public class tutorialScaryMusic : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        FindObjectOfType<AudioManager>().Stop("tutorialLight");
+        FindObjectOfType<AudioManager>().StopAll();
 
         FindObjectOfType<AudioManager>().Play("tutorialScary");
 
