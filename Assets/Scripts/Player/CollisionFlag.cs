@@ -6,7 +6,6 @@ public class CollisionFlag : MonoBehaviour {
 	//Set up variable to store joint
 	SpringJoint2D joint;
 
-	public LayerMask swingableLayer;	//Layer that player will see as something that they can attach to
 	public float distance = 3f;			//Distance that player needs to be from centre of the circle to latch
 	public LineRenderer rope;			//Visible line of rope generated
 
