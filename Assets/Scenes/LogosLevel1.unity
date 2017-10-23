@@ -27785,6 +27785,12 @@ GameObject:
   - 114: {fileID: 1079714149}
   - 114: {fileID: 1079714151}
   - 114: {fileID: 1079714150}
+  - 114: {fileID: 1079714153}
+  - 114: {fileID: 1079714154}
+  - 114: {fileID: 1079714155}
+  - 114: {fileID: 1079714157}
+  - 114: {fileID: 1079714158}
+  - 114: {fileID: 1079714156}
   m_Layer: 0
   m_Name: beeli
   m_TagString: Untagged
@@ -27850,7 +27856,7 @@ MonoBehaviour:
   scrollPos: {x: 0, y: 0}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
-  blockViewHeight: 400
+  blockViewHeight: 311
   zoom: 1
   scrollViewRect:
     serializedVersion: 2
@@ -27860,7 +27866,7 @@ MonoBehaviour:
     height: 840
   selectedBlock: {fileID: 1079714142}
   selectedCommands:
-  - {fileID: 1079714146}
+  - {fileID: 1079714147}
   variables: []
   description: 
   stepPause: 0
@@ -27896,9 +27902,15 @@ MonoBehaviour:
   commandList:
   - {fileID: 1079714152}
   - {fileID: 1079714147}
-  - {fileID: 1079714146}
-  - {fileID: 1079714151}
+  - {fileID: 1079714153}
+  - {fileID: 1079714158}
   - {fileID: 1079714150}
+  - {fileID: 1079714155}
+  - {fileID: 1079714154}
+  - {fileID: 1079714146}
+  - {fileID: 1079714157}
+  - {fileID: 1079714156}
+  - {fileID: 1079714151}
   - {fileID: 1079714149}
 --- !u!114 &1079714143
 MonoBehaviour:
@@ -27954,9 +27966,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Beeli Sir, we need to get out of he-
+  storyText: Beeli Sir please, our forest is dyi -
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1660857553}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -27965,7 +27977,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1969484244}
 --- !u!114 &1079714147
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -28053,9 +28065,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 6
   indentLevel: 0
-  storyText: Be quiet you noisy little tadpole!
+  storyText: Be quiet you little whipper snapper! I've heard about you from the colony
+    - you're filled with lies!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1079714148}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -28064,7 +28077,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1052619572}
 --- !u!114 &1079714151
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -28078,11 +28091,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 5
   indentLevel: 0
-  display: 1
+  display: 2
   stage: {fileID: 0}
   character: {fileID: 1079714148}
   replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: d3095c1bdfa984750acddef5bd5fa9e9, type: 3}
+  portrait: {fileID: 0}
   offset: 0
   fromPosition: {fileID: 1290382012}
   toPosition: {fileID: 1290382013}
@@ -28120,6 +28133,167 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1079714153
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 7
+  indentLevel: 0
+  storyText: Beeli Sir, we need to get out of here as soon as we can! The humans are
+    comi -
+  description: 
+  character: {fileID: 1660857553}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 1969484244}
+--- !u!114 &1079714154
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 8
+  indentLevel: 0
+  storyText: Bzzzzz, there's nothing wrong with our forest- except maybe you noisy
+    kids leaving junk all over the place!
+  description: 
+  character: {fileID: 1079714148}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 1052619572}
+--- !u!114 &1079714155
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 9
+  indentLevel: 0
+  storyText: But Sir! They ARE coming!
+  description: 
+  character: {fileID: 1660857553}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 1969484244}
+--- !u!114 &1079714156
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 12
+  indentLevel: 0
+  display: 2
+  stage: {fileID: 0}
+  character: {fileID: 1660857553}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 0}
+  offset: 0
+  fromPosition: {fileID: 1290382010}
+  toPosition: {fileID: 1290382011}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1079714157
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 10
+  indentLevel: 0
+  storyText: That's enough out of you! Until I see it with my own eyes, that these
+    so-called "humans" are here, I ain't leaving my forest!
+  description: 
+  character: {fileID: 1079714148}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 1052619572}
+--- !u!114 &1079714158
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 11
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1079714148}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: d3095c1bdfa984750acddef5bd5fa9e9, type: 3}
+  offset: 0
+  fromPosition: {fileID: 1290382012}
+  toPosition: {fileID: 1290382013}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
 --- !u!1 &1081945693
 GameObject:
   m_ObjectHideFlags: 0
@@ -33414,7 +33588,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1079714141}
+  selectedFlowchart: {fileID: 1892919087}
 --- !u!4 &1279886287
 Transform:
   m_ObjectHideFlags: 1
@@ -33525,6 +33699,14 @@ Prefab:
     - target: {fileID: 439874, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_RootOrder
       value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490998, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 674
+      objectReference: {fileID: 0}
+    - target: {fileID: 22490998, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: -1150
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
@@ -41427,7 +41609,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1660857554}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.16, y: 0.67, z: -0}
+  m_LocalPosition: {x: 284.1, y: 25.5, z: -0}
   m_LocalScale: {x: 0.10000002, y: 0.10000002, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -42451,7 +42633,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 179.999, y: 179.999, z: 179.999}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
@@ -48109,6 +48291,8 @@ GameObject:
   - 114: {fileID: 1892919088}
   - 114: {fileID: 1892919096}
   - 114: {fileID: 1892919095}
+  - 114: {fileID: 1892919097}
+  - 114: {fileID: 1892919098}
   m_Layer: 0
   m_Name: LevelEndItem
   m_TagString: Untagged
@@ -48138,10 +48322,10 @@ MonoBehaviour:
     x: -350
     y: -350
     width: 920
-    height: 840
+    height: 841
   selectedBlock: {fileID: 1892919089}
   selectedCommands:
-  - {fileID: 1892919095}
+  - {fileID: 1892919098}
   variables: []
   description: 
   stepPause: 0
@@ -48155,7 +48339,7 @@ MonoBehaviour:
   luaBindingName: flowchart
 --- !u!114 &1892919088
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892919086}
@@ -48198,7 +48382,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &1892919089
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892919086}
@@ -48210,7 +48394,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 50
-    y: 50
+    y: 51
     width: 120
     height: 40
   itemId: 0
@@ -48218,13 +48402,15 @@ MonoBehaviour:
   description: 
   eventHandler: {fileID: 1892919091}
   commandList:
+  - {fileID: 1892919097}
   - {fileID: 1892919090}
+  - {fileID: 1892919098}
   - {fileID: 1892919096}
   - {fileID: 1892919088}
   - {fileID: 1892919095}
 --- !u!114 &1892919090
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892919086}
@@ -48235,7 +48421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Yay I found it!
+  storyText: I think I found enough!
   description: 
   character: {fileID: 1660857553}
   portrait: {fileID: 0}
@@ -48246,10 +48432,10 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1969484244}
 --- !u!114 &1892919091
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892919086}
@@ -48303,7 +48489,7 @@ Transform:
   m_RootOrder: 18
 --- !u!114 &1892919095
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892919086}
@@ -48321,7 +48507,7 @@ MonoBehaviour:
   fadeTexture: {fileID: 0}
 --- !u!114 &1892919096
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1892919086}
@@ -48337,6 +48523,60 @@ MonoBehaviour:
   waitUntilFinished: 1
   fadeColor: {r: 0, g: 0, b: 0, a: 1}
   fadeTexture: {fileID: 0}
+--- !u!114 &1892919097
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1892919086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 5
+  indentLevel: 0
+  display: 1
+  stage: {fileID: 0}
+  character: {fileID: 1660857553}
+  replacedCharacter: {fileID: 0}
+  portrait: {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
+  offset: 0
+  fromPosition: {fileID: 1290382010}
+  toPosition: {fileID: 1290382011}
+  facing: 0
+  useDefaultSettings: 1
+  fadeDuration: 0.5
+  moveDuration: 1
+  shiftOffset: {x: 0, y: 0}
+  move: 1
+  shiftIntoPlace: 0
+  waitUntilFinished: 0
+--- !u!114 &1892919098
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1892919086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 6
+  indentLevel: 0
+  storyText: I should show Beeli as proof that the humans are here!
+  description: 
+  character: {fileID: 1660857553}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 1969484244}
 --- !u!1 &1893344411
 GameObject:
   m_ObjectHideFlags: 0
@@ -50620,6 +50860,12 @@ PolygonCollider2D:
       - {x: 0.095, y: -0.275}
       - {x: 0.175, y: -0.265}
       - {x: 0.265, y: -0.16499999}
+--- !u!114 &1969484244 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11433276, guid: 427113f5a7af44e9f8f8f6995d69767a,
+    type: 2}
+  m_PrefabInternal: {fileID: 538399472}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
 --- !u!1 &1974588831
 GameObject:
   m_ObjectHideFlags: 0
