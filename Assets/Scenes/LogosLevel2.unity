@@ -26201,9 +26201,9 @@ MonoBehaviour:
     y: -391
     width: 1334
     height: 982
-  selectedBlock: {fileID: 935046585}
+  selectedBlock: {fileID: 935046583}
   selectedCommands:
-  - {fileID: 935046579}
+  - {fileID: 935046571}
   variables: []
   description: 
   stepPause: 0
@@ -26650,7 +26650,7 @@ MonoBehaviour:
       typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
         PublicKeyToken=b77a5c561934e089
       typeFullname: System.Int32
-      intValue: 8
+      intValue: 19
       boolValue: 0
       floatValue: 0
       stringValue: 
@@ -26800,7 +26800,7 @@ MonoBehaviour:
   - {fileID: 935046586}
 --- !u!114 &935046578
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935046550}
@@ -26825,7 +26825,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 1363249121}
 --- !u!114 &935046579
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 935046550}
