@@ -61,7 +61,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: tutorialScary
     clip: {fileID: 8300000, guid: 1958496f4d027284d87eadf94e851226, type: 3}
-    volume: 0.526
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -140,6 +140,12 @@ MonoBehaviour:
   - name: tongueSwing
     clip: {fileID: 8300000, guid: b5e590d5a2f1f9a4e83eb04839851fa3, type: 3}
     volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snakeRumble
+    clip: {fileID: 8300000, guid: ccb47570c8391ab4a85107668c716d00, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

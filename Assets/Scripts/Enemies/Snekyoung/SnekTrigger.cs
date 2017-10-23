@@ -17,10 +17,9 @@ public class SnekTrigger : MonoBehaviour {
 			gameObject.transform.GetChild (0).gameObject.SetActive (true);
 		}
 
+		FindObjectOfType<AudioManager>().Play("snakeRumble");
 		// Finds the Camera, and calls the CameraShake script's ShakeCamera method
 		GameObject camera = GameObject.Find ("CameraUI");
-        
-        FindObjectOfType<AudioManager>().Play("snakeRumble");
         CameraShake cameraScript = camera.GetComponentInChildren<CameraShake> ();
 		cameraScript.ShakeCamera(1, 1);
 
