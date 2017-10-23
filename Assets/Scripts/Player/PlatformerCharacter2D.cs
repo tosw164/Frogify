@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+//Class that handles the logic for the movement for the character
 namespace UnityStandardAssets._2D
 {
 	public class PlatformerCharacter2D : MonoBehaviour
@@ -26,11 +27,13 @@ namespace UnityStandardAssets._2D
 		private float JUMP_COOLDOWN_VALUE = 1.0f;	//Value of "cooldown" representing time boolean can't be flipped after sprintjump
 		private bool allow_ground_slowdown; 		//boolean representing if groundcheck can disable sprintjump.
 
-		private float X_VELOCITY_LIMIT = 30f;
-		private float Y_VELOCITY_LIMIT = 25f;
+		private float X_VELOCITY_LIMIT = 30f;		//Speed limit for character (left and right) to ensure that physics aren't broken
+		private float Y_VELOCITY_LIMIT = 25f;		//Speed limit for character (up and down) to make sure that jumping cannot
+													//be broken when spacebar spammed.
 
 		public float movement_multiplier = 2.0f; //Represent speedup when LEFTSHIFT is pressed
 
+		//Initial setting of values for the character
 		private void Awake()
 		{
 			// Setting up references.
