@@ -41,29 +41,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: CollectGoldenBug
-    clip: {fileID: 8300000, guid: 3278b967030a7224db85262eda717b4d, type: 3}
-    volume: 0.576
+  - name: waterSound
+    clip: {fileID: 8300000, guid: 2a1d9056119806844b91ce9fc70fc35b, type: 3}
+    volume: 0.249
     pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
-  - name: Jump
-    clip: {fileID: 8300000, guid: 4ebd815508ea42341a2683d0c932ff1e, type: 3}
-    volume: 0.576
+  - name: mainTheme
+    clip: {fileID: 8300000, guid: ea39ffb8e4825441b9e5368d58a1d00e, type: 3}
+    volume: 0.526
     pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Death
-    clip: {fileID: 8300000, guid: a6e938aa074b7a04097c8f337ab9a2dd, type: 3}
-    volume: 0.705
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Fuck
-    clip: {fileID: 8300000, guid: 62dcb6bc8c8ba6f42b31ce14741983d7, type: 3}
-    volume: 0.576
-    pitch: 1
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
