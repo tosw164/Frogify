@@ -53,7 +53,7 @@ namespace POCC {
 
 		private Achievements.AchievementManager _achievementManger;
 
-		private List<String> _currentAchievements = new List<String>();
+		private List<string> _currentAchievements = new List<string>();
 
 		private Stack<POCC.Scenes.Scene> _tempScenes;
 
@@ -115,6 +115,7 @@ namespace POCC {
 			_collectableScore = 0;
 			_argumentationScore = 0;
 		}
+			
 
 		public void incrementCollectableScore(Collectable collectable){
 			_collectableScore += Lookup.collectableScoreLookup(collectable);
@@ -158,7 +159,7 @@ namespace POCC {
 		 */
 		public void handleAchievement(Achievements.Achievement achievement){
 			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
-			achievement._unlocked = true;
+
 
 			//Add to the achievement list in order to then check that.
 			_currentAchievements.Add (achievement._achievementMessage);
@@ -193,7 +194,7 @@ namespace POCC {
 			return _playerItems;
 		}
 
-		public List<String> getAchievements() {
+		public List<string> getAchievements() {
 			return _currentAchievements;
 		}
 
@@ -290,5 +291,8 @@ namespace POCC {
 		}
 		//======================================================
 
+		public void destroyTest(){
+			_manager = null;
+		}
 	}
 }
