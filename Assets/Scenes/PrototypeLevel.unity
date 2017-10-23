@@ -15230,7 +15230,6 @@ GameObject:
   - 114: {fileID: 760631505}
   - 120: {fileID: 760631504}
   - 114: {fileID: 760631502}
-  - 114: {fileID: 760631503}
   - 114: {fileID: 760631515}
   m_Layer: 9
   m_Name: PepPlayer
@@ -15259,18 +15258,6 @@ MonoBehaviour:
   portraitsFace: 0
   setSayDialog: {fileID: 0}
   description: 
---- !u!114 &760631503
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11415206, guid: 167ec55c11c7b4193ae8c13658c56c17,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 760631501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7dcc06ad6d4643ff85b029f05650d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!120 &760631504
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -15378,7 +15365,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294963711
-  movement_multiplier: 2.5
+  movement_multiplier: 1.75
 --- !u!114 &760631509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33225,7 +33212,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3}
 --- !u!33 &1599302432
 MeshFilter:
   m_ObjectHideFlags: 0

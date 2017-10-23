@@ -1316,7 +1316,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 23
 --- !u!1 &105626792
 GameObject:
   m_ObjectHideFlags: 0
@@ -1376,56 +1376,6 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!1001 &115066014
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 67.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 1.971
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_RootOrder
-      value: 22
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 475954, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &118082437
 GameObject:
   m_ObjectHideFlags: 0
@@ -1950,7 +1900,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 30
+  m_RootOrder: 29
 --- !u!1001 &170121386
 Prefab:
   m_ObjectHideFlags: 0
@@ -4760,7 +4710,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 27
+  m_RootOrder: 26
 --- !u!1 &401013754
 GameObject:
   m_ObjectHideFlags: 0
@@ -5361,7 +5311,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3}
 --- !u!114 &453539014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5654,7 +5604,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 25
+  m_RootOrder: 24
 --- !u!1 &497924198
 GameObject:
   m_ObjectHideFlags: 0
@@ -11749,7 +11699,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 23
+  m_RootOrder: 22
 --- !u!1 &997169617
 GameObject:
   m_ObjectHideFlags: 0
@@ -16614,7 +16564,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!1 &1409285828
 GameObject:
   m_ObjectHideFlags: 0
@@ -20816,7 +20766,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 31
+  m_RootOrder: 30
 --- !u!1 &1648959062
 GameObject:
   m_ObjectHideFlags: 0
@@ -25197,7 +25147,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 28
+  m_RootOrder: 27
 --- !u!1 &2032520173
 GameObject:
   m_ObjectHideFlags: 0
@@ -26981,7 +26931,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294963711
-  movement_multiplier: 2.5
+  movement_multiplier: 1.75
 --- !u!114 &2132086817
 MonoBehaviour:
   m_ObjectHideFlags: 0
