@@ -32,4 +32,9 @@ public class PauseGame : MonoBehaviour {
 
 		}
 	}
+
+	public void Unpause(){
+		Time.timeScale = 1;
+	}
+
 }
