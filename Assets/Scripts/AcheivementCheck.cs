@@ -10,7 +10,7 @@ public class AcheivementCheck : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		background = (Image)gameObject.transform.GetChild(3).GetComponent<Image>();
+		background = (Image)gameObject.transform.GetChild(0).GetComponent<Image>();
 		if (POCC.GameManager.getInstance ().getAchievements ().Contains (acheivementname)) {
 			background.enabled = true;
 		} else {
