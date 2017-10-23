@@ -29,7 +29,8 @@ public class EnemyDamageOnContact : MonoBehaviour {
 			{
 				collisionFlag = true;
 				POCC.GameManager manager = POCC.GameManager.getInstance ();
-				manager.decrementHealth ();
+                FindObjectOfType<AudioManager>().Play("damage");
+                manager.decrementHealth ();
 				StartCoroutine(Knockback(0.02f, 300, pep.gameObject.transform.position,pep));
 			}	
 		}

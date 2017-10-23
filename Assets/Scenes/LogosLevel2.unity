@@ -33053,6 +33053,7 @@ GameObject:
   - 120: {fileID: 1205630064}
   - 114: {fileID: 1205630063}
   - 114: {fileID: 1205630062}
+  - 114: {fileID: 1205630074}
   m_Layer: 9
   m_Name: PepPlayer
   m_TagString: Player
@@ -33314,6 +33315,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1205630074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1205630060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c7176103ad1ea641a04837752fed5f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1206149067
 GameObject:
   m_ObjectHideFlags: 0
