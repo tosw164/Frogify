@@ -4601,6 +4601,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 512139778}
   - 212: {fileID: 512139780}
+  - 60: {fileID: 512139779}
   m_Layer: 0
   m_Name: tile_jungle_treelimb_2 (13)
   m_TagString: Untagged
@@ -4621,6 +4622,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 730754174}
   m_RootOrder: 52
+--- !u!60 &512139779
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 512139777}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.65, y: -0.25}
+      - {x: 0.13, y: 0.26999998}
+      - {x: -0.22, y: 0.58}
+      - {x: -0.51, y: 0.77}
+      - {x: -0.62, y: 0.82}
+      - {x: -0.78, y: 0.82}
+      - {x: -0.78999996, y: 0.81}
+      - {x: -0.78999996, y: 0.39999998}
+      - {x: -0.71, y: 0.17999999}
+      - {x: -0.59, y: 0.28}
+      - {x: -0.35, y: 0.19999999}
+      - {x: -0.32, y: 0.08}
+      - {x: -0.26, y: 0.03}
+      - {x: -0.19999999, y: 0.08}
+      - {x: -0.01, y: -0.089999996}
+      - {x: 0.02, y: -0.19999999}
+      - {x: 0.07, y: -0.14999999}
+      - {x: 0.22, y: -0.39}
+      - {x: 0.32, y: -0.34}
+      - {x: 0.45, y: -0.52}
+      - {x: 0.76, y: -0.82}
+      - {x: 0.78999996, y: -0.82}
+      - {x: 0.78999996, y: -0.42999998}
+      - {x: 0.76, y: -0.39999998}
 --- !u!212 &512139780
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5883,6 +5922,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 645995295}
   - 212: {fileID: 645995297}
+  - 60: {fileID: 645995296}
   m_Layer: 0
   m_Name: tile_jungle_treelimb_2 (11)
   m_TagString: Untagged
@@ -5903,6 +5943,44 @@ Transform:
   m_Children: []
   m_Father: {fileID: 730754174}
   m_RootOrder: 50
+--- !u!60 &645995296
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 645995294}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.65, y: -0.25}
+      - {x: 0.13, y: 0.26999998}
+      - {x: -0.22, y: 0.58}
+      - {x: -0.51, y: 0.77}
+      - {x: -0.62, y: 0.82}
+      - {x: -0.78, y: 0.82}
+      - {x: -0.78999996, y: 0.81}
+      - {x: -0.78999996, y: 0.39999998}
+      - {x: -0.71, y: 0.17999999}
+      - {x: -0.59, y: 0.28}
+      - {x: -0.35, y: 0.19999999}
+      - {x: -0.32, y: 0.08}
+      - {x: -0.26, y: 0.03}
+      - {x: -0.19999999, y: 0.08}
+      - {x: -0.01, y: -0.089999996}
+      - {x: 0.02, y: -0.19999999}
+      - {x: 0.07, y: -0.14999999}
+      - {x: 0.22, y: -0.39}
+      - {x: 0.32, y: -0.34}
+      - {x: 0.45, y: -0.52}
+      - {x: 0.76, y: -0.82}
+      - {x: 0.78999996, y: -0.82}
+      - {x: 0.78999996, y: -0.42999998}
+      - {x: 0.76, y: -0.39999998}
 --- !u!212 &645995297
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -15515,6 +15593,7 @@ GameObject:
   - 114: {fileID: 1773357443}
   - 114: {fileID: 1773357445}
   - 114: {fileID: 1773357446}
+  - 60: {fileID: 1773357450}
   m_Layer: 0
   m_Name: tile_jungle_treelimb_2 (10)
   m_TagString: Untagged
@@ -15998,6 +16077,44 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 1440530724}
+--- !u!60 &1773357450
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773357430}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  m_Points:
+    m_Paths:
+    - - {x: 0.65, y: -0.25}
+      - {x: 0.13, y: 0.26999998}
+      - {x: -0.22, y: 0.58}
+      - {x: -0.51, y: 0.77}
+      - {x: -0.62, y: 0.82}
+      - {x: -0.78, y: 0.82}
+      - {x: -0.78999996, y: 0.81}
+      - {x: -0.78999996, y: 0.39999998}
+      - {x: -0.71, y: 0.17999999}
+      - {x: -0.59, y: 0.28}
+      - {x: -0.35, y: 0.19999999}
+      - {x: -0.32, y: 0.08}
+      - {x: -0.26, y: 0.03}
+      - {x: -0.19999999, y: 0.08}
+      - {x: -0.01, y: -0.089999996}
+      - {x: 0.02, y: -0.19999999}
+      - {x: 0.07, y: -0.14999999}
+      - {x: 0.22, y: -0.39}
+      - {x: 0.32, y: -0.34}
+      - {x: 0.45, y: -0.52}
+      - {x: 0.76, y: -0.82}
+      - {x: 0.78999996, y: -0.82}
+      - {x: 0.78999996, y: -0.42999998}
+      - {x: 0.76, y: -0.39999998}
 --- !u!1 &1780397900
 GameObject:
   m_ObjectHideFlags: 0
