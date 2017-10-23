@@ -3,8 +3,8 @@ using System.Collections;
 
 
 /**
- * This script is used for the moving platform - the assigned object moves left and right (set left and right limits) with a set 
- * movement speed.
+ * This script is used for the moving platform - the assigned object moves left and right (set left and right limits) with an assignable 
+ * movement speed. If Pep collides/is on the platform, he becomes a child of the platform and moves with it.
  */
 public class MovingPlatformHorizontal : MonoBehaviour {
 

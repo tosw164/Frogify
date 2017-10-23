@@ -49,7 +49,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: mainTheme
     clip: {fileID: 8300000, guid: ea39ffb8e4825441b9e5368d58a1d00e, type: 3}
-    volume: 0.526
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -61,7 +61,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: tutorialScary
     clip: {fileID: 8300000, guid: 1958496f4d027284d87eadf94e851226, type: 3}
-    volume: 0.526
+    volume: 0.3
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -79,13 +79,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: goldenFlyCollectable
     clip: {fileID: 8300000, guid: 7a099c913194e8f4ea76225fea3c20fb, type: 3}
-    volume: 0.197
+    volume: 0.448
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: mushroomBounce
     clip: {fileID: 8300000, guid: dcdc5e282279f564e85c01a360e67d59, type: 3}
-    volume: 0.51
+    volume: 0.682
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -122,6 +122,30 @@ MonoBehaviour:
   - name: logosCave
     clip: {fileID: 8300000, guid: 56443a5c248ccd647a19371af838129c, type: 3}
     volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ethosCave
+    clip: {fileID: 8300000, guid: 56443a5c248ccd647a19371af838129c, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: pathosSpiderMusic
+    clip: {fileID: 8300000, guid: cb547047719e24149a9be6a86e57d433, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: tongueSwing
+    clip: {fileID: 8300000, guid: b5e590d5a2f1f9a4e83eb04839851fa3, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snakeRumble
+    clip: {fileID: 8300000, guid: ccb47570c8391ab4a85107668c716d00, type: 3}
+    volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}

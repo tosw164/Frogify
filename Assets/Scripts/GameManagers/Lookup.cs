@@ -45,11 +45,11 @@ namespace POCC
 				case SceneType.HUB_4:
 					return builder.setLocation ("Hub3").build();
 				case SceneType.EXIT_1:
-					return builder.setLocation ("BearlanaExit").build();
+					return builder.setLocation ("BearlanaExit").resetScoreOnLeave().build();
 				case SceneType.EXIT_2:
-					return builder.setLocation ("BeeliExit").build();
+					return builder.setLocation ("BeeliExit").resetScoreOnLeave().build();
 				case SceneType.EXIT_3:
-					return builder.setLocation ("SnakeyeongExit").build();
+					return builder.setLocation ("SnakeyeongExit").resetScoreOnLeave().build();
 				case SceneType.END_OF_YEAR:
 				default:
 					// Unimplemented scene, map does not exist

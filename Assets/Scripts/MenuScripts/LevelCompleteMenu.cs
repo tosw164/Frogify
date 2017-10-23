@@ -7,17 +7,23 @@ public class LevelCompleteMenu : MonoBehaviour {
 	public GameObject FeedbackPanel;
 	public string answer;
 
+	public Text flies;
+	public Text creature;
+	public Text score;
+	public Text choice;
+
 	// Use this for initialization
 	void Start () {
 
-		this.gameObject.SetActive (true);
-		Transform fliesChild =  transform.Find("Panel/Panel/Flies");
-		Text flies = fliesChild.GetComponent<Text>();
+		Debug.Log ("HI");
+
+		//Transform fliesChild =  transform.Find("Score/ScoreText");
+		//flies = fliesChild.GetComponent<Text>();
 		flies.text = "" + POCC.GameManager.getInstance().getCollectableScore();
 
 		//check the user's choice with the answer. If correct, add 10 points
-		Transform creatureChild =  transform.Find("Panel/Panel/Creature");
-		Text creature = creatureChild.GetComponent<Text>();
+		//Transform creatureChild =  transform.Find("Score/CreatureText");
+		//creature = creatureChild.GetComponent<Text>();
 		string playerChoice = POCC.GameManager.getInstance().getChoice();
 		Debug.Log(playerChoice + " is stored");
 
@@ -30,15 +36,15 @@ public class LevelCompleteMenu : MonoBehaviour {
 
 
 
-		Transform scoreChild =  transform.Find("Panel/Panel/Score");
-		Text score = scoreChild.GetComponent<Text>();
+		//Transform scoreChild =  transform.Find("Score/ScoreText");
+		//score = scoreChild.GetComponent<Text>();
 		score.text = "" + POCC.GameManager.getInstance().getTotalScore();
 
 
 
 
-		Transform choiceChild =  transform.Find("Panel/FeedbackPanel/Choice");
-		Text choice = choiceChild.GetComponent<Text> ();
+		//Transform choiceChild =  transform.Find("Information/ChoiceText");
+		//choice = choiceChild.GetComponent<Text> ();
 		choice.text = "" + POCC.GameManager.getInstance().getChoice();
 
 	}

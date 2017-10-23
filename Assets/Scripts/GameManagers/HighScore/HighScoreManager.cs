@@ -8,6 +8,11 @@ using System;
  */
 namespace POCC.HighScore
 {
+	/**
+	 * Manager for holding High score entries - it simply persists the 
+	 * highscores based on the levels. It utilizes a singleton type pattern
+	 * in order to be accessed and get the entries out.
+	 */ 
 	[Serializable]
 	public class HighScoreManager {
 
@@ -21,8 +26,7 @@ namespace POCC.HighScore
 			}
 			return _manager;
 		}
-
-		//Maybe turn into singleton pattern?
+			
 		/*
 		 * Simply instantiate the storage elements.
 		 */
