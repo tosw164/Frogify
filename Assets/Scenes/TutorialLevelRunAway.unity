@@ -376,7 +376,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1, y: 3}
 --- !u!114 &11977139
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15910,7 +15910,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294963711
-  movement_multiplier: 2.5
+  movement_multiplier: 1.75
 --- !u!114 &1285748637
 MonoBehaviour:
   m_ObjectHideFlags: 0

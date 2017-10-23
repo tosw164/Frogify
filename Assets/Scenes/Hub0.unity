@@ -39549,7 +39549,12 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 11428250, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
+      propertyPath: movement_multiplier
+      value: 1.75
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11415206, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1981767311

@@ -31498,7 +31498,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 16
 --- !u!1001 &1280707910
 Prefab:
   m_ObjectHideFlags: 0
@@ -33616,7 +33616,7 @@ Transform:
   - {fileID: 1102648978}
   - {fileID: 1518494108}
   m_Father: {fileID: 0}
-  m_RootOrder: 26
+  m_RootOrder: 25
 --- !u!1 &1398485285
 GameObject:
   m_ObjectHideFlags: 0
@@ -39715,7 +39715,6 @@ GameObject:
   - 114: {fileID: 1660857558}
   - 120: {fileID: 1660857557}
   - 114: {fileID: 1660857553}
-  - 114: {fileID: 1660857556}
   - 114: {fileID: 1660857567}
   m_Layer: 9
   m_Name: PepPlayer
@@ -39739,18 +39738,6 @@ Transform:
   - {fileID: 161840392}
   m_Father: {fileID: 0}
   m_RootOrder: 7
---- !u!114 &1660857556
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11415206, guid: 167ec55c11c7b4193ae8c13658c56c17,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1660857554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7dcc06ad6d4643ff85b029f05650d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!120 &1660857557
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -39858,7 +39845,7 @@ MonoBehaviour:
   m_WhatIsGround:
     serializedVersion: 2
     m_Bits: 4294963711
-  movement_multiplier: 1.5
+  movement_multiplier: 1.75
 --- !u!114 &1660857562
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45843,7 +45830,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.1873}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 32
+  m_RootOrder: 31
 --- !u!1 &1892919086
 GameObject:
   m_ObjectHideFlags: 0
