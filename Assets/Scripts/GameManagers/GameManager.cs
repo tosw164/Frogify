@@ -165,7 +165,11 @@ namespace POCC {
 			_currentAchievements.Add (achievement._achievementMessage);
 		}
 		//======================================================
+		//Achievement Integration
 
+		public void sendAchievementEvent(Achievements.AchievementType achType){
+			_achievementManger.RegisterAchievementEvent (achType);
+		}
 
 		//======================================================
 		// Getter Methods:
