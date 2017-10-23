@@ -1233,7 +1233,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22474056, guid: e6640429062da4cecafeca4b11a48ce0, type: 2}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 22474056, guid: e6640429062da4cecafeca4b11a48ce0, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -9080,7 +9080,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439874, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 195256, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_IsActive
@@ -43876,7 +43876,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 415342, guid: 85b20015128014135b25b318ac182fe4, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 85b20015128014135b25b318ac182fe4, type: 2}
@@ -46825,7 +46825,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 448396, guid: 145a47f668b4441618e06d57cfa1d0bb, type: 2}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 160200, guid: 145a47f668b4441618e06d57cfa1d0bb, type: 2}
       propertyPath: m_Name
@@ -63811,7 +63811,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22411446, guid: d9fda2949c29142a6abae1b2dbfd4a9b, type: 2}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 22411446, guid: d9fda2949c29142a6abae1b2dbfd4a9b, type: 2}
       propertyPath: m_AnchoredPosition.x
@@ -68757,6 +68757,7 @@ GameObject:
   - 120: {fileID: 1525454968}
   - 114: {fileID: 1165013349}
   - 114: {fileID: 1525454967}
+  - 114: {fileID: 1525454978}
   m_Layer: 9
   m_Name: PepPlayer
   m_TagString: Player
@@ -68998,6 +68999,17 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1525454978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1525454965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef77c421bf7c7114bb551f666095ede9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1527395430
 GameObject:
   m_ObjectHideFlags: 0
@@ -88095,7 +88107,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 479198, guid: a2945138f91d1409fa15b1d5f6bb6b3c, type: 2}
       propertyPath: m_RootOrder
-      value: 22
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 11487308, guid: a2945138f91d1409fa15b1d5f6bb6b3c, type: 2}
       propertyPath: player
