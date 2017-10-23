@@ -239,6 +239,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &115096
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22401752}
+  - 222: {fileID: 22268964}
+  - 114: {fileID: 11425122}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &117494
 GameObject:
   m_ObjectHideFlags: 1
@@ -250,6 +267,22 @@ GameObject:
   - 114: {fileID: 11409468}
   m_Layer: 0
   m_Name: Acheivement
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &117518
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 421658}
+  - 114: {fileID: 11428818}
+  m_Layer: 0
+  m_Name: Acheivement (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -471,7 +504,7 @@ GameObject:
   - 4: {fileID: 431300}
   - 114: {fileID: 11452228}
   m_Layer: 0
-  m_Name: Acheivement (2)
+  m_Name: Acheivement (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -504,6 +537,23 @@ GameObject:
   - 224: {fileID: 22479164}
   m_Layer: 5
   m_Name: Sliding Area
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &140848
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 22444402}
+  - 222: {fileID: 22256236}
+  - 114: {fileID: 11451020}
+  m_Layer: 5
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1330,13 +1380,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 179462}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -554, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -673, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22402548}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!4 &406732
 Transform:
   m_ObjectHideFlags: 1
@@ -1344,7 +1394,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 186394}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -761, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -880, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1378,6 +1428,20 @@ Transform:
   - {fileID: 22439256}
   m_Father: {fileID: 22414440}
   m_RootOrder: 1
+--- !u!4 &421658
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117518}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 310.02795, y: -454, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 22444402}
+  m_Father: {fileID: 22414440}
+  m_RootOrder: 3
 --- !u!4 &431300
 Transform:
   m_ObjectHideFlags: 1
@@ -1385,13 +1449,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 132382}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -354, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 310.02795, y: -558, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22492536}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 2
+  m_RootOrder: 11
 --- !u!4 &436396
 Transform:
   m_ObjectHideFlags: 1
@@ -1412,13 +1476,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -452, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -350, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22415222}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 10
+  m_RootOrder: 2
 --- !u!4 &439326
 Transform:
   m_ObjectHideFlags: 1
@@ -1426,13 +1490,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121126}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -1177, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -1296, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22436758}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!4 &451456
 Transform:
   m_ObjectHideFlags: 1
@@ -1440,13 +1504,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 152336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -969, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -1088, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22415350}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!4 &455106
 Transform:
   m_ObjectHideFlags: 1
@@ -1454,13 +1518,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 108296}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -1073, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -1192, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22492174}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!4 &457996
 Transform:
   m_ObjectHideFlags: 1
@@ -1481,13 +1545,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 121356}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -864, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -983, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22472782}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!4 &469614
 Transform:
   m_ObjectHideFlags: 1
@@ -1509,13 +1573,13 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 181370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 310.02795, y: -658, z: 0}
+  m_LocalPosition: {x: 310.02795, y: -777, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 22492898}
   m_Father: {fileID: 22414440}
-  m_RootOrder: 4
+  m_RootOrder: 6
 --- !u!4 &495522
 Transform:
   m_ObjectHideFlags: 1
@@ -1823,7 +1887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2599b13c18adb41f980262507786a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acheivementname: 10 Collectables Obtained
+  acheivementname: First Level Completed
 --- !u!114 &11410158
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1856,7 +1920,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Persuade 1 NPC
+  m_Text: Persuade 2 NPC
 --- !u!114 &11412112
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2092,7 +2156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2599b13c18adb41f980262507786a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acheivementname: 20 Collectables Obtained
+  acheivementname: Second Level Completed
 --- !u!114 &11422642
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2179,7 +2243,40 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Collect 20 golden bugs
+  m_Text: Second Level Completed
+--- !u!114 &11425122
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 08548dfb239454c5ab6e05cee4425d34, type: 3}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Persuade 1 NPC
 --- !u!114 &11426166
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2240,6 +2337,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &11428818
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 117518}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2599b13c18adb41f980262507786a770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  acheivementname: 1 NPC Persuaded
 --- !u!114 &11430286
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2351,7 +2460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Persuade 2 NPC
+  m_Text: Last Level Completed!
 --- !u!114 &11431070
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2391,7 +2500,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 22400838}
   m_Direction: 2
   m_Value: 1
-  m_Size: 0.26791808
+  m_Size: 0.23969465
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -2771,6 +2880,33 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   acheivementname: 20 Collectables Obtained
+--- !u!114 &11451020
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 56334e4b2e49143978d111ae442f74a2, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
 --- !u!114 &11452228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2782,7 +2918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2599b13c18adb41f980262507786a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acheivementname: 1 NPC Persuaded
+  acheivementname: 2 NPC Persuaded
 --- !u!114 &11453268
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2966,7 +3102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2599b13c18adb41f980262507786a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acheivementname: 2 NPCs Persuaded
+  acheivementname: Third Level Completed
 --- !u!114 &11460114
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3097,7 +3233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2599b13c18adb41f980262507786a770, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acheivementname: 2 Hidden Item Found
+  acheivementname: Last Level Completed
 --- !u!114 &11464210
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3457,7 +3593,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Collect 10 golden bugs
+  m_Text: First Level Completed
 --- !u!114 &11475714
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4595,6 +4731,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195204}
+--- !u!222 &22256236
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140848}
 --- !u!222 &22259722
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -4625,6 +4767,12 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 130978}
+--- !u!222 &22268964
+CanvasRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115096}
 --- !u!222 &22270278
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -4807,7 +4955,7 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 22427962}
   m_RootOrder: 0
-  m_AnchorMin: {x: 0, y: 0.7320819}
+  m_AnchorMin: {x: 0, y: 0.76030535}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 20}
@@ -4832,6 +4980,24 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 4, y: -9}
   m_SizeDelta: {x: 643, y: 331}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &22401752
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 115096}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 22444402}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -213.77205, y: -11.602165}
+  m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22402274
 RectTransform:
@@ -5014,21 +5180,22 @@ RectTransform:
   m_Children:
   - {fileID: 469614}
   - {fileID: 409250}
-  - {fileID: 431300}
+  - {fileID: 437950}
+  - {fileID: 421658}
   - {fileID: 404304}
-  - {fileID: 476442}
   - {fileID: 406732}
+  - {fileID: 476442}
   - {fileID: 461306}
   - {fileID: 451456}
   - {fileID: 455106}
   - {fileID: 439326}
-  - {fileID: 437950}
+  - {fileID: 431300}
   m_Father: {fileID: 22456346}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 1172}
+  m_SizeDelta: {x: 0, y: 1310}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &22414822
 RectTransform:
@@ -5434,6 +5601,25 @@ RectTransform:
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.000037222, y: -155}
   m_SizeDelta: {x: 215, y: 92}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!224 &22444402
+RectTransform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 140848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 22401752}
+  m_Father: {fileID: 421658}
+  m_RootOrder: 0
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 2.972046, y: 96.0022}
+  m_SizeDelta: {x: 626, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &22449184
 RectTransform:
