@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 
+//Based off the script from the Unity Standard Assets package
 namespace UnityStandardAssets._2D
 {
 	[RequireComponent(typeof (PlatformerCharacter2D))]
@@ -8,12 +9,9 @@ namespace UnityStandardAssets._2D
 	{
 		public bool isMovable=true;
 
-		private PlatformerCharacter2D m_Character;
-		private bool m_Jump;
+		private PlatformerCharacter2D m_Character;  //Character script
+		private bool m_Jump;						//Jump boolean
 
-		void Start(){
-		
-		}
 
 		private void Awake()
 		{
@@ -31,17 +29,16 @@ namespace UnityStandardAssets._2D
 		}
 
 
+		//Method called multiple times a second that handles pasisng of keypresses into Move() function
 		private void FixedUpdate()
 		{
-
 			//check if movable
 			if (isMovable) {
 				// Read the inputs.
-				bool crouch = Input.GetKey(KeyCode.LeftControl) | Input.GetKey(KeyCode.S);
 				bool run = Input.GetKey (KeyCode.LeftShift);
 				float h = Input.GetAxis("Horizontal");
 				// Pass all parameters to the character control script.
-				m_Character.Move(h, crouch, m_Jump, run);
+				m_Character.Move(h, m_Jump, run);
 				m_Jump = false;
 			}
 
@@ -53,7 +50,7 @@ namespace UnityStandardAssets._2D
 		**/
 		public void disableMovement(){
 			//set the current character movement to be stationery
-			m_Character.Move(0, false, m_Jump, false);
+			m_Character.Move(0, m_Jump, false);
 			isMovable = false;
 		}
 
