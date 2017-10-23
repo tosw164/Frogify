@@ -65,15 +65,17 @@ namespace POCC.Achievements{
 		 */
 		public void ParseAchievements(AchievementType achType){
 			List<Achievement> achievementList = _achievementGroups [achType];
-			foreach(var currentAchievement in achievementList){
-				if (currentAchievement._unlocked == false) {
-					if( achType == AchievementType.COLLECTABLES ) {
-						if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
-							GameManager.getInstance ().handleAchievement (currentAchievement);
-						}
-					}
-					else if(_achivementTypeCount[achType] >= currentAchievement._unlockCount ){
+			//Changing so that currentAchievement is not a foreach iteration variable
+			for(int i = 0;i<achievementList.Count;i++){
+				Achievement currentAchievement = achievementList [i];
+				if (!currentAchievement._unlocked) {
+					if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
+						Debug.Log (currentAchievement._achievementMessage);
+						Debug.Log (currentAchievement._unlockCount);
+						Debug.Log (currentAchievement._unlocked);
+						Debug.Log ("Achievement unlocked in achievo manager");
 						GameManager.getInstance ().handleAchievement (currentAchievement);
+						currentAchievement._unlocked = true;
 					}
 				}
 			}
