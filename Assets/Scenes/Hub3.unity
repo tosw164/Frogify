@@ -8891,20 +8891,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   version: 1
-  scrollPos: {x: 0, y: 0}
+  scrollPos: {x: -444.90497, y: 83.38641}
   variablesScrollPos: {x: 0, y: 0}
   variablesExpanded: 1
   blockViewHeight: 400
-  zoom: 0.7249974
+  zoom: 0.77399766
   scrollViewRect:
     serializedVersion: 2
     x: -351
     y: -404
     width: 2283.1646
     height: 1025.4624
-  selectedBlock: {fileID: 440723088}
+  selectedBlock: {fileID: 440723076}
   selectedCommands:
-  - {fileID: 440723116}
+  - {fileID: 440723099}
   variables: []
   description: 
   stepPause: 0
@@ -8958,7 +8958,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 77
+    x: 75.10605
     y: 89
     width: 120
     height: 40
@@ -9152,7 +9152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 480
+    x: 478.62067
     y: 83.37932
     width: 122
     height: 40
@@ -9781,7 +9781,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 76
   indentLevel: 0
-  text: Logos
+  text: You've seen the oil! You've seen what it can do yourself. Isn't that proof
+    enough?
   description: You've seen the oil! You've seen what it can do yourself. Isn't that
     proof enough?
   targetBlock: {fileID: 440723078}
@@ -10028,7 +10029,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 75
   indentLevel: 0
-  text: Ethos
+  text: I have spent night and day to convince each tribe to leave. I wouldn't have
+    gone through so much effort if I didn't think this was important!
   description: I have spent night and day to convince each tribe to leave. I wouldn't
     have gone through so much effort if I didn't think this was important!
   targetBlock: {fileID: 440723088}
@@ -10198,7 +10200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 74
   indentLevel: 0
-  text: Pathos
+  text: Our homes will be flattened and flooded with oil! All will burn!
   description: Our homes will be flattened and flooded with oil! All will burn!
   targetBlock: {fileID: 440723095}
   hideIfVisited: 0
@@ -10325,7 +10327,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 73
   indentLevel: 0
-  text: Pathos argument... Exaggeration and what they care about, was it?
+  text: Ethos argument... Using your status, was it?
   description: 
   targetBlock: {fileID: 440723088}
   hideIfVisited: 0
@@ -10360,7 +10362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 71
   indentLevel: 0
-  storyText: Good, good! Now, a Pathos argument!
+  storyText: Good, good! Now, finally, an Ethos argument
   description: 
   character: {fileID: 440723047}
   portrait: {fileID: 0}
@@ -10719,7 +10721,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 318445161}
 --- !u!114 &440723116
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 440723037}
@@ -10762,7 +10764,7 @@ MonoBehaviour:
   callMode: 0
 --- !u!114 &440723117
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 440723037}
@@ -21872,7 +21874,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 357188666}
 --- !u!114 &907917578
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907917536}
@@ -21897,7 +21899,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 357188666}
 --- !u!114 &907917579
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907917536}
@@ -21922,7 +21924,7 @@ MonoBehaviour:
   setSayDialog: {fileID: 357188666}
 --- !u!114 &907917580
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 907917536}
@@ -39286,7 +39288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 440723040}
+  selectedFlowchart: {fileID: 907917539}
 --- !u!4 &1780395735
 Transform:
   m_ObjectHideFlags: 1
@@ -43512,11 +43514,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -4.34
+      value: -6.29
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.9
+      value: 0.99
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.z
