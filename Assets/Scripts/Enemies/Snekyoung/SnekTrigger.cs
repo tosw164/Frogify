@@ -19,7 +19,9 @@ public class SnekTrigger : MonoBehaviour {
 
 		// Finds the Camera, and calls the CameraShake script's ShakeCamera method
 		GameObject camera = GameObject.Find ("CameraUI");
-		CameraShake cameraScript = camera.GetComponentInChildren<CameraShake> ();
+        
+        FindObjectOfType<AudioManager>().Play("snakeRumble");
+        CameraShake cameraScript = camera.GetComponentInChildren<CameraShake> ();
 		cameraScript.ShakeCamera(1, 1);
 
 		// Removes the trigger, so Pep does not call Snekyoung again
