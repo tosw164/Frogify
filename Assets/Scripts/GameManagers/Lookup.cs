@@ -44,6 +44,12 @@ namespace POCC
 					return builder.setLocation ("EthosScene1").build();
 				case SceneType.HUB_4:
 					return builder.setLocation ("Hub3").build();
+				case SceneType.EXIT_1:
+					return builder.setLocation ("BearlanaExit").build();
+				case SceneType.EXIT_2:
+					return builder.setLocation ("BeeliExit").build();
+				case SceneType.EXIT_3:
+					return builder.setLocation ("SnakeyeongExit").build();
 				case SceneType.END_OF_YEAR:
 				default:
 					// Unimplemented scene, map does not exist
