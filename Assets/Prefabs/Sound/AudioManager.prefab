@@ -71,6 +71,30 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: bearlanaTheme
+    clip: {fileID: 8300000, guid: 749759778c9ad477e966d396a2c59ef1, type: 3}
+    volume: 0.526
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: goldenFlyCollectable
+    clip: {fileID: 8300000, guid: 7a099c913194e8f4ea76225fea3c20fb, type: 3}
+    volume: 0.14
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: mushroomBounce
+    clip: {fileID: 8300000, guid: dcdc5e282279f564e85c01a360e67d59, type: 3}
+    volume: 0.34
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pathosMusic
+    clip: {fileID: 8300000, guid: 7db42c6c18fe32049bb315047d4d6b21, type: 3}
+    volume: 0.463
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
