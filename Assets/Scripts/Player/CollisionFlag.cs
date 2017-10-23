@@ -33,9 +33,13 @@ public class CollisionFlag : MonoBehaviour {
 				joint.connectedBody = other.GetComponent<Rigidbody2D>();
 				joint.distance = distance;
 
-				//Enable the rope (visible part of swing)
-				//Attaches it to player and swingrange
-				rope.enabled = true;
+                //Play the relevant sound
+                
+                FindObjectOfType<AudioManager>().Play("tongueSwing");
+
+                //Enable the rope (visible part of swing)
+                //Attaches it to player and swingrange
+                rope.enabled = true;
 				rope.SetPosition (0, transform.position);
 				rope.SetPosition (1, other.transform.position);
 				isAttached = true;
