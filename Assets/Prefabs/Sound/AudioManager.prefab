@@ -79,13 +79,13 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: goldenFlyCollectable
     clip: {fileID: 8300000, guid: 7a099c913194e8f4ea76225fea3c20fb, type: 3}
-    volume: 0.197
+    volume: 0.448
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: mushroomBounce
     clip: {fileID: 8300000, guid: dcdc5e282279f564e85c01a360e67d59, type: 3}
-    volume: 0.51
+    volume: 0.682
     pitch: 1
     loop: 0
     source: {fileID: 0}
@@ -136,6 +136,12 @@ MonoBehaviour:
     volume: 0.58
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: tongueSwing
+    clip: {fileID: 8300000, guid: b5e590d5a2f1f9a4e83eb04839851fa3, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
