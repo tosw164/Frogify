@@ -91,8 +91,6 @@ namespace POCC {
 
 		public void decrementHealth() {
 			_health--;
-			Debug.Log("Took damage, current health is: " + _health);
-
 			if (_health == 0) {
 				// Set scene to game over scene and reset health back to default
 				switchScene(Lookup.sceneLookup(SceneType.GAME_OVER));
@@ -134,8 +132,6 @@ namespace POCC {
 		public void saveChoice(string playerChoice){
 			Debug.Log(playerChoice);
 			_argumentationChoice = playerChoice;
-			Debug.Log("choiceAssigned " + _argumentationChoice);
-
 		}
 
 		/**
