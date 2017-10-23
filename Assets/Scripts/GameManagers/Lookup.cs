@@ -25,16 +25,25 @@ namespace POCC
 				case SceneType.TUTORIAL_2:
 					return builder.setLocation ("TutorialLevelRunAway").build();
 				case SceneType.HUB_1:
-				case SceneType.LOGOS:
+					return builder.setLocation ("Hub0").build();
+				case SceneType.LOGOS_1:
+					return builder.setLocation ("LogosLevel1").build();
+				case SceneType.LOGOS_2:
+					return builder.setLocation ("LogosLevel2").build();
 				case SceneType.HUB_2:
+					return builder.setLocation ("Hub1").build();
 				case SceneType.PATHOS_1:
 					return builder.setLocation ("PathosLevelSpider").build();
 				case SceneType.PATHOS_2:
 					return builder.setLocation ("PathosLevelSpiderFollow").build();
 				case SceneType.HUB_3:
+					return builder.setLocation ("Hub2").build();
 				case SceneType.ETHOS_1:
+					return builder.setLocation ("EthosScene").build();
 				case SceneType.ETHOS_2:
+					return builder.setLocation ("EthosScene1").build();
 				case SceneType.HUB_4:
+					return builder.setLocation ("Hub3").build();
 				case SceneType.END_OF_YEAR:
 				default:
 					// Unimplemented scene, map does not exist
