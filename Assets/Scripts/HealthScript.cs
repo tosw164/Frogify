@@ -13,8 +13,10 @@ public class HealthScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(POCC.GameManager.getInstance().getHealth() < health) {
+		if (POCC.GameManager.getInstance ().getHealth () < health) {
 			renderers.enabled = false;
+		} else if (POCC.GameManager.getInstance ().getHealth () == health) {
+			renderers.enabled = true;
 		}
 	}
 }
