@@ -53,6 +53,18 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: tutorialLight
+    clip: {fileID: 8300000, guid: f5eb8e7dd295744b6bd76b074ab341a0, type: 3}
+    volume: 0.526
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: tutorialScary
+    clip: {fileID: 8300000, guid: 1958496f4d027284d87eadf94e851226, type: 3}
+    volume: 0.526
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
