@@ -14,14 +14,18 @@ public class HaloSwitcher : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D collision) 
 	{
-		componentHalo.enabled = true;
-		outsideRegion = false;
+		if(collision.tag == "Player"){
+			componentHalo.enabled = true;
+			outsideRegion = false;
+		}
 	}
 
-	void OnTriggerExit2D (Collider2D col) 
+	void OnTriggerExit2D (Collider2D collision) 
 	{
-		outsideRegion = true;
-		componentHalo.enabled = false;
+		if(collision.tag == "Player"){
+			outsideRegion = true;
+			componentHalo.enabled = false;
+		}
 	}
 
 	void Update (){
