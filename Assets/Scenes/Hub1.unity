@@ -18193,13 +18193,24 @@ GameObject:
   - 114: {fileID: 885225130}
   - 114: {fileID: 885225120}
   - 114: {fileID: 885225127}
-  - 114: {fileID: 885225126}
-  - 114: {fileID: 885225125}
   - 114: {fileID: 885225124}
   - 114: {fileID: 885225123}
   - 114: {fileID: 885225122}
   - 114: {fileID: 885225121}
   - 114: {fileID: 885225097}
+  - 114: {fileID: 885225147}
+  - 114: {fileID: 885225146}
+  - 114: {fileID: 885225145}
+  - 114: {fileID: 885225144}
+  - 114: {fileID: 885225143}
+  - 114: {fileID: 885225142}
+  - 114: {fileID: 885225141}
+  - 114: {fileID: 885225140}
+  - 114: {fileID: 885225139}
+  - 114: {fileID: 885225138}
+  - 114: {fileID: 885225126}
+  - 114: {fileID: 885225125}
+  - 114: {fileID: 885225105}
   m_Layer: 0
   m_Name: LogosLeader
   m_TagString: Untagged
@@ -18273,9 +18284,9 @@ MonoBehaviour:
     y: -356
     width: 1344
     height: 960
-  selectedBlock: {fileID: 885225120}
+  selectedBlock: {fileID: 885225098}
   selectedCommands:
-  - {fileID: 885225123}
+  - {fileID: 885225141}
   variables: []
   description: 
   stepPause: 0
@@ -18314,8 +18325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 48
-    y: 48
+    x: 69
+    y: 89
     width: 120
     height: 40
   itemId: 0
@@ -18329,6 +18340,13 @@ MonoBehaviour:
   - {fileID: 885225108}
   - {fileID: 885225107}
   - {fileID: 885225106}
+  - {fileID: 885225147}
+  - {fileID: 885225146}
+  - {fileID: 885225145}
+  - {fileID: 885225144}
+  - {fileID: 885225143}
+  - {fileID: 885225142}
+  - {fileID: 885225141}
   - {fileID: 885225097}
   - {fileID: 885225099}
   - {fileID: 885225137}
@@ -18347,7 +18365,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 29
   indentLevel: 0
-  text: Which item would best convince Chief Logos?
+  text: Tribe Logos has been convinced! What is Chief Logos trying to teach me? Which
+    argument best speaks to him?
   description: 
   targetBlock: {fileID: 885225100}
   hideIfVisited: 0
@@ -18373,13 +18392,15 @@ MonoBehaviour:
     width: 120
     height: 40
   itemId: 30
-  blockName: OptionApple
+  blockName: Pathos
   description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 885225118}
   - {fileID: 885225117}
   - {fileID: 885225116}
+  - {fileID: 885225140}
+  - {fileID: 885225139}
   - {fileID: 885225115}
   - {fileID: 885225104}
   - {fileID: 885225103}
@@ -18483,6 +18504,31 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 357188666}
+--- !u!114 &885225105
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 71
+  indentLevel: 0
+  storyText: I'll see you around, Pep.
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
 --- !u!114 &885225106
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -18521,7 +18567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 18
   indentLevel: 0
-  storyText: Those are... An apple? What do you expect me to do with this??
+  storyText: Oh no... These items... The humans. They have really come.
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -18725,8 +18771,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 36
   indentLevel: 0
-  storyText: Perhaps it is prudent to get more evidence... But I believe you, Pep.
-    Tribe Logos shall leave the forest.
+  storyText: 'You should have made an argument about the items you''ve brought, for
+    that is all you need in a Logos argument. Proof. '
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -18751,7 +18797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 35
   indentLevel: 0
-  storyText: Have I convinced you, Chief?
+  storyText: What should I have said, Chief?
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -18776,8 +18822,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 34
   indentLevel: 0
-  storyText: 'Hmm... Those teethmarks are unlike anything I''ve seen before... And
-    so large! This is unsettling, Pep. '
+  storyText: 'That argument spoke to my emotions, but the Logos argumentation has
+    nothing to do with emotions. '
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -18802,7 +18848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 39
   indentLevel: 0
-  text: Cigarette
+  text: I've seen the humans, Chief. You know you can trust me!
   description: 
   targetBlock: {fileID: 885225120}
   hideIfVisited: 0
@@ -18828,13 +18874,15 @@ MonoBehaviour:
     width: 120
     height: 40
   itemId: 50
-  blockName: OptionCig
+  blockName: Ethos
   description: 
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 885225127}
+  - {fileID: 885225138}
   - {fileID: 885225126}
   - {fileID: 885225125}
+  - {fileID: 885225105}
   - {fileID: 885225124}
   - {fileID: 885225123}
   - {fileID: 885225122}
@@ -18959,35 +19007,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemId: 53
+  itemId: 70
   indentLevel: 0
-  storyText: You have, Pep. You've used your reasoning to bring me solid proof of
-    human activity. Tribe Logos shall begin to pack. We shall leave.
-  description: 
-  character: {fileID: 885225102}
-  portrait: {fileID: 0}
-  voiceOverClip: {fileID: 0}
-  showAlways: 1
-  showCount: 1
-  extendPrevious: 0
-  fadeWhenDone: 1
-  waitForClick: 1
-  stopVoiceover: 1
-  setSayDialog: {fileID: 318445161}
---- !u!114 &885225126
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 885225093}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 52
-  indentLevel: 0
-  storyText: Have I convinced you, Chief?
+  storyText: Logos is about proof. Got it Chief! And thanks for listening to me!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -18999,6 +19021,32 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 357188666}
+--- !u!114 &885225126
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 69
+  indentLevel: 0
+  storyText: 'You should have made an argument about the items you''ve brought, for
+    that is all you need in a Logos argument. Proof. '
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
 --- !u!114 &885225127
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -19012,7 +19060,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 51
   indentLevel: 0
-  storyText: Ugh, the stench of tobacco. I can recognize it anywhere.
+  storyText: You've made an argument based on my knowledge of you. Good, but that
+    is not a Logos argument.
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -19037,7 +19086,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 40
   indentLevel: 0
-  text: Hat
+  text: The cigarette is proof enough - I don't need to say more.
   description: 
   targetBlock: {fileID: 885225129}
   hideIfVisited: 0
@@ -19059,11 +19108,11 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 293
-    y: 102
+    y: 103
     width: 120
     height: 40
   itemId: 42
-  blockName: OptionHat
+  blockName: Logos
   description: 
   eventHandler: {fileID: 0}
   commandList:
@@ -19196,8 +19245,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 45
   indentLevel: 0
-  storyText: Perhaps it is prudent to get more evidence... But I believe you, Pep.
-    Tribe Logos shall leave the forest.
+  storyText: I'll see you around, Pep.
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -19222,7 +19270,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 44
   indentLevel: 0
-  storyText: Have I convinced you, Chief?
+  storyText: Logos is about proofs. Got it, Chief!
   description: 
   character: {fileID: 2141783158}
   portrait: {fileID: 0}
@@ -19247,8 +19295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 43
   indentLevel: 0
-  storyText: What is this funny looking thing? I've seen nothing like it! I've noticed
-    generally that if I don't understand it, it is the work of humans.
+  storyText: Good, good! You have given proof to your argument. Excellent, Pep. That
+    is the Logos argument.
   description: 
   character: {fileID: 885225102}
   portrait: {fileID: 0}
@@ -19273,7 +19321,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 41
   indentLevel: 0
-  text: Apple
+  text: The humans have great big claws and fangs! How scary!
   description: 
   targetBlock: {fileID: 885225100}
   hideIfVisited: 0
@@ -19281,6 +19329,260 @@ MonoBehaviour:
     booleanRef: {fileID: 0}
     booleanVal: 1
   setMenuDialog: {fileID: 0}
+--- !u!114 &885225138
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 68
+  indentLevel: 0
+  storyText: What should I have said, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225139
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 67
+  indentLevel: 0
+  storyText: I'll see you around, Pep.
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225140
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 66
+  indentLevel: 0
+  storyText: Logos is about proof. Got it Chief! And thanks for listening to me!
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225141
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 65
+  indentLevel: 0
+  storyText: Logos is about using reasoning and logic, and giving proofs to your argument.
+    Give me an argument and I will teach you if that argument is a Logos argument!
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225142
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 64
+  indentLevel: 0
+  storyText: What's that, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225143
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 63
+  indentLevel: 0
+  storyText: 'You have been a great friend to our tribe, Pep. Before you leave, I
+    must teach you the Logos way of arguments. '
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225144
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 62
+  indentLevel: 0
+  storyText: Hurrah!
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225145
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 61
+  indentLevel: 0
+  storyText: You have, Pep. You have given us valuable information. Tribe Logos will
+    back you. We are willing to leave the forest.
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
+--- !u!114 &885225146
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 60
+  indentLevel: 0
+  storyText: Have I convinced you, Chief?
+  description: 
+  character: {fileID: 2141783158}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 357188666}
+--- !u!114 &885225147
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 885225093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 59
+  indentLevel: 0
+  storyText: The stench from this... It's a cigarette. The humans were here, without
+    doubt!
+  description: 
+  character: {fileID: 885225102}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 318445161}
 --- !u!1 &886069620
 GameObject:
   m_ObjectHideFlags: 0
@@ -30243,7 +30545,7 @@ MonoBehaviour:
     height: 841
   selectedBlock: {fileID: 1459207434}
   selectedCommands:
-  - {fileID: 1459207439}
+  - {fileID: 1459207443}
   variables: []
   description: 
   stepPause: 0
@@ -30517,7 +30819,7 @@ MonoBehaviour:
   indentLevel: 0
   display: 2
   stage: {fileID: 0}
-  character: {fileID: 440723047}
+  character: {fileID: 1459207438}
   replacedCharacter: {fileID: 0}
   portrait: {fileID: 0}
   offset: 0
