@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/**
+ * Call this script to display the inventory item
+ * */
 public class InventoryDisplay : MonoBehaviour {
 
 	public string itemName;

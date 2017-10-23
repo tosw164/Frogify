@@ -2,12 +2,15 @@
 using System.Collections;
 using UnityEngine.UI;
 
-
+/**
+ * This script is for changing the information on exit panels
+ * */
 public class ChangeInfo : MonoBehaviour {
 
 	private string currentInfo;
 
-	// Use this for initialization
+
+	// Use this for initialization, initialise where the score is showed first
 	void Start () {
 		Debug.Log ("called");
 		currentInfo = "score";
@@ -21,6 +24,9 @@ public class ChangeInfo : MonoBehaviour {
 	
 	}
 
+	/**
+	 * Call this information when you pressed the previous button
+	 * */
 	public void ChangeInformationLeft(int trash) {
 		Debug.Log ("called");
 		if (currentInfo == "score") {
@@ -34,6 +40,9 @@ public class ChangeInfo : MonoBehaviour {
 		}
 	}
 
+	/**
+	 * Call this information when you pressed the next button
+	 * */
 	public void ChangeInformationRight(int trash) {
 		if (currentInfo == "highscore") {
 			transform.parent.GetChild(1).gameObject.SetActive(false);
