@@ -340,6 +340,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 11439248, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
+      propertyPath: sounds.Array.data[6].volume
+      value: 0.38
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 133d865cd1f936b4cbffdb46197fcd12, type: 2}
   m_IsPrefabParent: 0
@@ -719,6 +723,7 @@ GameObject:
   - 92: {fileID: 455044633}
   - 124: {fileID: 455044632}
   - 81: {fileID: 455044631}
+  - 114: {fileID: 455044636}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -794,6 +799,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &455044636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455044630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f155bb9c5f1b4140b70179dcc9ebedb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &491012407
 GameObject:
   m_ObjectHideFlags: 0

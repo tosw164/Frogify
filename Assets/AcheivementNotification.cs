@@ -7,17 +7,19 @@ public class AcheivementNotification : MonoBehaviour {
 	public Text messageBox;
 
 	void Start() {
-		gameObject.SetActive (false);
+		gameObject.GetComponent<Renderer> ().enabled = false;
 	}
 
 	public void ShowMessage(string message) {
-		gameObject.SetActive (true);
+		Debug.Log (message);
+		gameObject.GetComponent<Renderer> ().enabled = true;
 		messageBox.text = message;
-		Waiting ();
-		gameObject.SetActive (false);
+		StartCoroutine(Waiting ());
 	}
 
 	IEnumerator Waiting() {
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(2f);
+		Debug.Log ("hello");
+		gameObject.GetComponent<Renderer> ().enabled = false;
 	}
 }
