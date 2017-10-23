@@ -3,7 +3,7 @@
 namespace POCC.Achievements
 {
 	[Serializable]
-	public struct Achievement
+	public class Achievement
 	{
 		public Achievement(int unlockCount, bool unlocked, string achievementMessage){
 			_unlockCount = unlockCount;
@@ -14,6 +14,20 @@ namespace POCC.Achievements
 		public int _unlockCount;
 		public bool _unlocked;
 		public string _achievementMessage;
+
+		public int getUnlockCount(){
+			return _unlockCount;
+		}
+
+
+		public bool getUnlockedBoolean(){
+			return _unlocked;
+		}
+
+
+		public string getAchievementMessage(){
+			return _achievementMessage;
+		}
 	};
 }
 
