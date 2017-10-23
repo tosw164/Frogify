@@ -16,9 +16,11 @@ public class Item : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag ("Player")) {
-			this.gameObject.SetActive(false);
+            
+            this.gameObject.SetActive(false);
 			POCC.GameManager.getInstance().addPlayerItem(itemName);//add to player's inventory
-		}
+            FindObjectOfType<AudioManager>().Play("collectItem");
+        }
 
 	}
 }

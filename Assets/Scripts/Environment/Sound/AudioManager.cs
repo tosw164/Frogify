@@ -11,7 +11,7 @@ public class AudioManager : MonoBehaviour {
     public Sound[] sounds;
 
     [HideInInspector]
-    public ArrayList currentlyPlaying = new ArrayList();
+    public static ArrayList currentlyPlaying = new ArrayList();
 
     public static AudioManager instance;
 
