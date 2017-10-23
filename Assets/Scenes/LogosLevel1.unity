@@ -25232,6 +25232,7 @@ GameObject:
   - 114: {fileID: 1079714157}
   - 114: {fileID: 1079714158}
   - 114: {fileID: 1079714156}
+  - 114: {fileID: 1079714159}
   m_Layer: 0
   m_Name: beeli
   m_TagString: Untagged
@@ -25307,7 +25308,7 @@ MonoBehaviour:
     height: 840
   selectedBlock: {fileID: 1079714142}
   selectedCommands:
-  - {fileID: 1079714147}
+  - {fileID: 1079714146}
   variables: []
   description: 
   stepPause: 0
@@ -25348,10 +25349,11 @@ MonoBehaviour:
   - {fileID: 1079714150}
   - {fileID: 1079714155}
   - {fileID: 1079714154}
-  - {fileID: 1079714146}
+  - {fileID: 1079714159}
   - {fileID: 1079714157}
-  - {fileID: 1079714156}
   - {fileID: 1079714151}
+  - {fileID: 1079714146}
+  - {fileID: 1079714156}
   - {fileID: 1079714149}
 --- !u!114 &1079714143
 MonoBehaviour:
@@ -25391,9 +25393,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: -3.1394966, y: 0}
+  m_Offset: {x: -2.0742502, y: 0}
   serializedVersion: 2
-  m_Size: {x: 11.449007, y: 7.11}
+  m_Size: {x: 9.31852, y: 7.11}
 --- !u!114 &1079714146
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -25407,7 +25409,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 1
   indentLevel: 0
-  storyText: Beeli Sir please, our forest is dyi -
+  storyText: Hmmm, maybe I can find some junk and prove to Beeli and Chief Logos that
+    the humans are coming!
   description: 
   character: {fileID: 1660857553}
   portrait: {fileID: 0}
@@ -25693,8 +25696,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 10
   indentLevel: 0
-  storyText: That's enough out of you! Until I see it with my own eyes, that these
-    so-called "humans" are here, I ain't leaving my forest!
+  storyText: That's enough out of you! Just go pick up some rubbish instead of sprouting
+    lies about "humans"
   description: 
   character: {fileID: 1079714148}
   portrait: {fileID: 0}
@@ -25735,6 +25738,31 @@ MonoBehaviour:
   move: 1
   shiftIntoPlace: 0
   waitUntilFinished: 0
+--- !u!114 &1079714159
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1079714138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec422cd568a9c4a31ad7c36d0572b9da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 13
+  indentLevel: 0
+  storyText: Beeli Sir please, our forest is dyi -
+  description: 
+  character: {fileID: 1660857553}
+  portrait: {fileID: 0}
+  voiceOverClip: {fileID: 0}
+  showAlways: 1
+  showCount: 1
+  extendPrevious: 0
+  fadeWhenDone: 1
+  waitForClick: 1
+  stopVoiceover: 1
+  setSayDialog: {fileID: 1969484244}
 --- !u!1 &1081945693
 GameObject:
   m_ObjectHideFlags: 0
@@ -30695,7 +30723,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61dddfdc5e0e44ca298d8f46f7f5a915, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedFlowchart: {fileID: 1892919087}
+  selectedFlowchart: {fileID: 1079714141}
 --- !u!4 &1279886287
 Transform:
   m_ObjectHideFlags: 1
@@ -30708,7 +30736,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 15
 --- !u!1 &1284063714
 GameObject:
   m_ObjectHideFlags: 0
