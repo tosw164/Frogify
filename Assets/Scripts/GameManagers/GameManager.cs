@@ -159,8 +159,8 @@ namespace POCC {
 		 */
 		public void handleAchievement(Achievements.Achievement achievement){
 			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
-
-
+			AcheivementNotification notificationbox = GameObject.Find ("AcheivementBox").GetComponent<AcheivementNotification>();
+			notificationbox.ShowMessage (achievement.getAchievementMessage());
 			//Add to the achievement list in order to then check that.
 			_currentAchievements.Add (achievement._achievementMessage);
 		}
