@@ -4,9 +4,13 @@ using System.Collections;
 using POCC.HighScore;
 using POCC;
 
+/**
+ * This class handles the submission of a high score entry after the button to
+ * submit a high score. It is invoked on one of the sections on the exit screens.
+ */
 public class SubmitHighScore : MonoBehaviour {
 	
-	public void handleHighScoreClick(){
+	public void handleHighScoreClick(int level){
 		GameObject go = GameObject.Find("HighscoreInput");
 		string playerName = go.GetComponent<InputField> ().text;
 		GameManager gm = GameManager.getInstance ();
