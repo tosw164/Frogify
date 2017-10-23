@@ -53,7 +53,7 @@ namespace POCC {
 
 		private Achievements.AchievementManager _achievementManger;
 
-		private List<String> _currentAchievements = new List<String>();
+		private List<string> _currentAchievements = new List<string>();
 
 		private Stack<POCC.Scenes.Scene> _tempScenes;
 
@@ -91,8 +91,6 @@ namespace POCC {
 
 		public void decrementHealth() {
 			_health--;
-			Debug.Log("Took damage, current health is: " + _health);
-
 			if (_health == 0) {
 				// Set scene to game over scene and reset health back to default
 				switchScene(Lookup.sceneLookup(SceneType.GAME_OVER));
@@ -115,6 +113,7 @@ namespace POCC {
 			_collectableScore = 0;
 			_argumentationScore = 0;
 		}
+			
 
 		public void incrementCollectableScore(Collectable collectable){
 			_collectableScore += Lookup.collectableScoreLookup(collectable);
@@ -133,8 +132,6 @@ namespace POCC {
 		public void saveChoice(string playerChoice){
 			Debug.Log(playerChoice);
 			_argumentationChoice = playerChoice;
-			Debug.Log("choiceAssigned " + _argumentationChoice);
-
 		}
 
 		/**
@@ -158,13 +155,19 @@ namespace POCC {
 		 */
 		public void handleAchievement(Achievements.Achievement achievement){
 			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
-			achievement._unlocked = true;
-
+			Camera camera = GameObject.Find("CameraUI").GetComponent<Camera>();
+			Canvas canvas = camera.transform.FindChild ("Canvas").GetComponent<Canvas>();
+			Transform notificationbox = canvas.gameObject.transform.Find("AcheivementBox");
+			notificationbox.GetComponent<AcheivementNotification> ().ShowMessage (achievement.getAchievementMessage());
 			//Add to the achievement list in order to then check that.
 			_currentAchievements.Add (achievement._achievementMessage);
 		}
 		//======================================================
+		//Achievement Integration
 
+		public void sendAchievementEvent(Achievements.AchievementType achType){
+			_achievementManger.RegisterAchievementEvent (achType);
+		}
 
 		//======================================================
 		// Getter Methods:
@@ -193,7 +196,7 @@ namespace POCC {
 			return _playerItems;
 		}
 
-		public List<String> getAchievements() {
+		public List<string> getAchievements() {
 			return _currentAchievements;
 		}
 
@@ -290,5 +293,8 @@ namespace POCC {
 		}
 		//======================================================
 
+		public void destroyTest(){
+			_manager = null;
+		}
 	}
 }

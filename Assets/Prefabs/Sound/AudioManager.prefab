@@ -49,7 +49,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: mainTheme
     clip: {fileID: 8300000, guid: ea39ffb8e4825441b9e5368d58a1d00e, type: 3}
-    volume: 0.526
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -61,9 +61,93 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: tutorialScary
     clip: {fileID: 8300000, guid: 1958496f4d027284d87eadf94e851226, type: 3}
+    volume: 0.3
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: hubMainTheme
+    clip: {fileID: 8300000, guid: de4023dfec7ca0a419cf1b1d1f65e3ac, type: 3}
     volume: 0.526
     pitch: 1
     loop: 1
+    source: {fileID: 0}
+  - name: bearlanaTheme
+    clip: {fileID: 8300000, guid: 749759778c9ad477e966d396a2c59ef1, type: 3}
+    volume: 0.526
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: goldenFlyCollectable
+    clip: {fileID: 8300000, guid: 7a099c913194e8f4ea76225fea3c20fb, type: 3}
+    volume: 0.448
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: mushroomBounce
+    clip: {fileID: 8300000, guid: dcdc5e282279f564e85c01a360e67d59, type: 3}
+    volume: 0.682
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: pathosMusic
+    clip: {fileID: 8300000, guid: 7db42c6c18fe32049bb315047d4d6b21, type: 3}
+    volume: 0.463
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: logosMusicHappy
+    clip: {fileID: 8300000, guid: 029dd1a92875138459088c9ed4443a19, type: 3}
+    volume: 0.083
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: healthRegen
+    clip: {fileID: 8300000, guid: 364dd95317ee142489758dc897682970, type: 3}
+    volume: 0.45
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: damage
+    clip: {fileID: 8300000, guid: 8fc67ab6a1ffc254385670b233e49026, type: 3}
+    volume: 0.52
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: collectItem
+    clip: {fileID: 8300000, guid: 6ab8bc3cdf5253d4a854c64b4571bf25, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: logosCave
+    clip: {fileID: 8300000, guid: 56443a5c248ccd647a19371af838129c, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ethosCave
+    clip: {fileID: 8300000, guid: 56443a5c248ccd647a19371af838129c, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: pathosSpiderMusic
+    clip: {fileID: 8300000, guid: cb547047719e24149a9be6a86e57d433, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: tongueSwing
+    clip: {fileID: 8300000, guid: b5e590d5a2f1f9a4e83eb04839851fa3, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: snakeRumble
+    clip: {fileID: 8300000, guid: ccb47570c8391ab4a85107668c716d00, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
     source: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:

@@ -13,20 +13,25 @@ using POCC.Achievements;
 namespace POCC.Achievements{
 	
 	public class AchievementManager {
+		//Field that holds all the achievements of the same category
 		private Dictionary<AchievementType, List<Achievement>> _achievementGroups;
+
+		//Holds the count for each catergory.
 		private Dictionary<AchievementType, int> _achivementTypeCount;
 
 		public AchievementManager(){
 			_achivementTypeCount = new Dictionary<AchievementType, int> ();
 
+			//Initialize the fields
 			_achivementTypeCount.Add (AchievementType.LEVEL, 0);
 			_achivementTypeCount.Add (AchievementType.NPC_PERSUADED, 0);
 			_achivementTypeCount.Add (AchievementType.COLLECTABLES, 0);
 			_achivementTypeCount.Add (AchievementType.HIDDEN_ITEMS, 0);
 
 			_achievementGroups = new Dictionary<AchievementType, List<Achievement>> ();
-			addAchivements ();
 
+			//Utility method for adding achievements to the handler 
+			addAchivements ();
 		}
 
 		/**
@@ -65,15 +70,13 @@ namespace POCC.Achievements{
 		 */
 		public void ParseAchievements(AchievementType achType){
 			List<Achievement> achievementList = _achievementGroups [achType];
-			foreach(var currentAchievement in achievementList){
-				if (currentAchievement._unlocked == false) {
-					if( achType == AchievementType.COLLECTABLES ) {
-						if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
-							GameManager.getInstance ().handleAchievement (currentAchievement);
-						}
-					}
-					else if(_achivementTypeCount[achType] >= currentAchievement._unlockCount ){
+			//Changing so that currentAchievement is not a foreach iteration variable
+			for(int i = 0;i<achievementList.Count;i++){
+				Achievement currentAchievement = achievementList [i];
+				if (!currentAchievement._unlocked) {
+					if (_achivementTypeCount[achType] >= currentAchievement._unlockCount) {
 						GameManager.getInstance ().handleAchievement (currentAchievement);
+						currentAchievement._unlocked = true;
 					}
 				}
 			}
@@ -85,7 +88,8 @@ namespace POCC.Achievements{
 		 * that can be obtained in this system.
 		 * 
 		 * It should really be in a seperate file or Database, but due to time constraints
-		 * we just placed it in the code here for now
+		 * we just placed it in the code here for now (we tried using JSON but it didnt get
+		 * fully implemented)
 		 */
 		private void addAchivements(){
 
@@ -99,17 +103,6 @@ namespace POCC.Achievements{
 			levelBasedAcheivements.Add (new Achievement(3,false,"Last Level Completed"));
 
 			_achievementGroups.Add (AchievementType.LEVEL, levelBasedAcheivements);
-
-
-			//Testing for when want to switch to JSON
-
-			//Achievement[] testArray = levelBasedAcheivements.ToArray();
-			//string achToJSON = JsonHelper.ToJson<Achievement>(testArray, true);
-			//Debug.Log(achToJSON);
-			//Achievement[] levelBasedList = JsonHelper.FromJson<Achievement>("LevelAchievementData.json");
-			//Debug.Log(levelBasedList[0]._achievementMessage);
-			//Debug.Log(levelBasedList[1]._achievementMessage);
-
 
 			//========================================================================
 			// Achievements for NPC Persuasion

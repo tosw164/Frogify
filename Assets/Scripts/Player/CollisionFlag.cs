@@ -5,13 +5,11 @@ public class CollisionFlag : MonoBehaviour {
 
 	//Set up variable to store joint
 	SpringJoint2D joint;
-	bool swinging = false;
 
-	public LayerMask swingable_layer;
-	public float distance = 3f;
-	public LineRenderer rope;
+	public float distance = 3f;			//Distance that player needs to be from centre of the circle to latch
+	public LineRenderer rope;			//Visible line of rope generated
 
-	public static bool isAttached;
+	public static bool isAttached;		//Boolean publicly visible used by other scripts to see if player latched
 
 	void Start(){
 		//Disable rope and joint, instantiate joint
@@ -21,17 +19,27 @@ public class CollisionFlag : MonoBehaviour {
 		isAttached = false;
 	}
 
+	//Trigger on every frame when user in range of a swingrange
 	void OnTriggerStay2D(Collider2D other)
 	{
+		//Make sure the other item has tag SwingRange
 		if (other.tag == "SwingRange"){
-			Debug.Log ("yay" + other.transform.position);
 
+			//Creates the connection if space pressed when in range
 			if (Input.GetKeyDown(KeyCode.Space)){
+
+				//Enables the joint to the other component
 				joint.enabled = true;
 				joint.connectedBody = other.GetComponent<Rigidbody2D>();
 				joint.distance = distance;
 
-				rope.enabled = true;
+                //Play the relevant sound
+                
+                FindObjectOfType<AudioManager>().Play("tongueSwing");
+
+                //Enable the rope (visible part of swing)
+                //Attaches it to player and swingrange
+                rope.enabled = true;
 				rope.SetPosition (0, transform.position);
 				rope.SetPosition (1, other.transform.position);
 				isAttached = true;
@@ -39,7 +47,7 @@ public class CollisionFlag : MonoBehaviour {
 		}
 	}
 
-
+	//Called once per frame to either enable or allow disabling of the rope
 	void Update(){
 		if (Input.GetKeyUp(KeyCode.Space) && rope.enabled == true){
 			joint.enabled = false;

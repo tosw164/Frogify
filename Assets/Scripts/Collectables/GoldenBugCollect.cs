@@ -9,6 +9,8 @@ public class GoldenBugCollect : MonoBehaviour {
 		if (other.gameObject.CompareTag ("Player")) {
 			POCC.GameManager.getInstance().incrementCollectableScore(POCC.Collectable.GOLDFLY);
 			Destroy (gameObject);
-		}
+            FindObjectOfType<AudioManager>().Play("goldenFlyCollectable");
+            
+        }
 	}
 }

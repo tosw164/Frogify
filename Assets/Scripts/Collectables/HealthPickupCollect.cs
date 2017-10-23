@@ -8,7 +8,8 @@ public class HealthPickupCollect : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.CompareTag("Player")) {
 			POCC.GameManager.getInstance().incrementHealth();
-			Destroy(gameObject);
+            FindObjectOfType<AudioManager>().Play("healthRegen");
+            Destroy(gameObject);
 		}
 	}
 }

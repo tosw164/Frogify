@@ -10,7 +10,8 @@ public class AudioManager : MonoBehaviour {
 
     public Sound[] sounds;
 
-    private ArrayList currentlyPlaying = new ArrayList();
+    [HideInInspector]
+    public static ArrayList currentlyPlaying = new ArrayList();
 
     public static AudioManager instance;
 
@@ -66,5 +67,16 @@ public class AudioManager : MonoBehaviour {
             s.source.Stop();
         }
         currentlyPlaying.Clear();
+    }
+
+    public bool isPlaying(string name)
+    {
+        foreach (Sound s in currentlyPlaying)
+        {
+            if (s.name.Equals(name)) {
+                return true;
+            }
+        }
+        return false;
     }
 }
