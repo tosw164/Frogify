@@ -20,6 +20,11 @@ public class AcheivementCheck : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		background = (Image)gameObject.transform.GetChild(0).GetComponent<Image>();
+		if (POCC.GameManager.getInstance ().getAchievements ().Contains (acheivementname)) {
+			background.enabled = true;
+		} else {
+			background.enabled = false;
+		}
 	}
 }
