@@ -155,7 +155,7 @@ namespace POCC {
 		 */
 		public void handleAchievement(Achievements.Achievement achievement){
 			Debug.Log ("Achievement Get!! - " + achievement._achievementMessage);
-			Camera camera = GameObject.Find("StatsPrefab").GetComponent<Camera>();
+			Camera camera = GameObject.Find("CameraUI").GetComponent<Camera>();
 			Canvas canvas = camera.transform.FindChild ("Canvas").GetComponent<Canvas>();
 			Transform notificationbox = canvas.gameObject.transform.Find("AcheivementBox");
 			notificationbox.GetComponent<AcheivementNotification> ().ShowMessage (achievement.getAchievementMessage());
