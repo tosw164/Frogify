@@ -26326,6 +26326,9 @@ GameObject:
   - 114: {fileID: 935046569}
   - 114: {fileID: 935046578}
   - 114: {fileID: 935046579}
+  - 114: {fileID: 935046580}
+  - 114: {fileID: 935046582}
+  - 114: {fileID: 935046581}
   m_Layer: 0
   m_Name: beeli
   m_TagString: Untagged
@@ -26356,9 +26359,9 @@ MonoBehaviour:
     y: -391
     width: 1334
     height: 982
-  selectedBlock: {fileID: 935046583}
+  selectedBlock: {fileID: 935046577}
   selectedCommands:
-  - {fileID: 935046571}
+  - {fileID: 935046581}
   variables: []
   description: 
   stepPause: 0
@@ -26868,6 +26871,7 @@ MonoBehaviour:
   - {fileID: 935046589}
   - {fileID: 935046590}
   - {fileID: 935046574}
+  - {fileID: 935046582}
 --- !u!114 &935046574
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -26941,7 +26945,7 @@ MonoBehaviour:
   nodeRect:
     serializedVersion: 2
     x: 257
-    y: 132
+    y: 133
     width: 120
     height: 40
   itemId: 34
@@ -26953,6 +26957,7 @@ MonoBehaviour:
   - {fileID: 935046591}
   - {fileID: 935046578}
   - {fileID: 935046586}
+  - {fileID: 935046581}
 --- !u!114 &935046578
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -27003,6 +27008,135 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 1363249121}
+--- !u!114 &935046580
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935046550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 48
+  indentLevel: 0
+  targetObject: {fileID: 140118, guid: 54e563d6d5b0f4694a489cda3cc221b5, type: 2}
+  targetComponentAssemblyName: ArgumentAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ArgumentAdapter
+  targetMethod: saveArgumentationChoice
+  targetMethodText: 'saveArgumentationChoice (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Hat
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &935046581
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935046550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 50
+  indentLevel: 0
+  targetObject: {fileID: 140118, guid: 54e563d6d5b0f4694a489cda3cc221b5, type: 2}
+  targetComponentAssemblyName: ArgumentAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ArgumentAdapter
+  targetMethod: saveArgumentationChoice
+  targetMethodText: 'saveArgumentationChoice (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Apple
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
+--- !u!114 &935046582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935046550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 49
+  indentLevel: 0
+  targetObject: {fileID: 140118, guid: 54e563d6d5b0f4694a489cda3cc221b5, type: 2}
+  targetComponentAssemblyName: ArgumentAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: ArgumentAdapter
+  targetMethod: saveArgumentationChoice
+  targetMethodText: 'saveArgumentationChoice (String): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.String, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.String
+      intValue: 0
+      boolValue: 0
+      floatValue: 0
+      stringValue: Cigarette
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!114 &935046583
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -27079,6 +27213,7 @@ MonoBehaviour:
   - {fileID: 935046566}
   - {fileID: 935046579}
   - {fileID: 935046576}
+  - {fileID: 935046580}
 --- !u!114 &935046586
 MonoBehaviour:
   m_ObjectHideFlags: 2
