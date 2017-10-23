@@ -4,7 +4,7 @@ using System.Collections;
 
 /**
  * This script is used for the moving platform - the assigned object moves up and  and down (set top and bottom limits) with a set 
- * movement speed.
+ * movement speed. If Pep collides/is on the platform, he becomes a child of the platform and moves with it.
  */
 public class MovingPlatformVertical : MonoBehaviour {
 
