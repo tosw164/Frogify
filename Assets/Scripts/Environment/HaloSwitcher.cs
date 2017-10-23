@@ -3,38 +3,38 @@ using System.Collections;
 
 public class HaloSwitcher : MonoBehaviour {
 
-	private Behaviour componentHalo;
-	private bool outsideRegion;
+	public SpriteRenderer halo;
+	private bool outside_region;
+
 	// Use this for initialization
 	void Start () {
-		outsideRegion = true;
-		componentHalo = (Behaviour)GetComponent("Halo");
-
+		outside_region = false;
 	}
 
 	void OnTriggerEnter2D(Collider2D collision) 
 	{
 		if(collision.tag == "Player"){
-			componentHalo.enabled = true;
-			outsideRegion = false;
+			halo.enabled = true;
+			outside_region = false;
+
 		}
 	}
 
 	void OnTriggerExit2D (Collider2D collision) 
 	{
 		if(collision.tag == "Player"){
-			outsideRegion = true;
-			componentHalo.enabled = false;
+			halo.enabled = false;
+			outside_region = true;
 		}
 	}
 
 	void Update (){
-		if (outsideRegion) {
+		if (outside_region) {
 			if (CollisionFlag.isAttached) {
-				componentHalo.enabled = true;
+				halo.enabled = true;
 			} else {
-				outsideRegion = false;
-				componentHalo.enabled = false;
+				outside_region = false;
+				halo.enabled = false;
 			}
 		}
 	}
