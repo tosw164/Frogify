@@ -2,6 +2,8 @@
 
 /**
  * Simple structure class that maintains an entry for a highscore.
+ * Structure class as it should be read only - only instantiated once
+ * and then thats it.
  */
 namespace POCC.HighScore
 {

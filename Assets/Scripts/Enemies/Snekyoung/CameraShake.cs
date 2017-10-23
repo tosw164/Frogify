@@ -1,4 +1,9 @@
-﻿///Daniel Moore (Firedan1176) - Firedan1176.webs.com/
+﻿/*
+ * http://wiki.unity3d.com/index.php/Camera_Shake
+ * Copied from unity wiki, used for camera shake when Snekyoung approaches
+ */
+
+///Daniel Moore (Firedan1176) - Firedan1176.webs.com/
 ///26 Dec 2015
 ///
 ///Shakes camera parent object

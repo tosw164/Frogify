@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
+//Class that handles the logic for the movement for the character
 namespace UnityStandardAssets._2D
 {
 	public class PlatformerCharacter2D : MonoBehaviour
 	{
 		[SerializeField] private float m_MaxSpeed = 10f;                    // The fastest the player can travel in the x axis.
 		[SerializeField] private float m_JumpForce = 400f;                  // Amount of force added when the player jumps.
-		[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;  // Amount of maxSpeed applied to crouching movement. 1 = 100%
 		[SerializeField] private bool m_AirControl = false;                 // Whether or not a player can steer while jumping;
 		[SerializeField] private LayerMask m_WhatIsGround;                  // A mask determining what is ground to the character
 
@@ -27,11 +27,13 @@ namespace UnityStandardAssets._2D
 		private float JUMP_COOLDOWN_VALUE = 1.0f;	//Value of "cooldown" representing time boolean can't be flipped after sprintjump
 		private bool allow_ground_slowdown; 		//boolean representing if groundcheck can disable sprintjump.
 
-		private float X_VELOCITY_LIMIT = 30f;
-		private float Y_VELOCITY_LIMIT = 25f;
+		private float X_VELOCITY_LIMIT = 30f;		//Speed limit for character (left and right) to ensure that physics aren't broken
+		private float Y_VELOCITY_LIMIT = 25f;		//Speed limit for character (up and down) to make sure that jumping cannot
+													//be broken when spacebar spammed.
 
 		public float movement_multiplier = 2.0f; //Represent speedup when LEFTSHIFT is pressed
 
+		//Initial setting of values for the character
 		private void Awake()
 		{
 			// Setting up references.
@@ -46,13 +48,11 @@ namespace UnityStandardAssets._2D
 
 		private void FixedUpdate()
 		{
+			//Set X and Y velocity speed limit if passed.
 			if (m_Rigidbody2D.velocity.y > Y_VELOCITY_LIMIT){
-//				Debug.Log ("SURPASSED Y " + m_Rigidbody2D.velocity);
 				m_Rigidbody2D.velocity = new Vector2(m_Rigidbody2D.velocity.x, Y_VELOCITY_LIMIT);
 			}
-
 			if (m_Rigidbody2D.velocity.x > Y_VELOCITY_LIMIT){
-//				Debug.Log ("SURPASSED X " + m_Rigidbody2D.velocity);
 				m_Rigidbody2D.velocity = new Vector2(X_VELOCITY_LIMIT, m_Rigidbody2D.velocity.y);
 			}
 
@@ -61,7 +61,6 @@ namespace UnityStandardAssets._2D
 			// The player is grounded if a circlecast to the groundcheck position hits anything designated as ground
 			// This can be done using layers instead but Sample Assets will not overwrite your project settings.
 			Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
-			
 
 			for (int i = 0; i < colliders.Length; i++)
 			{
@@ -78,7 +77,7 @@ namespace UnityStandardAssets._2D
 		}
 
 
-		public void Move(float move, bool crouch, bool jump, bool run)
+		public void Move(float move, bool jump, bool run)
 		{
 			//If shift was held when jump pressed, should keep momentum
 			if (m_Grounded && jump && run){
@@ -87,6 +86,7 @@ namespace UnityStandardAssets._2D
 				//Add cooldown and make else if below not triggerable until cooldown depleted
 				jump_cooldown = Time.time + JUMP_COOLDOWN_VALUE;
 				allow_ground_slowdown = false;
+
 			} else if (m_Grounded && jump_speedup && allow_ground_slowdown){
 				//Only set it to false after cooldown after sprintjump if grounded
 				jump_speedup = false;
@@ -97,18 +97,9 @@ namespace UnityStandardAssets._2D
 				jump_speedup = false;
 			}
 
-			//TODO REMOVE BECAUSE DEBUGGING
-			if (!m_Grounded && !jump_speedup){
-				Debug.Log("jump: " + jump + " run: " + run);
-			}
-
 			//only control the player if grounded or airControl is turned on
 			if (m_Grounded || m_AirControl)
 			{
-				
-				// Reduce the speed if crouching by the crouchSpeed multiplier
-				move = (crouch ? move*m_CrouchSpeed : move);
-
 				m_Anim.SetBool ("isWalking", true);
 
 				// Add run multiplier of LEFTSHIFT held down and change speed accordingly
@@ -137,9 +128,9 @@ namespace UnityStandardAssets._2D
 			// If the player should jump...
 			if (m_Grounded && jump && m_Anim.GetBool("Ground"))
 			{
-				Debug.Log ("Jump");
-				// Add a vertical force to the player.
 				m_Grounded = false;
+
+				//Set animation values and jumpforce
 				m_Anim.SetBool ("isWalking", false);
 				m_Anim.SetBool("Ground", false);
 				m_Anim.SetBool ("isJump", true);
@@ -151,7 +142,7 @@ namespace UnityStandardAssets._2D
 			}
 		}
 
-
+		//Method that flips player sprite depending on which way they ar facing
 		private void Flip()
 		{
 			// Switch the way the player is labelled as facing.
