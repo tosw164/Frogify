@@ -10,8 +10,13 @@ public class SceneSwitchAdapter : MonoBehaviour {
 		Scene scene = Lookup.sceneLookup(sceneType);
 		GameManager.getInstance().switchScene(scene);
 
+		GameObject pep = GameObject.FindGameObjectWithTag ("Player");
 
-		Platformer2DUserControl pepController = GameObject.FindGameObjectWithTag("Player").GetComponent<Platformer2DUserControl> ();
-		pepController.enableMovement ();
+		if(pep!=null){
+			Platformer2DUserControl pepController = pep.GetComponent<Platformer2DUserControl> ();
+			pepController.enableMovement ();
+		}
+
+
 	}
 }
