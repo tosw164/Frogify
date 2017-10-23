@@ -49,7 +49,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: mainTheme
     clip: {fileID: 8300000, guid: ea39ffb8e4825441b9e5368d58a1d00e, type: 3}
-    volume: 0.526
+    volume: 0.5
     pitch: 1
     loop: 1
     source: {fileID: 0}
@@ -124,6 +124,18 @@ MonoBehaviour:
     volume: 0.58
     pitch: 1
     loop: 0
+    source: {fileID: 0}
+  - name: ethosCave
+    clip: {fileID: 8300000, guid: 56443a5c248ccd647a19371af838129c, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: pathosSpiderMusic
+    clip: {fileID: 8300000, guid: cb547047719e24149a9be6a86e57d433, type: 3}
+    volume: 0.58
+    pitch: 1
+    loop: 1
     source: {fileID: 0}
 --- !u!1001 &100100000
 Prefab:
