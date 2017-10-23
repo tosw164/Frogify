@@ -4725,7 +4725,6 @@ GameObject:
   - 114: {fileID: 132422049}
   - 120: {fileID: 132422048}
   - 114: {fileID: 132422045}
-  - 114: {fileID: 132422047}
   - 114: {fileID: 132422058}
   m_Layer: 9
   m_Name: PepPlayer
@@ -4769,18 +4768,6 @@ Transform:
   - {fileID: 473317697}
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &132422047
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11415206, guid: 167ec55c11c7b4193ae8c13658c56c17,
-    type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 132422044}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e7dcc06ad6d4643ff85b029f05650d0c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!120 &132422048
 LineRenderer:
   m_ObjectHideFlags: 0
