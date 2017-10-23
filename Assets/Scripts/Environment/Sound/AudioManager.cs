@@ -1,6 +1,7 @@
 ﻿using UnityEngine.Audio;
 using System;
 using UnityEngine;
+using System.Collections;
 
 /// <summary>
 /// Credit: https://www.youtube.com/watch?v=6OT43pvUyfY&t=41s
@@ -8,6 +9,8 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour {
 
     public Sound[] sounds;
+
+    private ArrayList currentlyPlaying = new ArrayList();
 
     public static AudioManager instance;
 
@@ -40,8 +43,28 @@ public class AudioManager : MonoBehaviour {
         Sound s = Array.Find(sounds, sound => sound.name == name);
         if (s == null)
         {
-            Debug.LogWarning("Can't find name of sound: " + name);
+            Debug.LogWarning("Can't find (play) name of sound: " + name);
         }
         s.source.Play();
+        currentlyPlaying.Add(s);
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Can't find (stop) name of sound: " + name);
+        }
+        s.source.Stop();
+        currentlyPlaying.Remove(s);
+    }
+
+    public void StopAll() {
+        foreach(Sound s in currentlyPlaying)
+        {
+            s.source.Stop();
+        }
+        currentlyPlaying.Clear();
     }
 }
