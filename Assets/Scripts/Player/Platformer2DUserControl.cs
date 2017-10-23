@@ -12,7 +12,7 @@ namespace UnityStandardAssets._2D
 		private PlatformerCharacter2D m_Character;  //Character script
 		private bool m_Jump;						//Jump boolean
 
-
+		//Initialise character
 		private void Awake()
 		{
 			m_Character = GetComponent<PlatformerCharacter2D>();
@@ -37,6 +37,7 @@ namespace UnityStandardAssets._2D
 				// Read the inputs.
 				bool run = Input.GetKey (KeyCode.LeftShift);
 				float h = Input.GetAxis("Horizontal");
+
 				// Pass all parameters to the character control script.
 				m_Character.Move(h, m_Jump, run);
 				m_Jump = false;
