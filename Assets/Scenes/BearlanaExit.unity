@@ -2372,6 +2372,72 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1004261670}
+--- !u!1001 &1015443760
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 149.75285
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -26.40674
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 493418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: FeedbackPanel
+      value: 
+      objectReference: {fileID: 955544400}
+    - target: {fileID: 11463418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: answer
+      value: Pathos
+      objectReference: {fileID: 0}
+    - target: {fileID: 11463418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: choice
+      value: 
+      objectReference: {fileID: 1031481983}
+    - target: {fileID: 11463418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1987791655}
+    - target: {fileID: 11463418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: flies
+      value: 
+      objectReference: {fileID: 200419901}
+    - target: {fileID: 11463418, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+      propertyPath: creature
+      value: 
+      objectReference: {fileID: 510928608}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 9c3382be7d4cb4439bd7d9094244676e, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1027411264
 GameObject:
   m_ObjectHideFlags: 0
@@ -3397,7 +3463,7 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1607452994}
   m_Direction: 0
   m_Value: 1
-  m_Size: 1
+  m_Size: 0.99999994
   m_NumberOfSteps: 0
   m_OnValueChanged:
     m_PersistentCalls:
@@ -3656,7 +3722,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Creature of the Forest: Beeli'
+  m_Text: 'Creature of the Forest: Bearlana'
 --- !u!222 &1654568268
 CanvasRenderer:
   m_ObjectHideFlags: 0
