@@ -13,6 +13,15 @@ namespace POCC.HighScore
 
 		private Dictionary<int,List<HighScoreEntry>> _highScoreStorage;
 
+		private static HighScoreManager _manager; 
+
+		public static HighScoreManager getInstance() {
+			if (_manager == null) {
+				_manager = new HighScoreManager();
+			}
+			return _manager;
+		}
+
 		//Maybe turn into singleton pattern?
 		/*
 		 * Simply instantiate the storage elements.
@@ -31,7 +40,6 @@ namespace POCC.HighScore
 		public void addHighScore(int level, HighScoreEntry entry){
 			List<HighScoreEntry> levelScoreList = _highScoreStorage [level];
 			levelScoreList.Add (entry);
-			_highScoreStorage.Add (level, levelScoreList);
 		}
 
 		/**
