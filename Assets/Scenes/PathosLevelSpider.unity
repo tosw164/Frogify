@@ -2359,6 +2359,53 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &219233007
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 219233008}
+  - 114: {fileID: 219233009}
+  m_Layer: 0
+  m_Name: UnknownSound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &219233008
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219233007}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_Children: []
+  m_Father: {fileID: 505000981}
+  m_RootOrder: 3
+--- !u!114 &219233009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 219233007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameText: ???
+  nameColor: {r: 0, g: 0, b: 0, a: 1}
+  soundEffect: {fileID: 0}
+  portraits: []
+  portraitsFace: 0
+  setSayDialog: {fileID: 0}
+  description: 
 --- !u!1 &224827972
 GameObject:
   m_ObjectHideFlags: 0
@@ -2776,8 +2823,9 @@ MonoBehaviour:
     y: -350
     width: 921
     height: 840
-  selectedBlock: {fileID: 0}
-  selectedCommands: []
+  selectedBlock: {fileID: 249656507}
+  selectedCommands:
+  - {fileID: 249656512}
   variables: []
   description: 
   stepPause: 0
@@ -2876,7 +2924,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: IS ANYONE OUT THERE????
   description: 
-  character: {fileID: 0}
+  character: {fileID: 219233009}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -2885,7 +2933,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1154203107}
 --- !u!114 &249656510
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2965,7 +3013,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 931754683}
 --- !u!114 &249656513
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -4627,11 +4675,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 78.76885
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -8.199702
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_SizeDelta.x
@@ -4664,6 +4712,14 @@ Prefab:
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142018, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472558, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -858
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
@@ -5836,12 +5892,7 @@ MonoBehaviour:
     height: 844
   selectedBlock: {fileID: 505000979}
   selectedCommands:
-  - {fileID: 505000984}
-  - {fileID: 505000986}
-  - {fileID: 505000982}
-  - {fileID: 505000983}
   - {fileID: 505000978}
-  - {fileID: 505000985}
   variables: []
   description: 
   stepPause: 0
@@ -5877,7 +5928,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 931754683}
 --- !u!114 &505000979
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -5933,6 +5984,7 @@ Transform:
   - {fileID: 571862743}
   - {fileID: 385102989}
   - {fileID: 867799326}
+  - {fileID: 219233008}
   m_Father: {fileID: 0}
   m_RootOrder: 9
 --- !u!114 &505000982
@@ -5950,7 +6002,7 @@ MonoBehaviour:
   indentLevel: 0
   storyText: AHHHHHHH!! HELP ME!!!!!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 219233009}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -5959,7 +6011,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1154203107}
 --- !u!114 &505000983
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6956,11 +7008,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22405728, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 80.76885
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405728, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -10.199702
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22405728, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_SizeDelta.x
@@ -6993,6 +7045,18 @@ Prefab:
     - target: {fileID: 22405728, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 117712, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415900, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -861
+      objectReference: {fileID: 0}
+    - target: {fileID: 118758, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
@@ -10142,11 +10206,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 439874, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 80.76885
+      value: 84
       objectReference: {fileID: 0}
     - target: {fileID: 439874, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -10.199702
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 439874, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -10360,13 +10424,9 @@ GameObject:
   - 114: {fileID: 912168690}
   - 114: {fileID: 912168689}
   - 114: {fileID: 912168688}
-  - 114: {fileID: 912168687}
   - 114: {fileID: 912168681}
-  - 114: {fileID: 912168696}
   - 114: {fileID: 912168695}
-  - 114: {fileID: 912168694}
   - 114: {fileID: 912168693}
-  - 114: {fileID: 912168697}
   - 114: {fileID: 912168698}
   m_Layer: 9
   m_Name: PepPlayer (1)
@@ -10399,8 +10459,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Pep
-  nameColor: {r: 0, g: 1, b: 0.048275948, a: 1}
+  nameText: Lost Froglet
+  nameColor: {r: 0.7352941, g: 0.19463669, b: 0.25056657, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
@@ -10642,8 +10702,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 12
   indentLevel: 0
-  storyText: Yes please!! I've been stuck here for days :( I'm covered in oil and
-    i feel bad :( :(
+  storyText: Yes please!! I've been stuck here for days... And there's spiders everywhere!
+    I'm covered in oil and it feels so icky...
   description: 
   character: {fileID: 912168669}
   portrait: {fileID: 0}
@@ -10654,7 +10714,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 1154203107}
 --- !u!114 &912168682
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10681,7 +10741,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 52
+    x: 51
     y: 51
     width: 120
     height: 40
@@ -10693,15 +10753,11 @@ MonoBehaviour:
   - {fileID: 912168692}
   - {fileID: 912168691}
   - {fileID: 912168690}
-  - {fileID: 912168687}
   - {fileID: 912168681}
-  - {fileID: 912168696}
   - {fileID: 912168695}
-  - {fileID: 912168694}
   - {fileID: 912168693}
   - {fileID: 912168689}
   - {fileID: 912168688}
-  - {fileID: 912168697}
   - {fileID: 912168698}
 --- !u!114 &912168684
 MonoBehaviour:
@@ -10728,7 +10784,7 @@ MonoBehaviour:
     height: 841
   selectedBlock: {fileID: 912168683}
   selectedCommands:
-  - {fileID: 912168698}
+  - {fileID: 912168690}
   variables: []
   description: 
   stepPause: 0
@@ -10768,35 +10824,6 @@ MonoBehaviour:
   isRepeatable: 0
   targetFlowchart: {fileID: 912168684}
   needededItems: []
---- !u!114 &912168687
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 912168667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 11
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 912168669}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 1156785047}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
 --- !u!114 &912168688
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10865,7 +10892,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 8
   indentLevel: 0
-  storyText: Hey!! Do you need my help?
+  storyText: Hey!! You're the missing child, aren't you?! Do you need my help?
   description: 
   character: {fileID: 1611929420}
   portrait: {fileID: 0}
@@ -10876,7 +10903,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 931754683}
 --- !u!114 &912168691
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10956,36 +10983,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
---- !u!114 &912168694
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 912168667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 15
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 912168669}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 1156785047}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
+  setSayDialog: {fileID: 1154203107}
 --- !u!114 &912168695
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -10999,7 +10997,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 14
   indentLevel: 0
-  storyText: Don't worry I'll get you out of here!! Follow me
+  storyText: Don't worry I'll get you out of here. Follow me!
   description: 
   character: {fileID: 1611929420}
   portrait: {fileID: 0}
@@ -11010,65 +11008,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
---- !u!114 &912168696
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 912168667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 13
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 1611929420}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 867799325}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
---- !u!114 &912168697
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 912168667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 19
-  indentLevel: 0
-  display: 2
-  stage: {fileID: 0}
-  character: {fileID: 912168669}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 0}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 1655340391}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 1
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
+  setSayDialog: {fileID: 931754683}
 --- !u!114 &912168698
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -11272,6 +11212,12 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &931754683 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11433276, guid: 427113f5a7af44e9f8f8f6995d69767a,
+    type: 2}
+  m_PrefabInternal: {fileID: 571862742}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
 --- !u!1 &934289905
 GameObject:
   m_ObjectHideFlags: 0
@@ -13095,11 +13041,12 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
---- !u!224 &1156785047 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 22490998, guid: 8093da7ed22a64db3ba6b1154e4f06b4,
+--- !u!114 &1154203107 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11492346, guid: ab883cfbf346e4d10b101fd5717752ee,
     type: 2}
-  m_PrefabInternal: {fileID: 867799324}
+  m_PrefabInternal: {fileID: 385102988}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
 --- !u!1 &1156815934
 GameObject:
   m_ObjectHideFlags: 0
@@ -16757,7 +16704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1611929421}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -82.8, y: 11.02, z: 0}
+  m_LocalPosition: {x: -85.42, y: 11.14, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -17388,11 +17335,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 186579249}
   m_RootOrder: 6
---- !u!224 &1655340391 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 22401276, guid: 8093da7ed22a64db3ba6b1154e4f06b4,
-    type: 2}
-  m_PrefabInternal: {fileID: 867799324}
 --- !u!1001 &1655548701
 Prefab:
   m_ObjectHideFlags: 0

@@ -1322,11 +1322,6 @@ RectTransform:
 Transform:
   m_PrefabParentObject: {fileID: 439874, guid: 8093da7ed22a64db3ba6b1154e4f06b4, type: 2}
   m_PrefabInternal: {fileID: 105492100}
---- !u!224 &105492103 stripped
-RectTransform:
-  m_PrefabParentObject: {fileID: 22490998, guid: 8093da7ed22a64db3ba6b1154e4f06b4,
-    type: 2}
-  m_PrefabInternal: {fileID: 105492100}
 --- !u!224 &105492104 stripped
 RectTransform:
   m_PrefabParentObject: {fileID: 22471614, guid: 8093da7ed22a64db3ba6b1154e4f06b4,
@@ -1814,6 +1809,12 @@ SpriteRenderer:
   m_Color: {r: 0.6397059, g: 0.6397059, b: 0.6397059, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &134024752 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11433276, guid: 427113f5a7af44e9f8f8f6995d69767a,
+    type: 2}
+  m_PrefabInternal: {fileID: 2062455709}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
 --- !u!1 &155887505
 GameObject:
   m_ObjectHideFlags: 0
@@ -1970,8 +1971,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25fb867d2049d41f597aefdd6b19f598, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: Pep
-  nameColor: {r: 0, g: 1, b: 0.048275948, a: 1}
+  nameText: Lost Froglet
+  nameColor: {r: 0.6397059, g: 0.1364079, b: 0.18847302, a: 1}
   soundEffect: {fileID: 0}
   portraits:
   - {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
@@ -12447,11 +12448,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 21.22
+      value: 21.88
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 26
+      value: 25.68
       objectReference: {fileID: 0}
     - target: {fileID: 486410, guid: 167ec55c11c7b4193ae8c13658c56c17, type: 2}
       propertyPath: m_LocalPosition.z
@@ -12553,6 +12554,12 @@ SpriteRenderer:
   m_Color: {r: 0.36764705, g: 0.36764705, b: 0.36764705, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!114 &1440530724 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 11492346, guid: ab883cfbf346e4d10b101fd5717752ee,
+    type: 2}
+  m_PrefabInternal: {fileID: 1916371769}
+  m_Script: {fileID: 11500000, guid: 3a0bbe22c246e4c78ad8e9816cbae9d5, type: 3}
 --- !u!1 &1443346571
 GameObject:
   m_ObjectHideFlags: 0
@@ -15497,7 +15504,6 @@ GameObject:
   - 114: {fileID: 1773357436}
   - 114: {fileID: 1773357437}
   - 114: {fileID: 1773357435}
-  - 114: {fileID: 1773357450}
   - 114: {fileID: 1773357449}
   - 114: {fileID: 1773357448}
   - 114: {fileID: 1773357447}
@@ -15507,6 +15513,8 @@ GameObject:
   - 114: {fileID: 1773357439}
   - 114: {fileID: 1773357444}
   - 114: {fileID: 1773357443}
+  - 114: {fileID: 1773357445}
+  - 114: {fileID: 1773357446}
   m_Layer: 0
   m_Name: tile_jungle_treelimb_2 (10)
   m_TagString: Untagged
@@ -15596,7 +15604,7 @@ MonoBehaviour:
     height: 840
   selectedBlock: {fileID: 1773357436}
   selectedCommands:
-  - {fileID: 1773357439}
+  - {fileID: 1773357446}
   variables: []
   description: 
   stepPause: 0
@@ -15658,7 +15666,6 @@ MonoBehaviour:
   commandList:
   - {fileID: 1773357435}
   - {fileID: 1773357444}
-  - {fileID: 1773357450}
   - {fileID: 1773357449}
   - {fileID: 1773357448}
   - {fileID: 1773357447}
@@ -15666,7 +15673,9 @@ MonoBehaviour:
   - {fileID: 1773357443}
   - {fileID: 1773357441}
   - {fileID: 1773357440}
+  - {fileID: 1773357445}
   - {fileID: 1773357439}
+  - {fileID: 1773357446}
 --- !u!114 &1773357437
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15873,6 +15882,42 @@ MonoBehaviour:
   returnValueType: System.Void
   showInherited: 0
   callMode: 0
+--- !u!114 &1773357445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773357430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 24
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 1
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
+--- !u!114 &1773357446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1773357430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207aecf668a0345388087ccf522f9957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 25
+  indentLevel: 0
+  duration: 2
+  targetAlpha: 0
+  waitUntilFinished: 1
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
+  fadeTexture: {fileID: 0}
 --- !u!114 &1773357447
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15886,9 +15931,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 13
   indentLevel: 0
-  storyText: No worries!! Let's take you back to the tribe <3
+  storyText: No worries!! Let's take you back to the tribe. Chief Pathos is worried
+    sick about you!
   description: 
-  character: {fileID: 0}
+  character: {fileID: 1407202522}
   portrait: {fileID: 0}
   voiceOverClip: {fileID: 0}
   showAlways: 1
@@ -15897,7 +15943,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
+  setSayDialog: {fileID: 134024752}
 --- !u!114 &1773357448
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15940,7 +15986,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemId: 9
   indentLevel: 0
-  storyText: Thanks for helping me!!
+  storyText: Thanks for helping me, Pep!! You're a lifesaver! Literally!
   description: 
   character: {fileID: 183842650}
   portrait: {fileID: 0}
@@ -15951,36 +15997,7 @@ MonoBehaviour:
   fadeWhenDone: 1
   waitForClick: 1
   stopVoiceover: 1
-  setSayDialog: {fileID: 0}
---- !u!114 &1773357450
-MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1773357430}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ac5ce55bc698fa4290939ef6e426501, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemId: 8
-  indentLevel: 0
-  display: 1
-  stage: {fileID: 0}
-  character: {fileID: 183842650}
-  replacedCharacter: {fileID: 0}
-  portrait: {fileID: 21300000, guid: 1683c441e7b324faba29eaa6ce5e1c64, type: 3}
-  offset: 0
-  fromPosition: {fileID: 0}
-  toPosition: {fileID: 105492103}
-  facing: 0
-  useDefaultSettings: 1
-  fadeDuration: 0.5
-  moveDuration: 1
-  shiftOffset: {x: 0, y: 0}
-  move: 0
-  shiftIntoPlace: 0
-  waitUntilFinished: 0
+  setSayDialog: {fileID: 1440530724}
 --- !u!1 &1780397900
 GameObject:
   m_ObjectHideFlags: 0
@@ -17226,11 +17243,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 78.76885
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -8.199702
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_SizeDelta.x
@@ -17263,6 +17280,18 @@ Prefab:
     - target: {fileID: 22413666, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 142018, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22472558, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -864
+      objectReference: {fileID: 0}
+    - target: {fileID: 124150, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ab883cfbf346e4d10b101fd5717752ee, type: 2}
@@ -18665,6 +18694,14 @@ Prefab:
     - target: {fileID: 22405728, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 117712, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22415900, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -860
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 427113f5a7af44e9f8f8f6995d69767a, type: 2}
