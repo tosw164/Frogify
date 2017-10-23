@@ -993,7 +993,7 @@ Transform:
   - {fileID: 1030843552}
   - {fileID: 1369099160}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &113435969
 GameObject:
   m_ObjectHideFlags: 0
@@ -2018,7 +2018,7 @@ Transform:
   - {fileID: 179196933}
   - {fileID: 619975912}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &179196931
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,7 +2174,7 @@ Transform:
   - {fileID: 133983423}
   - {fileID: 528839762}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &186865318
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,7 +6040,7 @@ Transform:
   - {fileID: 867799326}
   - {fileID: 219233008}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!114 &505000982
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -6637,7 +6637,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &543740032
 GameObject:
   m_ObjectHideFlags: 0
@@ -6756,6 +6756,48 @@ SpriteRenderer:
   m_Color: {r: 0.49264705, g: 0.49264705, b: 0.49264705, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &547924889
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -11.217083
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.0225452
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &547959050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6848,7 +6890,7 @@ Transform:
   - {fileID: 1268167308}
   - {fileID: 132712693}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &558523653
 GameObject:
   m_ObjectHideFlags: 0
@@ -8786,7 +8828,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
 --- !u!1 &715259124
 GameObject:
   m_ObjectHideFlags: 0
@@ -10493,7 +10535,7 @@ Transform:
   - {fileID: 684808958}
   - {fileID: 1454396111}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
 --- !u!1001 &896395037
 Prefab:
   m_ObjectHideFlags: 0
@@ -10719,9 +10761,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809e9d9fbcfc34f5dbe631caaeb8ae53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingable_layer:
-    serializedVersion: 2
-    m_Bits: 2048
   distance: 3
   rope: {fileID: 912168670}
 --- !u!231 &912168672
@@ -10773,7 +10812,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxSpeed: 0
   m_JumpForce: 0
-  m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
@@ -10888,7 +10926,7 @@ Transform:
   - {fileID: 728896351}
   - {fileID: 1071094588}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!114 &912168681
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -15092,7 +15130,7 @@ Transform:
   - {fileID: 582371347}
   - {fileID: 636778881}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1417667924
 GameObject:
   m_ObjectHideFlags: 0
@@ -17131,7 +17169,7 @@ Transform:
   - {fileID: 1213408416}
   - {fileID: 401571461}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!114 &1611929423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17196,9 +17234,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809e9d9fbcfc34f5dbe631caaeb8ae53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingable_layer:
-    serializedVersion: 2
-    m_Bits: 2048
   distance: 3
   rope: {fileID: 1611929424}
 --- !u!231 &1611929426
@@ -17250,7 +17285,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxSpeed: 10
   m_JumpForce: 800
-  m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
@@ -18795,7 +18829,7 @@ Transform:
   - {fileID: 1570111529}
   - {fileID: 61792068}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1 &1778796355
 GameObject:
   m_ObjectHideFlags: 0
@@ -20871,7 +20905,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!1 &1981863644
 GameObject:
   m_ObjectHideFlags: 0

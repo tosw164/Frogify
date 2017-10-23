@@ -26329,6 +26329,7 @@ GameObject:
   - 114: {fileID: 935046580}
   - 114: {fileID: 935046582}
   - 114: {fileID: 935046581}
+  - 114: {fileID: 935046592}
   m_Layer: 0
   m_Name: beeli
   m_TagString: Untagged
@@ -26359,9 +26360,9 @@ MonoBehaviour:
     y: -391
     width: 1334
     height: 982
-  selectedBlock: {fileID: 935046577}
+  selectedBlock: {fileID: 935046573}
   selectedCommands:
-  - {fileID: 935046581}
+  - {fileID: 935046592}
   variables: []
   description: 
   stepPause: 0
@@ -26870,6 +26871,7 @@ MonoBehaviour:
   - {fileID: 935046575}
   - {fileID: 935046589}
   - {fileID: 935046590}
+  - {fileID: 935046592}
   - {fileID: 935046574}
   - {fileID: 935046582}
 --- !u!114 &935046574
@@ -27356,6 +27358,49 @@ MonoBehaviour:
   waitForClick: 1
   stopVoiceover: 1
   setSayDialog: {fileID: 1363249121}
+--- !u!114 &935046592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 935046550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 688e35811870d403f9e2b1ab2a699d98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemId: 51
+  indentLevel: 0
+  targetObject: {fileID: 135396, guid: 2e39b28aa3bdd4f72893e7c15c7b1d17, type: 2}
+  targetComponentAssemblyName: AchievementSenderAdapter, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  targetComponentFullname: UnityEngine.Component[]
+  targetComponentText: AchievementSenderAdapter
+  targetMethod: sendAchievement
+  targetMethodText: 'sendAchievement (Int32): Void'
+  methodParameters:
+  - objValue:
+      typeAssemblyname: System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      typeFullname: System.Int32
+      intValue: 1
+      boolValue: 0
+      floatValue: 0
+      stringValue: 
+      colorValue: {r: 0, g: 0, b: 0, a: 0}
+      gameObjectValue: {fileID: 0}
+      materialValue: {fileID: 0}
+      objectValue: {fileID: 0}
+      spriteValue: {fileID: 0}
+      textureValue: {fileID: 0}
+      vector2Value: {x: 0, y: 0}
+      vector3Value: {x: 0, y: 0, z: 0}
+    variableKey: 
+  saveReturnValue: 0
+  returnValueVariableKey: 
+  returnValueType: System.Void
+  showInherited: 0
+  callMode: 0
 --- !u!1 &935090738
 GameObject:
   m_ObjectHideFlags: 0
@@ -33568,9 +33613,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 809e9d9fbcfc34f5dbe631caaeb8ae53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  swingable_layer:
-    serializedVersion: 2
-    m_Bits: 2048
   distance: 3
   rope: {fileID: 1205630064}
 --- !u!231 &1205630066
@@ -33622,7 +33664,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MaxSpeed: 10
   m_JumpForce: 800
-  m_CrouchSpeed: 0.36
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2

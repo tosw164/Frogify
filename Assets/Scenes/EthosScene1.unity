@@ -1974,7 +1974,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
 --- !u!114 &57595326 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 11492346, guid: ab883cfbf346e4d10b101fd5717752ee,
@@ -4468,7 +4468,7 @@ Transform:
   - {fileID: 864259673}
   - {fileID: 1587356488}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
 --- !u!1 &125787209
 GameObject:
   m_ObjectHideFlags: 0
@@ -8200,7 +8200,7 @@ Transform:
   - {fileID: 1109012944}
   - {fileID: 1431198517}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1 &224583398
 GameObject:
   m_ObjectHideFlags: 0
@@ -8631,7 +8631,7 @@ Transform:
   - {fileID: 1957360337}
   - {fileID: 1125912922}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
 --- !u!1 &239750387
 GameObject:
   m_ObjectHideFlags: 0
@@ -10623,7 +10623,7 @@ Transform:
   - {fileID: 694680718}
   - {fileID: 938105198}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
 --- !u!1 &270228442
 GameObject:
   m_ObjectHideFlags: 0
@@ -29592,7 +29592,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &771619973
 GameObject:
   m_ObjectHideFlags: 0
@@ -31699,7 +31699,7 @@ Transform:
   - {fileID: 994742655}
   - {fileID: 75103201}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &854229589
 GameObject:
   m_ObjectHideFlags: 0
@@ -44670,7 +44670,7 @@ Transform:
   - {fileID: 720819219}
   - {fileID: 1871216200}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
 --- !u!1 &1182374959
 GameObject:
   m_ObjectHideFlags: 0
@@ -52112,7 +52112,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
 --- !u!1 &1431198516
 GameObject:
   m_ObjectHideFlags: 0
@@ -54254,7 +54254,7 @@ Transform:
   - {fileID: 1229715672}
   - {fileID: 1754053561}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
 --- !u!114 &1476946667
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -69787,6 +69787,48 @@ SpriteRenderer:
   m_Color: {r: 0.49803922, g: 0.45882353, b: 0.3882353, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1889841396
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 99.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -70.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 420506, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: add6f499edab4423a805f5ef72c90372, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1889977560
 GameObject:
   m_ObjectHideFlags: 0
@@ -71851,7 +71893,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!1 &1948177222
 GameObject:
   m_ObjectHideFlags: 0
