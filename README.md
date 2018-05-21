@@ -32,3 +32,4 @@ issues (especially with frame rate).
 | Edison Rho | [Edds390](https://github.com/Edds390) | grho390 | 974678284 |
 | Eli Salter | [elisalter](https://github.com/elisalter) | esal284 | 151882407 |
 
+Special thanks to [Rashina Hoda](https://github.com/rashina), [Guyver Fu](https://github.com/gdsl), [Michael Orr](https://github.com/michaeljamesorr) and the ECE department at the University of Auckland for being involved in the creation of Pep and the Dying Forest.
